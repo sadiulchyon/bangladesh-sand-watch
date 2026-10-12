@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#183e35">
+  <meta name="description" content="A bilingual pilot archive of news, official documents, and research on sand and gravel extraction in Bangladesh.">
+  <title>Bangladesh Sand Watch | Evidence archive</title>
+  <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script type="module" src="app.js"></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to archive</a>
+  <header class="masthead">
+    <a class="brand" href="#archive" data-view="archive" aria-label="Bangladesh Sand Watch home">
+      <img src="assets/mark.svg" width="42" height="42" alt="">
+      <span>Bangladesh<span class="brand-second">Sand Watch<span class="brand-dot">.</span></span></span>
+    </a>
+    <nav aria-label="Main navigation">
+      <button class="nav-button active" data-view="archive" data-i18n="archive">Archive</button>
+      <button class="nav-button" data-view="review" data-i18n="review">Review workspace</button>
+      <button class="nav-button" data-view="methods" data-i18n="methods">Sources & method</button>
+    </nav>
+    <div class="header-end"><span class="pilot-label" data-i18n="pilot">PILOT EDITION</span><div class="language-switch" role="group" aria-label="Interface language"><button id="lang-en" aria-pressed="true">EN</button><button id="lang-bn" aria-pressed="false" lang="bn">বাংলা</button></div></div>
+  </header>
+  <main id="main">
+    <section class="intro">
+      <div class="intro-copy">
+        <p class="eyebrow" data-i18n="eyebrow">BANGLADESH · RIVERS · EXTRACTION · GOVERNANCE</p>
+        <h1 data-i18n="headline">Follow the sand.<br>Find the evidence.</h1>
+        <p class="intro-description" data-i18n="description">Reporting, policy, and research on sand and gravel extraction in Bangladesh, brought together in one searchable archive.</p>
+        <div class="intro-meta"><span class="live-dot"></span><span data-i18n="snapshot">Collection snapshot: October 11, 2026</span><span class="meta-divider">/</span><span id="collection-status">Collection foundation</span></div>
+      </div>
+      <div class="intro-aside"><div class="edition-number">01<span data-i18n="edition">COLLECTION PILOT</span></div><p data-i18n="aside">A starting point for a national observatory. Every record keeps its source, context, and outstanding checks.</p><div class="river-lines" aria-hidden="true"></div></div>
+    </section>
+    <div id="load-error" class="notice error" hidden></div>
+    <div id="storage-notice" class="notice" hidden></div>
+    <section class="stats" aria-label="Pilot collection totals">
+      <button class="stat active" data-category="all"><span class="stat-value" id="stat-all">17</span><span data-i18n="allRecords">All records</span><span class="stat-arrow">↗</span></button>
+      <button class="stat" data-category="news"><span class="stat-value" id="stat-news">9</span><span data-i18n="news">News & context</span><span class="stat-arrow">↗</span></button>
+      <button class="stat" data-category="official"><span class="stat-value" id="stat-official">4</span><span data-i18n="official">Official documents</span><span class="stat-arrow">↗</span></button>
+      <button class="stat" data-category="research"><span class="stat-value" id="stat-research">3</span><span data-i18n="research">Research articles</span><span class="stat-arrow">↗</span></button>
+    </section>
+    <section id="catalogue" class="catalogue">
+      <aside class="filters" aria-label="Filter records">
+        <div class="filter-heading"><h2 data-i18n="refine">Refine the archive</h2><button id="reset" class="text-button" data-i18n="reset">Reset</button></div>
+        <label><span data-i18n="category">Record category</span><select id="category"><option value="all">All categories</option><option value="news">News & context</option><option value="official">Official documents</option><option value="research">Research articles</option><option value="project">Research projects</option></select></label>
+        <label><span data-i18n="district">District / scope</span><select id="district"></select></label>
+        <label><span data-i18n="river">River / site</span><select id="river"></select></label>
+        <label><span data-i18n="dateFrom">From source date</span><input type="date" id="dateFrom" value="2026-01-01"></label><label><span data-i18n="dateTo">Through source date</span><input type="date" id="dateTo"></label><label><span data-i18n="year">Source year</span><select id="year"></select></label>
+        <label><span data-i18n="material">Material</span><select id="material"><option value="all">All materials</option><option value="sand">Sand</option><option value="gravel">Stone / gravel</option><option value="soil">Soil</option></select></label>
+        <label><span data-i18n="topic">Topic</span><select id="topic"></select></label>
+        <label><span data-i18n="sourceLanguage">Source language</span><select id="sourceLanguage"><option value="all">Both languages</option><option value="Bangla">Bangla</option><option value="English">English</option></select></label>
+        <label><span data-i18n="decision">Review decision</span><select id="decision"><option value="all">All decisions</option><option value="Pending">Pending</option><option value="Accept">Accept</option><option value="Revise">Revise</option><option value="Reject">Reject</option></select></label>
+        <label><span data-i18n="publisher">Publisher / authority</span><select id="source"></select></label>
+        <div class="sidebar-note"><span class="small-label" data-i18n="scopeNote">COVERAGE NOTE</span><p data-i18n="coverage">17 selected records, including one research project. This pilot does not measure national completeness.</p><button class="text-button" data-view="methods" data-i18n="readMethod">Read the collection method ↗</button></div>
+      </aside>
+      <div class="archive-content">
+        <div class="section-heading"><div><p class="eyebrow" id="section-eyebrow">THE EVIDENCE ARCHIVE</p><h2 id="section-title">Browse the collection</h2></div><details class="export-menu"><summary class="button secondary" data-i18n="export">Export ↓</summary><div class="export-options"><button id="export-csv" data-i18n="exportCsv">Filtered records · CSV</button><button id="export-review" data-i18n="exportReview">Review backup · JSON</button><button id="import-review" data-i18n="importReview">Import review backup</button><a href="Bangladesh_Sand_Watch_pilot.xlsx" download data-i18n="workbook">Original pilot · Excel</a></div></details></div>
+        <div id="review-intro" class="review-intro" hidden><strong data-i18n="reviewTitle">Your editorial workspace</strong><p data-i18n="reviewLocal">Decisions and notes are saved across devices. Export a review backup for a separate copy. Accept means accepted for the archive, not independently verified.</p></div>
+        <div class="search-wrap"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="Search rivers, places, titles, or topics…" aria-label="Search archive"><kbd>/</kbd></div>
+        <div class="results-toolbar"><p id="results-count" role="status" aria-live="polite">Loading records…</p><label class="sort-label"><span data-i18n="sort">Sort</span><select id="sort"><option value="newest">Newest source date</option><option value="oldest">Oldest source date</option><option value="source">Publisher A–Z</option><option value="id">Record ID</option></select></label></div>
+        <div id="records" class="records"></div>
+        <div id="empty" class="empty" hidden><span aria-hidden="true">⌕</span><h3 data-i18n="noResults">No matching records</h3><p data-i18n="trySearch">Try a broader search or reset the filters.</p><button id="empty-reset" class="button secondary" data-i18n="reset">Reset</button></div>
+        <div class="archive-bottom"><span id="review-progress">0 of 17 records reviewed</span><span data-i18n="datesNote">Dates retain the source’s meaning. Undated records appear last.</span></div>
+      </div>
+    </section>
+    <section id="methods" class="methods" hidden>
+      <div class="section-heading"><div><p class="eyebrow" data-i18n="methodEyebrow">TRANSPARENT BY DESIGN</p><h2 data-i18n="methodTitle">What this collection can tell you</h2></div><a class="button secondary" href="Bangladesh_Sand_Watch_pilot.xlsx" download data-i18n="downloadWorkbook">Download pilot workbook ↓</a></div>
+      <div class="method-grid"><article><span class="method-number">01</span><h3 data-i18n="sampleTitle">A bounded sample</h3><p data-i18n="sampleText">Eight bilingual searches returned 32 hits. Selection tested different source types and extraction difficulties. The 17 retained records are examples, not a complete national inventory.</p></article><article><span class="method-number">02</span><h3 data-i18n="claimsTitle">Claims stay attributed</h3><p data-i18n="claimsText">News allegations, editorial opinion, research findings, and official instruments remain distinct. A newspaper headline is not a legal determination. Accepting a record does not verify every claim.</p></article><article><span class="method-number">03</span><h3 data-i18n="datesTitle">Dates keep their context</h3><p data-i18n="datesText">Publication, update, first-online, notification, and posting dates are labeled. The consolidated 2010 law has no verified full date here. A project period is not a publication date.</p></article><article><span class="method-number">04</span><h3 data-i18n="pdfTitle">Documents need checking</h3><p data-i18n="pdfText">Only 4 of 35 pages of the 2025 rules and 2 of 4 pages of the Sunamganj tender were parsed. Bengali OCR contains errors. Deadlines, amounts, legal wording, and unread pages need visual review.</p></article></div>
+      <div class="method-strip"><div><strong>22</strong><span data-i18n="examined">initial source pages examined</span></div><div><strong>3</strong><span data-i18n="recovered">sources recovered on retry</span></div><div><strong>4</strong><span data-i18n="unresolved">page bodies unresolved</span></div><div><strong>1</strong><span data-i18n="duplicate">DOI duplicate merged</span></div></div>
+      <div class="method-limits"><h3 data-i18n="limitsTitle">Current limits</h3><p data-i18n="limitsText">This version contains a fixed pilot dataset. It does not collect new reports automatically. Nationwide recall, reviewer hours, and recurring operating cost have not been measured. Missing coverage does not show an absence of extraction. Summaries still require native-language editorial review.</p></div>
+      <div class="coverage-section"><h3>Source registry & collection history</h3><p id="coverage-count"></p><p class="registry-note">Planned sources are not automatically proof of coverage. Check dates refer to targeted searches, not every page on a website. Historical backfill and additional district portals will be added gradually.</p><div class="audit-scroll"><table><thead><tr><th>Source</th><th>Category / language</th><th>Baseline / last targeted check</th><th>Coverage note</th></tr></thead><tbody id="registry-body"></tbody></table></div><h3 class="runs-title">Collection runs</h3><div id="collection-runs"></div></div><div class="expanded-log"><h3 data-i18n="backfillTitle">2026 backfill progress</h3><p id="backfill-progress"></p><p data-i18n="checkedMeaning">Checked means a targeted indexed search was performed. It does not mean every relevant article on that source was found.</p><div class="audit-scroll"><table><thead><tr><th>Source</th><th>Jan</th><th>Feb</th><th>Mar</th><th>Apr</th><th>May</th><th>Jun</th><th>Jul</th><th>Aug</th><th>Sep</th><th>Oct</th></tr></thead><tbody id="month-matrix"></tbody></table></div><h3 data-i18n="discoveryTitle">Discovery & retrieval log</h3><div class="log-tools"><input id="log-search" type="search" placeholder="Search titles, sources, queries…" aria-label="Search discovery log"><select id="log-status" aria-label="Discovery status"><option value="all">All statuses</option></select><button class="button secondary" id="export-log">Export log CSV ↓</button></div><p id="log-count"></p><div class="audit-scroll"><table><thead><tr><th>Discovered source</th><th>Date / status</th><th>Query / reason</th></tr></thead><tbody id="discovery-body"></tbody></table></div><details class="audit"><summary data-i18n="searchHistory">Search attempts and failures</summary><div class="audit-scroll"><table><thead><tr><th>Query</th><th>Status / hits</th><th>Error / coverage limit</th></tr></thead><tbody id="search-history"></tbody></table></div></details></div><div class="source-section"><h3 data-i18n="inventory">Publishers & authorities in the pilot</h3><div id="source-inventory" class="source-inventory"></div></div>
+      <details class="audit"><summary data-i18n="audit">Discovery log · 32 search hits</summary><p data-i18n="auditNote">The log includes duplicates, deferred results, and retrieval failures. It records discovery decisions rather than validating the reported events.</p><div class="audit-scroll"><table><thead><tr><th data-i18n="searchHit">Search hit</th><th data-i18n="disposition">Disposition</th><th data-i18n="retrieval">Retrieval</th></tr></thead><tbody id="audit-body"></tbody></table></div></details>
+    </section>
+  </main>
+  <footer><div class="footer-brand">Bangladesh Sand Watch<span>.</span></div><p data-i18n="footer">An evidence archive for rivers, extraction, and governance.</p><span data-i18n="footerEdition">Initial website · Pilot dataset</span></footer>
+  <dialog id="record-dialog" aria-labelledby="dialog-title"><div class="dialog-top"><span id="dialog-kind"></span><button id="close-dialog" class="icon-button" aria-label="Close record">×</button></div><div id="detail-content"></div></dialog>
+  <input type="file" id="review-file" accept="application/json,.json" hidden>
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+  <noscript><p>This archive requires JavaScript for search. <a href="Bangladesh_Sand_Watch_pilot.xlsx">Download the workbook</a> to read all records.</p></noscript>
+</body>
+</html>

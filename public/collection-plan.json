@@ -1,0 +1,81 @@
+{
+  "version": "3.0",
+  "audienceRequirement": "owner-private",
+  "timezone": "America/Chicago",
+  "maxSearchQueries": 8,
+  "maxResultsPerQuery": 20,
+  "maxNewPages": 20,
+  "maxNewRecords": 20,
+  "queries": [
+    "বাংলাদেশ \"বালু উত্তোলন\"",
+    "বাংলাদেশ \"পাথর উত্তোলন\"",
+    "\"Bangladesh\" \"sand extraction\" -site:facebook.com -site:youtube.com -site:instagram.com",
+    "\"Bangladesh\" \"gravel mining\" OR \"stone quarry\"",
+    "site:gov.bd \"বালুমহাল\" \"ইজারা\" {year}",
+    "site:minland.gov.bd \"বালুমহাল\""
+  ],
+  "rotation": "Use up to six pending source-by-month jobs from GET /api/backfill plus two fresh-news searches. Each Monday include research within the eight-query limit. Split a result-cap search into narrower dates or separate sand and stone terms; record it as Needs narrower search, never complete coverage.",
+  "researchQuery": "\"Bangladesh\" \"sand mining\" research journal",
+  "sourceRules": [
+    "Use Firecrawl to search and read actual pages. Do not create records from snippets alone.",
+    "Backfill from January 1, 2026 to the current date, and check recent reports with a fourteen-day overlap. Verify dates in source bodies/metadata. Preserve older context records, but log newly found older pages as Outside date scope rather than new 2026 articles. Distinguish update dates from publication dates.",
+    "For each unseen canonical URL, read source content before writing. Retry a missing body once; log failures.",
+    "Retain English and Bangla original titles, attributed paraphrases in both languages, district, river/site, source date with its meaning, material, topics, and source links. Use Unknown for unresolved places and blank dates when unverified.",
+    "Keep news, editorials, research, project pages, laws, rules, and lease notices distinct. New entries must be Pending.",
+    "Read only accessible content. Flag abstract-only research and partial PDF parsing. Never invent dates, quantities, locations, legality, or unread provisions.",
+    "Canonical URL and DOI deduplication is enforced by the writer. Do not merge different events just because they share a river.",
+    "Keep new summaries concise and match the source claim strength in both languages. Flag allegations, legal interpretation, dates and OCR for review.",
+    "Run at most two Firecrawl searches concurrently. On HTTP 429, respect Retry-After or wait 60 seconds, retry once, then log Retry status. A rate-limit failure is not a zero-result search.",
+    "Log every returned URL, exact query, rank, discovery status, date evidence, reason, duplicate linkage, and retrieval failure through POST /api/backfill. Snippets alone remain Awaiting retrieval, not article records.",
+    "Prioritize existing Awaiting retrieval and Retry items, not only fresh discoveries. Resolve or retry readable 2026 candidates before leaving them indefinitely in the log.",
+    "For capped jobs, POST new narrower jobs to /api/backfill with id, parentId, sourceId, source, month, startDate, endDateExclusive, query, limit and status Queued. Mark the parent Needs narrower search. Check all narrower jobs before suggesting that the original time window has been checked.",
+    "Bangla discovery must vary বালু উত্তোলন, বালু তোলা, বালু লুট, সিলিকা বালু, পাথর উত্তোলন, পাথর লুট and কোয়ারি. English discovery must vary sand extraction, sand mining, sand lifting, gravel extraction and stone quarrying. Search result limits and indexing make all checks partial.",
+    "If using Firecrawl JSON extraction, use jsonOptions.prompt without a schema object because the current connector rejects schema fields. Verify extracted dates against actual publication labels or publisher metadata.",
+    "Use the publication calendar shown by each source. Bangladesh sources may already be on the next day in Asia/Dhaka while the user is in America/Chicago. Do not mistake a source header clock for an article date.",
+    "Continue through the current date; refresh the current-month end boundary and enqueue source-month jobs for newly begun months. Preserve completed historical jobs and their exact original queries."
+  ],
+  "execution": [
+    "Read the current Site with Sites get_site. Require owner-private access: owner is the only allowed user and there are no allowed groups or external visitors. Stop if the audience changed.",
+    "Retrieve /api/update-plan and /api/archive using a fresh Sites service access token in the OAI-Sites-Authorization header. Keep credentials in memory and hidden stdin only.",
+    "GET /api/backfill for pending jobs and read discovery backlog from /api/archive. Perform bounded searches and scrapes. POST exact searches and all returned hits to /api/backfill, plus job status updates. Preserve failures and capped-result searches.",
+    "POST one JSON object to /api/ingest with runId, records, sourceChecks, found, queries, and errors. Use a stable runId for retries. Never republish the Site for routine collection.",
+    "GET /api/archive again and confirm inserted IDs, Pending status, and saved run. Report only meaningful additions or failures."
+  ],
+  "requestShape": {
+    "runId": "collection-ISO-timestamp",
+    "found": 0,
+    "queries": [],
+    "errors": [],
+    "sourceChecks": [
+      {
+        "id": "registry-id",
+        "error": null
+      }
+    ],
+    "records": [
+      {
+        "type": "News",
+        "source": "Publisher",
+        "title": "Original title",
+        "date": "",
+        "dateKind": "Date not verified",
+        "district": "Unknown",
+        "river": "Unknown",
+        "material": "Sand",
+        "topics": "Extraction",
+        "language": "Bangla",
+        "en": "Source-attributed English summary",
+        "bn": "উৎস অনুযায়ী বাংলা সারসংক্ষেপ",
+        "evidence": "Article text",
+        "flag": "Pending editorial review",
+        "documentId": "",
+        "otherDate": "",
+        "url": "https://example.com/article",
+        "alternateUrl": "",
+        "notes": "Outstanding checks and content limits"
+      }
+    ]
+  },
+  "scopeStart": "2026-01-01",
+  "backfillEndpoint": "/api/backfill"
+}
