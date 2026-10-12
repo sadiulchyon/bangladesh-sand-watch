@@ -1,3 +1,7 @@
+# Bangladesh Sand Watch v4 hosting migration
+
+The independent Cloudflare Worker, secure owner login, deployment configuration, and complete database snapshot are in [`cloudflare/`](cloudflare/README.md). The current ChatGPT Sites deployment remains live; Cloudflare has not yet been deployed. All v3 source is retained below.
+
 # Bangladesh Sand Watch, website v3
 
 Preserves the original bilingual design and the 17-record pilot. Adds a durable D1 archive, shared editorial decisions/notes, URL and DOI deduplication, a 45-source registry, run history, and a bounded unattended ingestion API. New collection records enter Pending review.
