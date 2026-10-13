@@ -18,7 +18,7 @@ export default {
       if(p==='/api/discovery-export') return discoveryExport.GET(request);
       if(p==='/api/update-plan') {
         const result=await updatePlan.GET(); const plan=await result.json() as any;
-        return Response.json({...plan,maxNewRecords:10,hosting:'Cloudflare Workers Free',writeBatchLimits:{records:10,reviews:20,logs:40},bootstrap:'Import cloudflare/initial-data.sql with Wrangler. HTTP bootstrap is disabled.'});
+        return Response.json({...plan,maxNewRecords:10,hosting:'Cloudflare Workers Free',writeBatchLimits:{records:10,reviews:20,logs:40},bootstrap:'Import cloudflare/initial-data_v2.sql with Wrangler. HTTP bootstrap is disabled.'});
       }
     }
     if(p.startsWith('/api/')) {

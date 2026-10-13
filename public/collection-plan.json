@@ -1,5 +1,5 @@
 {
-  "version": "3.0",
+  "version": "3.1",
   "audienceRequirement": "owner-private",
   "timezone": "America/Chicago",
   "maxSearchQueries": 8,
@@ -14,11 +14,11 @@
     "site:gov.bd \"বালুমহাল\" \"ইজারা\" {year}",
     "site:minland.gov.bd \"বালুমহাল\""
   ],
-  "rotation": "Use up to six pending source-by-month jobs from GET /api/backfill plus two fresh-news searches. Each Monday include research within the eight-query limit. Split a result-cap search into narrower dates or separate sand and stone terms; record it as Needs narrower search, never complete coverage.",
+  "rotation": "Use up to three unfinished historical source-year/period jobs and three 2026 source-month jobs from /api/backfill and /api/archive, plus two recent/research searches. Prefer unresolved source bodies. Each Monday include research within the eight-query limit. Split capped searches into narrower time windows and log the limits.",
   "researchQuery": "\"Bangladesh\" \"sand mining\" research journal",
   "sourceRules": [
     "Use Firecrawl to search and read actual pages. Do not create records from snippets alone.",
-    "Backfill from January 1, 2026 to the current date, and check recent reports with a fourteen-day overlap. Verify dates in source bodies/metadata. Preserve older context records, but log newly found older pages as Outside date scope rather than new 2026 articles. Distinguish update dates from publication dates.",
+    "Collect historical coverage before 2026 and all 2026 reports through the current source-local date. Recent discovery uses a fourteen-day overlap. Read original dates from article labels or publisher metadata, distinguish publication/update/issue dates, and retain blank dates with a verified publication year in otherDate when no day/month is available. Do not exclude relevant older reports solely because they precede 2026.",
     "For each unseen canonical URL, read source content before writing. Retry a missing body once; log failures.",
     "Retain English and Bangla original titles, attributed paraphrases in both languages, district, river/site, source date with its meaning, material, topics, and source links. Use Unknown for unresolved places and blank dates when unverified.",
     "Keep news, editorials, research, project pages, laws, rules, and lease notices distinct. New entries must be Pending.",
@@ -32,7 +32,8 @@
     "Bangla discovery must vary বালু উত্তোলন, বালু তোলা, বালু লুট, সিলিকা বালু, পাথর উত্তোলন, পাথর লুট and কোয়ারি. English discovery must vary sand extraction, sand mining, sand lifting, gravel extraction and stone quarrying. Search result limits and indexing make all checks partial.",
     "If using Firecrawl JSON extraction, use jsonOptions.prompt without a schema object because the current connector rejects schema fields. Verify extracted dates against actual publication labels or publisher metadata.",
     "Use the publication calendar shown by each source. Bangladesh sources may already be on the next day in Asia/Dhaka while the user is in America/Chicago. Do not mistake a source header clock for an article date.",
-    "Continue through the current date; refresh the current-month end boundary and enqueue source-month jobs for newly begun months. Preserve completed historical jobs and their exact original queries."
+    "Continue through the current date; refresh the current-month end boundary and enqueue source-month jobs for newly begun months. Preserve completed historical jobs and their exact original queries.",
+    "Previously logged Outside date scope items can now be reconsidered for historical inclusion. Preserve their original retrieval evidence and link successful imports; do not rewrite an old search as newly performed. Source-year checks are partial keyword checks, not complete coverage."
   ],
   "execution": [
     "Read the current Site with Sites get_site. Require owner-private access: owner is the only allowed user and there are no allowed groups or external visitors. Stop if the audience changed.",
@@ -76,6 +77,7 @@
       }
     ]
   },
-  "scopeStart": "2026-01-01",
-  "backfillEndpoint": "/api/backfill"
+  "scopeStart": "1900-01-01",
+  "backfillEndpoint": "/api/backfill",
+  "historicalCoverage": "All available reports from the territory of Bangladesh, including pre-2026 material and 2026. Search indexing and source availability limit coverage."
 }

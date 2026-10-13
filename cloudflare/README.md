@@ -9,7 +9,7 @@ The Worker guards EVERY page, asset, and API with an owner login or collector be
 1. Create your Cloudflare account and keep the Workers Free plan. No custom domain is needed initially; use the assigned workers.dev address.
 2. Clone this private GitHub repository. Use Node 22 or newer. In `cloudflare/`, run `npm install` and `npm test`.
 3. Run `npx wrangler login`, then `npx wrangler d1 create bangladesh-sand-watch`. Copy the returned, non-secret database ID into `cloudflare/wrangler.jsonc`, replacing the all-zero placeholder. Commit that configuration update.
-4. From `cloudflare/`, run `npx wrangler d1 migrations apply bangladesh-sand-watch --remote --config wrangler.jsonc` and then `npx wrangler d1 execute bangladesh-sand-watch --remote --config wrangler.jsonc --file initial-data.sql`. The latter imports the verified snapshot: 64 records, 64 reviews, 45 sources, 4 collection runs, 314 discovery hits, 40 search attempts, and 450 backfill jobs. Import is idempotent and does not overwrite existing rows. Some operational timestamps use the snapshot timestamp because the archive API does not export every underlying table timestamp.
+4. From `cloudflare/`, run `npx wrangler d1 migrations apply bangladesh-sand-watch --remote --config wrangler.jsonc` and then `npx wrangler d1 execute bangladesh-sand-watch --remote --config wrangler.jsonc --file initial-data_v2.sql`. The latter imports the verified snapshot: 130 records, 130 reviews, 45 sources, 8 collection runs, 583 discovery hits, 66 search attempts, and 574 backfill jobs. Import is idempotent and does not overwrite existing rows. Some operational timestamps use the snapshot timestamp because the archive API does not export every underlying table timestamp.
 5. Set a dedicated owner username and strong password using the secure Wrangler prompts: `npx wrangler secret put OWNER_USERNAME --config wrangler.jsonc`, then `npx wrangler secret put OWNER_PASSWORD --config wrangler.jsonc`. Set a separate random collector credential with `npx wrangler secret put INGEST_TOKEN --config wrangler.jsonc`. Never paste these secrets into GitHub source, issues, or chat. Secret updates may deploy a version, but this Worker refuses all access until credentials match.
 6. Run `npm run build`, then `npm run deploy`. The deploy helper refuses the placeholder database ID. Open the returned URL and sign in with the dedicated owner credentials. Verify records, reviews, log export and backfill counts before replacing the existing website.
 
@@ -32,4 +32,8 @@ Scraping remains separate from hosting. Cloudflare does not supply Firecrawl cre
 - SQLite schema/snapshot import and repeat import preserve all table counts.
 - Wrangler dry-run bundles the standalone Worker and static assets successfully.
 
-Account creation, real D1 import, hosted endpoint tests, browser QA and automatic deployment remain pending.
+The owner has created and signed into a Cloudflare account. Deployment access is unavailable to the assistant in the owner's app browser. Real D1 import, secret setup, hosted endpoint tests, browser QA and automatic deployment remain pending.
+
+## Historical archive update
+
+Snapshot v2 contains 130 records including 52 additions with source dates from 2013 through 2026. All 52 enter Pending review with bilingual attributed summaries. The archive opens across all years, and the existing collector now alternates historical and current searches. Updated-only publication labels and first-online versus issue dates are flagged. Indexed searches remain partial. The previous `initial-data.sql` is retained for version history; use v2 for a fresh deployment.

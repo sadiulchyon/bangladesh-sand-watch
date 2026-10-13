@@ -1,8 +1,8 @@
 # Bangladesh Sand Watch v4 hosting migration
 
-The independent Cloudflare Worker, secure owner login, deployment configuration, and complete database snapshot are in [`cloudflare/`](cloudflare/README.md). The current ChatGPT Sites deployment remains live; Cloudflare has not yet been deployed. All v3 source is retained below.
+The independent Cloudflare Worker, owner login, deployment configuration and archive snapshot are in [`cloudflare/`](cloudflare/README.md). The ChatGPT Sites deployment remains live; Cloudflare deployment is pending. The archive now opens across all available years.
 
-# Bangladesh Sand Watch, website v3
+# Bangladesh Sand Watch, website v3.1
 
 Preserves the original bilingual design and the 17-record pilot. Adds a durable D1 archive, shared editorial decisions/notes, URL and DOI deduplication, a 45-source registry, run history, and a bounded unattended ingestion API. New collection records enter Pending review.
 
@@ -30,6 +30,6 @@ Daily discovery starts with at most eight queries, twenty hits per query, and tw
 
 Noto Sans Bengali is supplied under the SIL Open Font License in public/assets/OFL.txt.
 
-## 2026 backfill
+## Historical and 2026 backfill
 
-The default archive starts on January 1, 2026 using labeled source dates, with older context retained. The new search/discovery tables retain every query attempt, returned URL, status, date evidence, record link and exclusion/retrieval reason. `/api/backfill` supplies queued month/source searches and accepts logs, status changes and narrower child jobs. `/api/backfill/bootstrap` seeds the 450 source–month checks separately from schema migrations. A Checked job means an indexed keyword search occurred; it never establishes exhaustive coverage. The source matrix, search-failure table and discovery CSV expose this distinction. Date filters are verified against actual source dates; updated-only records are flagged.
+The default archive now shows all available years, including historical reports and 2026. Date filters remain available. Historical source-year checks supplement the 2026 month matrix. Publication years are retained without inventing exact dates. The new search/discovery tables retain every query attempt, returned URL, status, date evidence, record link and exclusion/retrieval reason. `/api/backfill` supplies queued month/source searches and accepts logs, status changes and narrower child jobs. `/api/backfill/bootstrap` seeds the 450 source–month checks separately from schema migrations. A Checked job means an indexed keyword search occurred; it never establishes exhaustive coverage. The source matrix, search-failure table and discovery CSV expose this distinction. Date filters are verified against actual source dates; updated-only records are flagged.
