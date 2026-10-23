@@ -48,4 +48,5 @@ execFileSync(process.execPath,['--check',path.join(root,'public/app.js')]);
 execFileSync(process.execPath,['--check',path.join(root,'public/core.js')]);
 execFileSync(process.execPath,['--check',path.join(root,'public/visuals.js')]);
 execFileSync(process.execPath,['--check',path.join(root,'public/places.js')]);
+execFileSync(process.execPath,['--check',path.join(root,'public/insights.js')]);
 console.log('Passed: 17 records, provenance and dates, bilingual aliases, combined filters, sorting, review import/export rules, CSV safety, syntax, DOM targets, and static assets.');

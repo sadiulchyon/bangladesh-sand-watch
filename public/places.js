@@ -122,3 +122,7 @@ export function detectRivers(text){
  if(!found.length)for(const [name,,pattern] of groupRules)if(pattern.test(rest)){found.push(name);break;}
  return found;
 }
+
+// Spelling variants of the same publisher. Separate editions (e.g. The Daily Star Bangla) stay distinct.
+const sourceAliases={'Ittefaq':'The Daily Ittefaq','bdnews24':'bdnews24.com','bdnews24 Bangla':'bdnews24.com Bangla','BSS':'Bangladesh Sangbad Sangstha','Jago News24':'Jago News 24','rajshahi.gov.bd':'Rajshahi District Administration'};
+export const canonicalSource=s=>sourceAliases[s]??s;
