@@ -18,6 +18,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&display=swap">
   <link rel="stylesheet" href="styles.css">
   <script type="module" src="app.js"></script>
+  <script type="module" src="visuals.js"></script>
 </head>
 <body>
   <a class="skip" href="#main">Skip to archive</a>
@@ -35,6 +36,8 @@
   </header>
   <main id="main">
     <section class="intro">
+      <img class="intro-photo" src="media/mining-site.jpg" srcset="media/mining-site-sm.jpg 1200w, media/mining-site.jpg 2400w" sizes="(max-width: 740px) 100vw, 1440px" fetchpriority="high" alt="Aerial view of a river sand extraction site with trucks, piles of sediment, and channels" data-alt-en="Aerial view of a river sand extraction site with trucks, piles of sediment, and channels" data-alt-bn="ট্রাক, বালুর স্তূপ ও জলপ্রবাহসহ নদীতে উত্তোলনস্থলের আকাশ থেকে তোলা ছবি">
+      <p class="intro-credit" data-visual-en="Owner-supplied DJI photograph · Site and capture date unverified" data-visual-bn="ব্যবহারকারীর দেওয়া DJI ছবি · স্থান ও তোলার তারিখ যাচাই করা হয়নি">Owner-supplied DJI photograph · Site and capture date unverified</p>
       <div class="intro-copy">
         <p class="eyebrow" data-i18n="eyebrow">BANGLADESH · RIVERS · EXTRACTION · GOVERNANCE</p>
         <h1 data-i18n="headline">Follow the sand.<br>Find the evidence.</h1>
@@ -50,6 +53,16 @@
       <button class="stat" data-category="news"><span class="stat-value" id="stat-news">9</span><span data-i18n="news">News & context</span><span class="stat-arrow">↗</span></button>
       <button class="stat" data-category="official"><span class="stat-value" id="stat-official">4</span><span data-i18n="official">Official documents</span><span class="stat-arrow">↗</span></button>
       <button class="stat" data-category="research"><span class="stat-value" id="stat-research">3</span><span data-i18n="research">Research articles</span><span class="stat-arrow">↗</span></button>
+    </section>
+    <section id="visuals" class="visuals" aria-labelledby="visuals-title">
+      <div class="visuals-header"><div><p class="eyebrow" data-visual-en="FROM THE FIELD &amp; THE RESEARCH" data-visual-bn="মাঠ ও গবেষণা থেকে">FROM THE FIELD &amp; THE RESEARCH</p><h2 id="visuals-title" data-visual-en="See the river change" data-visual-bn="নদীর পরিবর্তন দেখুন">See the river change</h2></div><p data-visual-en="Satellite timelapses and figures from the Lubha River study give context to the evidence archive below." data-visual-bn="লুভা নদীর গবেষণার স্যাটেলাইট টাইমল্যাপস ও চিত্র নিচের তথ্য-আর্কাইভকে প্রেক্ষাপট দেয়।">Satellite timelapses and figures from the Lubha River study give context to the evidence archive below.</p></div>
+      <div class="media-strip">
+        <article class="media-card video"><video controls muted playsinline preload="none" poster="media/lubha-skysat-timelapse-poster.jpg" aria-label="Satellite timelapse of the Lubha River"><source src="media/lubha-skysat-timelapse.mp4" type="video/mp4"></video><div class="media-copy"><span class="media-kind" data-visual-en="Video · 11 s · silent" data-visual-bn="ভিডিও · ১১ সেকেন্ড · শব্দহীন">Video · 11 s · silent</span><h3 data-visual-en="Lubha from above" data-visual-bn="ওপর থেকে লুভা">Lubha from above</h3><p data-visual-en="SkySat satellite sequence of changing river features. Owner-supplied." data-visual-bn="নদীর পরিবর্তনশীল রূপের স্কাইস্যাট স্যাটেলাইট দৃশ্য। ব্যবহারকারীর দেওয়া।">SkySat satellite sequence of changing river features. Owner-supplied.</p></div></article>
+        <article class="media-card video"><video controls muted playsinline preload="none" poster="media/lubha-timelapse-poster.jpg" aria-label="Lubha River timelapse"><source src="media/lubha-timelapse.mp4" type="video/mp4"></video><div class="media-copy"><span class="media-kind" data-visual-en="Video · 26 s · silent" data-visual-bn="ভিডিও · ২৬ সেকেন্ড · শব্দহীন">Video · 26 s · silent</span><h3 data-visual-en="Lubha across time" data-visual-bn="সময়ের ব্যবধানে লুভা">Lubha across time</h3><p data-visual-en="River timelapse with no narration. Owner-supplied." data-visual-bn="বর্ণনাহীন নদীর টাইমল্যাপস। ব্যবহারকারীর দেওয়া।">River timelapse with no narration. Owner-supplied.</p></div></article>
+        <button class="media-card figure" type="button" data-figure="media/lubha-location.jpg" data-credit-en="Chyon et al. (2026), Figure 2. Lubhachorra study location." data-credit-bn="Chyon ও সহলেখক (২০২৬), চিত্র ২। লুভাছড়া গবেষণাস্থল।"><img src="media/lubha-location-thumb.jpg" loading="lazy" alt="Map locating the Lubhachorra study reach" data-alt-en="Map locating the Lubhachorra study reach" data-alt-bn="লুভাছড়া গবেষণাস্থলের অবস্থান মানচিত্র"><span class="media-copy"><span class="media-kind" data-visual-en="Figure 2 · tap to enlarge" data-visual-bn="চিত্র ২ · বড় করতে চাপুন">Figure 2 · tap to enlarge</span><span class="media-title" data-visual-en="Where the study took place" data-visual-bn="গবেষণাস্থল কোথায়">Where the study took place</span></span></button>
+        <button class="media-card figure" type="button" data-figure="media/lubha-1972-2024.jpg" data-credit-en="Chyon et al. (2026), Figure 3. The river landscape in 1972 and 2024." data-credit-bn="Chyon ও সহলেখক (২০২৬), চিত্র ৩। ১৯৭২ ও ২০২৪ সালে নদীর ভূদৃশ্য।"><img src="media/lubha-1972-2024-thumb.jpg" loading="lazy" alt="Comparison of the Lubhachorra River in 1972 and 2024" data-alt-en="Comparison of the Lubhachorra River in 1972 and 2024" data-alt-bn="১৯৭২ ও ২০২৪ সালে লুভাছড়া নদীর তুলনা"><span class="media-copy"><span class="media-kind" data-visual-en="Figure 3 · tap to enlarge" data-visual-bn="চিত্র ৩ · বড় করতে চাপুন">Figure 3 · tap to enlarge</span><span class="media-title" data-visual-en="1972 to 2024" data-visual-bn="১৯৭২ থেকে ২০২৪">1972 to 2024</span></span></button>
+        <button class="media-card figure" type="button" data-figure="media/lubha-extraction-recovery.jpg" data-credit-en="Chyon et al. (2026), Figure 10. Conceptual relative trends, not a measured time series." data-credit-bn="Chyon ও সহলেখক (২০২৬), চিত্র ১০। ধারণাগত আপেক্ষিক প্রবণতা; পরিমাপ করা সময়সারি নয়।"><img src="media/lubha-extraction-recovery-thumb.jpg" loading="lazy" alt="Conceptual diagram of relative extraction and recovery trends" data-alt-en="Conceptual diagram of relative extraction and recovery trends" data-alt-bn="উত্তোলন ও পুনরুদ্ধারের আপেক্ষিক প্রবণতার ধারণাগত চিত্র"><span class="media-copy"><span class="media-kind" data-visual-en="Figure 10 · tap to enlarge" data-visual-bn="চিত্র ১০ · বড় করতে চাপুন">Figure 10 · tap to enlarge</span><span class="media-title" data-visual-en="Extraction and recovery" data-visual-bn="উত্তোলন ও পুনরুদ্ধার">Extraction and recovery</span></span></button>
+      </div>
     </section>
     <section id="catalogue" class="catalogue">
       <aside class="filters" aria-label="Filter records">
@@ -86,6 +99,7 @@
   </main>
   <footer><div class="footer-brand">Bangladesh Sand Watch<span>.</span></div><p data-i18n="footer">An evidence archive for rivers, extraction, and governance.</p><span data-i18n="footerEdition">Initial website · Pilot dataset</span></footer>
   <dialog id="record-dialog" aria-labelledby="dialog-title"><div class="dialog-top"><span id="dialog-kind"></span><button id="close-dialog" class="icon-button" aria-label="Close record">×</button></div><div id="detail-content"></div></dialog>
+  <dialog id="media-dialog" class="media-dialog" aria-label="Research figure"><div class="dialog-top"><span id="media-credit"></span><button id="close-media" class="icon-button" aria-label="Close figure">×</button></div><img id="media-image" alt=""><div class="media-dialog-foot"><a class="button secondary" href="https://doi.org/10.1016/j.crsus.2025.100605" target="_blank" rel="noopener noreferrer" data-visual-en="Read the paper ↗" data-visual-bn="গবেষণাপত্র পড়ুন ↗">Read the paper ↗</a></div></dialog>
   <input type="file" id="review-file" accept="application/json,.json" hidden>
   <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
   <noscript><p>This archive requires JavaScript for search. <a href="Bangladesh_Sand_Watch_pilot.xlsx">Download the workbook</a> to read all records.</p></noscript>

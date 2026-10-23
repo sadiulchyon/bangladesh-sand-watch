@@ -46,4 +46,5 @@ for(const m of html.matchAll(/(?:src|href)="([^"#]+)"/g)){if(!/^(https?:|data:)/
 assert.ok(existsSync(path.join(root,'public/assets/NotoSansBengali.ttf')));
 execFileSync(process.execPath,['--check',path.join(root,'public/app.js')]);
 execFileSync(process.execPath,['--check',path.join(root,'public/core.js')]);
+execFileSync(process.execPath,['--check',path.join(root,'public/visuals.js')]);
 console.log('Passed: 17 records, provenance and dates, bilingual aliases, combined filters, sorting, review import/export rules, CSV safety, syntax, DOM targets, and static assets.');
