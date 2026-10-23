@@ -1,0 +1,10 @@
+{
+  "name": "bangladesh-sand-watch-collector",
+  "private": true,
+  "type": "module",
+  "description": "Automated collector for the public archive. Runs in GitHub Actions.",
+  "dependencies": {
+    "@mozilla/readability": "0.6.0",
+    "linkedom": "0.18.13"
+  }
+}
