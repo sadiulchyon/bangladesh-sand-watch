@@ -436,3 +436,11 @@ html[lang=bn] .stat-value,html[lang=bn] .method-strip strong{font-family:Bangla,
 @media (prefers-reduced-motion:reduce){
   *,*:before,*:after{scroll-behavior:auto!important;transition:none!important;animation:none!important}
 }
+
+/* ---------- Public (GitHub Pages) read-only mode ---------- */
+html[data-mode=public] .nav-button[data-view=review],
+html[data-mode=public] #export-review,
+html[data-mode=public] #import-review,
+html[data-mode=public] #review-form,
+html[data-mode=public] .filters label:has(#decision),
+html[data-mode=public] #review-progress{display:none!important}
