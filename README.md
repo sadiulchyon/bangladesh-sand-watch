@@ -4,7 +4,7 @@ Public address: https://sadiulchyon.github.io/bangladesh-sand-watch/
 
 `.github/workflows/pages.yml` runs `node scripts/check.mjs`, then `node scripts/build-pages.mjs`, and deploys `_site/` on every push to `main` (or by hand from the Actions tab). The build loads the verified D1 snapshot `cloudflare/initial-data_v2.sql` into an in-memory SQLite database and writes `data/archive.json` in the same shape as `GET /api/archive`. Set `SNAPSHOT` to build from a different SQL export.
 
-The public site is read-only (`<html data-mode="public">`). It hides the review workspace, the review editor, review import/export and the decision filter, and it never publishes editorial notes. Record CSV, discovery-log CSV and workbook downloads still work. To publish newer records, commit a fresh SQL snapshot and push to `main`.
+The public site is read-only (`<html data-mode="public">`). It hides the review workspace, the review editor, review import/export and the decision filter, and it never publishes editorial notes. Record CSV, discovery-log CSV and workbook downloads still work. To publish newer records, save `/api/archive` from the live site into `snapshots/` (see `snapshots/README.md`) and push to `main`; the build merges it into the SQL snapshot.
 
 One-time setup: in the repository, open Settings → Pages and set Source to "GitHub Actions".
 
