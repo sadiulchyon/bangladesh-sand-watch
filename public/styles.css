@@ -573,3 +573,7 @@ html[lang=bn] .slide figcaption strong{font-family:Bangla,var(--font);font-weigh
   .slide-nav.prev{left:8px}.slide-nav.next{right:8px}
 }
 @media (prefers-reduced-motion:reduce){.slide{transition:none}}
+
+/* ---------- Auto-collected badge ---------- */
+.auto-badge{display:inline-flex;align-items:center;gap:4px;padding:2px 8px;border-radius:999px;background:var(--teal-soft);color:var(--teal);font-size:10px;font-weight:650;letter-spacing:.3px}
+.auto-badge:before{content:'';width:5px;height:5px;border-radius:50%;background:currentColor}
