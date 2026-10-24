@@ -147,19 +147,58 @@ Return JSON only:
  "flag":"what a reviewer must still check, e.g. 'Allegations' or 'Abstract only'"}
 If not relevant, return {"relevant":false,"reason":"..."} only.`;
 
-let modelCalls=0;
+// GitHub Models endpoints, tried in order by probeModel(); the first that returns a real chat
+// completion is used for the run. Redirects are not followed so they show up in the log.
+const endpoints=[
+  {name:'models.github.ai',url:'https://models.github.ai/inference/chat/completions',model:MODEL,headers:{'Accept':'application/vnd.github+json','X-GitHub-Api-Version':'2022-11-28'},json:true},
+  {name:'models.inference.ai.azure.com (legacy)',url:'https://models.inference.ai.azure.com/chat/completions',model:MODEL.replace(/^[^/]+\//,''),headers:{},json:true}
+];
+let endpoint=null,modelCalls=0;
+async function callModel(ep,messages){
+  const res=await fetch(ep.url,{method:'POST',redirect:'manual',signal:AbortSignal.timeout(90000),
+    headers:{'Authorization':`Bearer ${env.GITHUB_TOKEN}`,'Content-Type':'application/json',...ep.headers},
+    body:JSON.stringify({model:ep.model,temperature:0.1,...(ep.json?{response_format:{type:'json_object'}}:{}),messages})});
+  return {res,text:await res.text()};
+}
+// Model replies sometimes wrap JSON in prose or code fences; take the outermost object.
+function parseReply(text){
+  let data;try{data=JSON.parse(text);}catch{throw new Error(`model endpoint returned non-JSON: ${JSON.stringify(text.slice(0,120))}`);}
+  const content=data?.choices?.[0]?.message?.content;
+  if(typeof content!=='string')throw new Error(`model response has no message content: ${JSON.stringify(text.slice(0,200))}`);
+  const a=content.indexOf('{'),b=content.lastIndexOf('}');
+  if(a<0||b<a)throw new Error(`model reply is not JSON: ${JSON.stringify(content.slice(0,120))}`);
+  return JSON.parse(content.slice(a,b+1));
+}
+async function probeModel(){
+  try{
+    const res=await fetch('https://models.github.ai/catalog/models',{headers:{'Authorization':`Bearer ${env.GITHUB_TOKEN}`,'Accept':'application/vnd.github+json'},signal:AbortSignal.timeout(20000)});
+    const text=await res.text();
+    try{const ids=JSON.parse(text).map(m=>m.id);log(`Model catalog (${ids.length}): ${ids.slice(0,40).join(', ')}`);if(!ids.includes(MODEL))log(`! ${MODEL} is not in the catalog`);}
+    catch{log(`Model catalog: HTTP ${res.status} ${text.slice(0,160)}`);}
+  }catch(e){log('Model catalog failed:',e.message);}
+  const messages=[{role:'system',content:'You answer with JSON only.'},{role:'user',content:'Return the JSON object {"ok": true}.'}];
+  for(const ep of endpoints){
+    for(const json of [true,false]){
+      ep.json=json;
+      try{
+        const {res,text}=await callModel(ep,messages);
+        log(`Probe ${ep.name} (model ${ep.model}, json mode ${json}): HTTP ${res.status}, ${res.headers.get('content-type')??'no content-type'}${res.headers.get('location')?', redirect to '+res.headers.get('location'):''}, body ${JSON.stringify(text.slice(0,200))}`);
+        if(res.ok&&parseReply(text).ok===true){endpoint=ep;log(`Using ${ep.name} with model ${ep.model}.`);return true;}
+      }catch(e){log(`Probe ${ep.name} (json mode ${json}) failed: ${e.message}`);}
+    }
+  }
+  return false;
+}
 async function writeRecord(page,{kind='article'}={}){
   if(modelCalls>=MAX_MODEL_CALLS)throw new Error('model call budget reached');
   if(modelCalls)await sleep(4500); // free tier: about 15 requests per minute
   modelCalls++;
   const content=`Source URL: ${page.url}\nSite: ${page.site||'unknown'}\nTitle: ${page.title}\nMaterial type: ${kind}\n\nText:\n${page.text.slice(0,12000)}`;
   for(let attempt=1;attempt<=3;attempt++){
-    const res=await fetch('https://models.github.ai/inference/chat/completions',{method:'POST',headers:{'Authorization':`Bearer ${env.GITHUB_TOKEN}`,'Content-Type':'application/json','Accept':'application/vnd.github+json'},
-      body:JSON.stringify({model:MODEL,temperature:0.1,response_format:{type:'json_object'},messages:[{role:'system',content:instructions},{role:'user',content}]}),signal:AbortSignal.timeout(90000)});
+    const {res,text}=await callModel(endpoint,[{role:'system',content:instructions},{role:'user',content}]);
     if(res.status===429){const wait=Number(res.headers.get('retry-after')||60);log(`Model rate limited; waiting ${wait}s`);if(wait>120)throw new Error('model daily limit reached');await sleep(wait*1000);continue;}
-    if(!res.ok)throw new Error(`model HTTP ${res.status}: ${(await res.text()).slice(0,300)}`);
-    const data=await res.json();
-    return JSON.parse(data.choices[0].message.content);
+    if(!res.ok)throw new Error(`model HTTP ${res.status}: ${text.slice(0,300)}`);
+    return parseReply(text);
   }
   throw new Error('model rate limited three times');
 }
@@ -182,6 +221,11 @@ function buildRecord(page,out,extra){
 }
 
 // ---------- main ----------
+if(!await probeModel()){
+  const msg='No working GitHub Models endpoint (see the probe lines above). Nothing was collected or saved.';
+  log(msg);if(env.GITHUB_STEP_SUMMARY)appendFileSync(env.GITHUB_STEP_SUMMARY,`## Collector stopped\n\n${msg}\n`);
+  process.exit(1);
+}
 const archive=loadArchive({log:()=>{}});
 const knownUrls=new Set(),knownDois=new Set(archive.records.map(r=>String(r.documentId??'').toLowerCase()).filter(Boolean));
 for(const r of archive.records){try{knownUrls.add(canonicalUrl(r.url));}catch{}}
@@ -200,7 +244,7 @@ for(const c of queue){
 }
 log(`Candidates: ${candidates.length} (backlog ${candidates.filter(c=>c.origin==='backlog').length}, news search ${candidates.filter(c=>c.origin==='bing'||c.origin==='gdelt').length}, research ${candidates.filter(c=>c.origin==='openalex').length})`);
 
-const records=[],discovery=[],errors=[];let fetches=0;
+const records=[],discovery=[],errors=[];let fetches=0,modelFailures=0;
 const logEntry=(c,status,reason,recordId)=>discovery.push({...(c.discovery??{}),autoAttempts:(c.discovery?.autoAttempts??0)+(status==='Awaiting retrieval'?0:1),id:c.discovery?.id??discoveryId(c.url),url:c.url,title:c.discovery?.title??c.title??c.url,query:c.discovery?.query??c.query,status,reason,recordId:recordId??c.discovery?.recordId,loggedAt:stamp,collector:'github-actions'});
 // Alternate news and research so one source type cannot use up the whole budget.
 const ordered=[];const news=candidates.filter(c=>c.origin!=='openalex'),papers=candidates.filter(c=>c.origin==='openalex');
@@ -226,6 +270,7 @@ for(const c of ordered){
         notes:`Auto-collected ${stamp.slice(0,10)} (${page.via} retrieval, ${page.text.length} characters read). Date ${published?'from article:published_time / datePublished metadata':modified?'from modified-time metadata only':'not found in page metadata'}.`};
     }
     const out=await writeRecord(page,{kind:c.work?'research abstract':'article'});
+    modelFailures=0;
     const built=buildRecord(page,out,extra);
     if(c.work&&built.record){built.record.type='Research';built.record.evidence=built.record.evidence||'Abstract only';if(!/abstract/i.test(built.record.flag))built.record.flag+='; Abstract only';}
     if(built.skip){logEntry(c,'Excluded',built.skip);log(`- excluded ${c.url}: ${built.skip}`);continue;}
@@ -237,6 +282,7 @@ for(const c of ordered){
     summary.push(`| ${r.date||'—'} | ${r.source} | [${r.title.replace(/\|/g,'/').slice(0,100)}](${r.url}) |`);
   }catch(e){
     errors.push(`${c.url}: ${e.message}`);log(`! ${c.url}: ${e.message}`);
+    if(/^model/.test(e.message)&&++modelFailures>=3){log('Three model failures in a row; stopping.');break;}
     if(/budget|daily limit/.test(e.message))break;
   }
 }
@@ -250,7 +296,8 @@ log(`Run ${runId}: ${records.length} records added, ${discovery.filter(d=>d.stat
 if(env.GITHUB_STEP_SUMMARY){
   appendFileSync(env.GITHUB_STEP_SUMMARY,`## Collector run ${runId}\n\n${records.length} new records, ${modelCalls} model calls, ${errors.length} errors${DRY_RUN?' (dry run, nothing saved)':''}.\n\n`+(summary.length?`| Date | Source | Title |\n|---|---|---|\n${summary.join('\n')}\n`:'')+(errors.length?`\n<details><summary>Errors</summary>\n\n${errors.slice(0,30).map(e=>'- '+e.replace(/[<>]/g,'')).join('\n')}\n</details>\n`:''));
 }
-if(!DRY_RUN&&(records.length||discovery.length)){
+if(modelFailures>=3&&!records.length){log('Not saving: the model failed and no records were written.');process.exitCode=1;}
+else if(!DRY_RUN&&(records.length||discovery.length)){
   const file=path.join(root,'snapshots',`${runId}.json`);
   writeFileSync(file,JSON.stringify({records,runs:[run],discovery},null,1));
   log(`Wrote ${path.relative(root,file)}`);
