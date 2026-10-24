@@ -147,35 +147,59 @@ Return JSON only:
  "flag":"what a reviewer must still check, e.g. 'Allegations' or 'Abstract only'"}
 If not relevant, return {"relevant":false,"reason":"..."} only.`;
 
-// GitHub Models endpoints, tried in order by probeModel(); the first that returns a real chat
-// completion is used for the run. Redirects are not followed so they show up in the log.
+// AI providers, tried in order by probeModel(); the first that returns a real completion is used
+// for the run. Google Gemini (free tier, GEMINI_API_KEY secret) comes first when a key is set,
+// then GitHub Models. Each provider supplies its own request and how to read the reply text.
+const githubModels=(name,url,model,extraHeaders)=>({name,model,pause:4500,json:true,
+  request:(ep,messages)=>fetch(url,{method:'POST',redirect:'manual',signal:AbortSignal.timeout(90000),
+    headers:{'Authorization':`Bearer ${env.GITHUB_TOKEN}`,'Content-Type':'application/json',...extraHeaders},
+    body:JSON.stringify({model:ep.model,temperature:0.1,...(ep.json?{response_format:{type:'json_object'}}:{}),messages})}),
+  reply:data=>data?.choices?.[0]?.message?.content});
+const gemini={name:'Google Gemini',model:env.GEMINI_MODEL||'gemini-2.5-flash',pause:6500,json:true, // free tier: about 10 requests per minute
+  request:(ep,messages)=>fetch(`https://generativelanguage.googleapis.com/v1beta/models/${ep.model}:generateContent`,{method:'POST',signal:AbortSignal.timeout(90000),
+    headers:{'x-goog-api-key':env.GEMINI_API_KEY,'Content-Type':'application/json'}, // key in a header, never in the URL or logs
+    body:JSON.stringify({systemInstruction:{parts:[{text:messages.filter(m=>m.role==='system').map(m=>m.content).join('\n')}]},
+      contents:messages.filter(m=>m.role!=='system').map(m=>({role:'user',parts:[{text:m.content}]})),
+      generationConfig:{temperature:0.1,...(ep.json?{responseMimeType:'application/json'}:{})}})}),
+  reply:data=>data?.candidates?.[0]?.content?.parts?.map(p=>p.text??'').join('')};
 const endpoints=[
-  {name:'models.github.ai',url:'https://models.github.ai/inference/chat/completions',model:MODEL,headers:{'Accept':'application/vnd.github+json','X-GitHub-Api-Version':'2022-11-28'},json:true},
-  {name:'models.inference.ai.azure.com (legacy)',url:'https://models.inference.ai.azure.com/chat/completions',model:MODEL.replace(/^[^/]+\//,''),headers:{},json:true}
+  ...(env.GEMINI_API_KEY?[gemini]:[]),
+  githubModels('GitHub Models','https://models.github.ai/inference/chat/completions',MODEL,{'Accept':'application/vnd.github+json','X-GitHub-Api-Version':'2022-11-28'}),
+  githubModels('GitHub Models (legacy Azure)','https://models.inference.ai.azure.com/chat/completions',MODEL.replace(/^[^/]+\//,''),{})
 ];
 let endpoint=null,modelCalls=0;
-async function callModel(ep,messages){
-  const res=await fetch(ep.url,{method:'POST',redirect:'manual',signal:AbortSignal.timeout(90000),
-    headers:{'Authorization':`Bearer ${env.GITHUB_TOKEN}`,'Content-Type':'application/json',...ep.headers},
-    body:JSON.stringify({model:ep.model,temperature:0.1,...(ep.json?{response_format:{type:'json_object'}}:{}),messages})});
-  return {res,text:await res.text()};
-}
+async function callModel(ep,messages){const res=await ep.request(ep,messages);return {res,text:await res.text()};}
 // Model replies sometimes wrap JSON in prose or code fences; take the outermost object.
-function parseReply(text){
+function parseReply(ep,text){
   let data;try{data=JSON.parse(text);}catch{throw new Error(`model endpoint returned non-JSON: ${JSON.stringify(text.slice(0,120))}`);}
-  const content=data?.choices?.[0]?.message?.content;
-  if(typeof content!=='string')throw new Error(`model response has no message content: ${JSON.stringify(text.slice(0,200))}`);
+  const content=ep.reply(data);
+  if(typeof content!=='string'||!content)throw new Error(`model response has no message content: ${JSON.stringify(text.slice(0,200))}`);
   const a=content.indexOf('{'),b=content.lastIndexOf('}');
   if(a<0||b<a)throw new Error(`model reply is not JSON: ${JSON.stringify(content.slice(0,120))}`);
   return JSON.parse(content.slice(a,b+1));
 }
+// If the configured Gemini model has been renamed or retired, fall back to an available Flash model.
+async function pickGeminiModel(){
+  try{
+    const res=await fetch('https://generativelanguage.googleapis.com/v1beta/models?pageSize=200',{headers:{'x-goog-api-key':env.GEMINI_API_KEY},signal:AbortSignal.timeout(20000)});
+    const data=await res.json();
+    const names=(data.models??[]).filter(m=>m.supportedGenerationMethods?.includes('generateContent')).map(m=>m.name.replace(/^models\//,''));
+    log(`Gemini models available (${names.length}): ${names.filter(n=>/gemini/.test(n)).slice(0,25).join(', ')||JSON.stringify(data).slice(0,200)}`);
+    if(names.length&&!names.includes(gemini.model)){
+      const pick=names.find(n=>/^gemini-[\d.]+-flash$/.test(n))??names.find(n=>/flash/.test(n)&&!/lite|image|tts|live|exp/.test(n));
+      if(pick){log(`! ${gemini.model} is not available; using ${pick}`);gemini.model=pick;}
+    }
+  }catch(e){log('Gemini model list failed:',e.message);}
+}
 async function probeModel(){
+  if(env.GEMINI_API_KEY)await pickGeminiModel();
+  else log('No GEMINI_API_KEY secret set; trying GitHub Models only.');
   try{
     const res=await fetch('https://models.github.ai/catalog/models',{headers:{'Authorization':`Bearer ${env.GITHUB_TOKEN}`,'Accept':'application/vnd.github+json'},signal:AbortSignal.timeout(20000)});
     const text=await res.text();
-    try{const ids=JSON.parse(text).map(m=>m.id);log(`Model catalog (${ids.length}): ${ids.slice(0,40).join(', ')}`);if(!ids.includes(MODEL))log(`! ${MODEL} is not in the catalog`);}
-    catch{log(`Model catalog: HTTP ${res.status} ${text.slice(0,160)}`);}
-  }catch(e){log('Model catalog failed:',e.message);}
+    try{const ids=JSON.parse(text).map(m=>m.id);log(`GitHub Models catalog (${ids.length}): ${ids.slice(0,40).join(', ')}`);}
+    catch{log(`GitHub Models catalog: HTTP ${res.status} ${JSON.stringify(text.slice(0,160))}`);}
+  }catch(e){log('GitHub Models catalog failed:',e.message);}
   const messages=[{role:'system',content:'You answer with JSON only.'},{role:'user',content:'Return the JSON object {"ok": true}.'}];
   for(const ep of endpoints){
     for(const json of [true,false]){
@@ -183,7 +207,7 @@ async function probeModel(){
       try{
         const {res,text}=await callModel(ep,messages);
         log(`Probe ${ep.name} (model ${ep.model}, json mode ${json}): HTTP ${res.status}, ${res.headers.get('content-type')??'no content-type'}${res.headers.get('location')?', redirect to '+res.headers.get('location'):''}, body ${JSON.stringify(text.slice(0,200))}`);
-        if(res.ok&&parseReply(text).ok===true){endpoint=ep;log(`Using ${ep.name} with model ${ep.model}.`);return true;}
+        if(res.ok&&parseReply(ep,text).ok===true){endpoint=ep;log(`Using ${ep.name} with model ${ep.model}.`);return true;}
       }catch(e){log(`Probe ${ep.name} (json mode ${json}) failed: ${e.message}`);}
     }
   }
@@ -191,14 +215,14 @@ async function probeModel(){
 }
 async function writeRecord(page,{kind='article'}={}){
   if(modelCalls>=MAX_MODEL_CALLS)throw new Error('model call budget reached');
-  if(modelCalls)await sleep(4500); // free tier: about 15 requests per minute
+  if(modelCalls)await sleep(endpoint.pause); // stay under the free tier's per-minute limit
   modelCalls++;
   const content=`Source URL: ${page.url}\nSite: ${page.site||'unknown'}\nTitle: ${page.title}\nMaterial type: ${kind}\n\nText:\n${page.text.slice(0,12000)}`;
   for(let attempt=1;attempt<=3;attempt++){
     const {res,text}=await callModel(endpoint,[{role:'system',content:instructions},{role:'user',content}]);
     if(res.status===429){const wait=Number(res.headers.get('retry-after')||60);log(`Model rate limited; waiting ${wait}s`);if(wait>120)throw new Error('model daily limit reached');await sleep(wait*1000);continue;}
     if(!res.ok)throw new Error(`model HTTP ${res.status}: ${text.slice(0,300)}`);
-    return parseReply(text);
+    return parseReply(endpoint,text);
   }
   throw new Error('model rate limited three times');
 }
@@ -276,7 +300,7 @@ for(const c of ordered){
     if(built.skip){logEntry(c,'Excluded',built.skip);log(`- excluded ${c.url}: ${built.skip}`);continue;}
     const r=built.record,id=keyFor(r.url);
     if(knownIds.has(id)||records.some(x=>x.id===id)){logEntry(c,'Already archived','duplicate canonical URL',id);continue;}
-    records.push({...r,id,decision:'Pending',reviewNotes:'',collectedAt:new Date().toISOString(),auto:true,model:MODEL});
+    records.push({...r,id,decision:'Pending',reviewNotes:'',collectedAt:new Date().toISOString(),auto:true,model:`${endpoint.name}: ${endpoint.model}`});
     logEntry(c,'Added to archive','auto-collected',id);
     log(`+ ${id} ${r.date||'undated'} ${r.source}: ${r.title.slice(0,90)}`);
     summary.push(`| ${r.date||'—'} | ${r.source} | [${r.title.replace(/\|/g,'/').slice(0,100)}](${r.url}) |`);
@@ -290,7 +314,7 @@ for(const c of ordered){
 for(const c of candidates)if(c.origin!=='backlog'&&!discovery.some(d=>d.url===c.url))logEntry(c,'Awaiting retrieval','found by automated search; not processed this run');
 
 const run={id:runId,finishedAt:new Date().toISOString(),status:errors.length?'partial':'completed',found:candidates.length,added:records.length,fetches,duplicates:discovery.filter(d=>d.status==='Already archived').length,
-  recordIds:records.map(r=>r.id),errors:errors.slice(0,20),queries:['Backlog','Bing News RSS','GDELT DOC API','OpenAlex'],collector:'github-actions',model:MODEL,modelCalls};
+  recordIds:records.map(r=>r.id),errors:errors.slice(0,20),queries:['Backlog','Bing News RSS','GDELT DOC API','OpenAlex'],collector:'github-actions',model:`${endpoint.name}: ${endpoint.model}`,modelCalls};
 log(`Run ${runId}: ${records.length} records added, ${discovery.filter(d=>d.status==='Excluded').length} excluded, ${errors.length} errors, ${modelCalls} model calls.`);
 
 if(env.GITHUB_STEP_SUMMARY){
