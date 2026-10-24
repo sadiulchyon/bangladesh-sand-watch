@@ -16,7 +16,7 @@ on:
 
 permissions:
   contents: write   # commit the new snapshot file
-  models: read      # GitHub Models (free) writes the bilingual summaries
+  models: read      # GitHub Models, used only when no GEMINI_API_KEY secret is set
   actions: write    # start the Pages deploy (pushes made by this workflow do not trigger it)
 
 concurrency:
@@ -40,6 +40,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           FIRECRAWL_API_KEY: ${{ secrets.FIRECRAWL_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           MAX_RECORDS: ${{ inputs.max_records || '12' }}
           DRY_RUN: ${{ inputs.dry_run || 'false' }}
       # The same checks and build the Pages workflow runs, so a bad file never reaches main.
