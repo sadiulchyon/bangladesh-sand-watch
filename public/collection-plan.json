@@ -21,7 +21,7 @@
     "Collect historical coverage before 2026 and all 2026 reports through the current source-local date. Recent discovery uses a fourteen-day overlap. Read original dates from article labels or publisher metadata, distinguish publication/update/issue dates, and retain blank dates with a verified publication year in otherDate when no day/month is available. Do not exclude relevant older reports solely because they precede 2026.",
     "For each unseen canonical URL, read source content before writing. Retry a missing body once; log failures.",
     "Retain English and Bangla original titles, attributed paraphrases in both languages, district, river/site, source date with its meaning, material, topics, and source links. Use Unknown for unresolved places and blank dates when unverified.",
-    "Keep news, editorials, research, project pages, laws, rules, and lease notices distinct. New entries must be Pending.",
+    "Keep news, editorials, research, project pages, laws, rules, and lease notices distinct. Unreviewed entries remain Pending. The owner-authorized scheduled-chat workflow can assign Accept after an assistant original-source editorial pass under EDITORIAL_POLICY.md; machine generation alone is not a pass.",
     "Read only accessible content. Flag abstract-only research and partial PDF parsing. Never invent dates, quantities, locations, legality, or unread provisions.",
     "Canonical URL and DOI deduplication is enforced by the writer. Do not merge different events just because they share a river.",
     "Keep new summaries concise and match the source claim strength in both languages. Flag allegations, legal interpretation, dates and OCR for review.",
@@ -79,7 +79,9 @@
       }
     ]
   },
-  "scopeStart": "1900-01-01",
+  "scopeStart": null,
+  "datePriority": "Current year and newest reports first, then earlier years; any available year can qualify, with no lower-year cutoff for scheduled-chat.",
+  "scheduledChatCreditPolicy": "Check current Firecrawl balance before and after each run; normally use at most 40 net credits and target up to 20 accepted new records, reduced when balance or evidence is insufficient. No credit purchases, paid overages or subscriptions. Recheck availability on the existing daily schedule after exhaustion.",
   "backfillEndpoint": "/api/backfill",
   "historicalCoverage": "All available reports from the territory of Bangladesh, including pre-2026 material and 2026. Search indexing and source availability limit coverage."
 }

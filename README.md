@@ -2,19 +2,19 @@
 
 The active daily collector is the **Bangladesh Sand Watch daily news** scheduled chat task (`bangladesh-sand-watch-daily-news`), configured for **08:40 America/Chicago**. Its schedule is managed in the desktop app, not by a GitHub Actions cron trigger. Keep the computer awake and the app running for this local task. It uses the chat's connected research and GitHub tools; a separate Gemini API key is not required for this workflow.
 
-Each run targets up to 20 new News records when enough relevant, nonduplicate sources can be verified. It:
+Each run targets up to 20 new News records when enough relevant, nonduplicate sources can be verified. It prioritizes the newest years, then works through appropriate reporting from any available year, with no lower-year cutoff. It checks the Firecrawl balance before and after collection and normally uses no more than 40 net credits per run, reducing work when the balance is low. It:
 
 1. reads the current main branch, merges the archive and snapshots, and searches Bangla and English reporting;
 2. reads original article pages, retains their stated publication/update dates, and attributes allegations rather than treating search snippets as evidence;
-3. prepares bilingual summaries naming the river/site and location and retaining source-stated monetary amounts, volumes, distances, areas and other substantive figures with their units and attribution; checks canonical URLs, DOI and reported incidents for duplicates, and keeps new records Pending review;
+3. prepares bilingual summaries naming the river/site and location and retaining source-stated monetary amounts, volumes, distances, areas and other substantive figures with their units and attribution; checks canonical URLs, DOI and reported incidents for duplicates, and performs an assistant editorial pass before assigning Accept;
 4. validates the full JSON payload and its blob hash, then commits a new snapshot using an expected-head check so concurrent edits are preserved;
 5. follows the exact commit's GitHub Pages build and deployment, parses the deployed archive JSON, and verifies every new ID and the expected record-count increase before reporting completion.
 
-Scheduled records are marked `auto: true` and show the "Auto-collected" badge. Run and discovery entries identify the collector as `scheduled-chat`. These summaries still need editorial review. A green workflow or a run with zero additions does not establish successful collection.
+Scheduled records are marked `auto: true` and show the "Auto-collected" badge. Run and discovery entries identify the collector as `scheduled-chat` and record the assistant's editorial checks. The owner authorizes Accept after those checks; unread, duplicate or unresolved content is deferred or excluded. Accept is archive inclusion and faithful source representation, not independent verification of allegations. A green workflow or a run with zero additions does not establish successful collection.
 
 The first scheduled test on 25 October 2026 added three distinct News records and verified all three on the public site, increasing the archive from 270 to 273 records. The test snapshot is `snapshots/2026-10-25-scheduled-chat-first-success.json`.
 
-The owner approved all 273 existing records for editorial inclusion on 25 October 2026. Their decisions and summary maintenance are saved in `snapshots/2026-10-25-zz-editorial-review-all-current.json`. Later records still require review. [Editorial policy](EDITORIAL_POLICY.md) defines acceptance, mandatory river/location names, and preservation of source-stated figures and units in both summaries.
+The owner approved all 273 existing records for editorial inclusion on 25 October 2026, then authorized recurring assistant collection and editorial acceptance of new records that pass the source checks. The original decisions and summary maintenance are saved in `snapshots/2026-10-25-zz-editorial-review-all-current.json`. [Editorial policy](EDITORIAL_POLICY.md) defines acceptance, mandatory river/location names, source-stated figures and units, all-years priority, and credit-aware operation. The task does not purchase credits or enable paid overages. On credit exhaustion it retains its schedule to recheck availability and reports a new actionable blocker.
 
 ## Legacy manual collector
 
