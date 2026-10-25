@@ -1,9 +1,7 @@
 name: Collect new records
 
-# Daily at 06:17 Bangladesh time (00:17 UTC), or by hand from the Actions tab.
+# Manual diagnostics only; the daily collector is the scheduled chat task documented in README.md.
 on:
-  schedule:
-    - cron: '17 0 * * *'
   workflow_dispatch:
     inputs:
       max_records:

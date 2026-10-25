@@ -1,14 +1,24 @@
-# Automated collection (GitHub Actions, free)
+# Scheduled news collection
 
-`.github/workflows/collect.yml` runs `collector/collect.mjs` daily at 06:17 Bangladesh time, and can be started by hand from the Actions tab (with a dry-run option). Each run now targets up to 20 new records. It:
+The active daily collector is the **Bangladesh Sand Watch daily news** scheduled chat task (`bangladesh-sand-watch-daily-news`), configured for **08:40 America/Chicago**. Its schedule is managed in the desktop app, not by a GitHub Actions cron trigger. Keep the computer awake and the app running for this local task. It uses the chat's connected research and GitHub tools; a separate Gemini API key is not required for this workflow.
 
-1. gathers candidates from the unread discovery-log backlog, Bing News RSS (Bangla and English), the GDELT news index and OpenAlex research abstracts;
-2. **reads each page** (direct download with Mozilla Readability, then the current Firecrawl v2 API as a fallback when the `FIRECRAWL_API_KEY` secret is set) and never writes a record from a search snippet; publisher queues rotate so one blocked site cannot use the whole page-read budget;
-3. asks an AI model to write the bilingual record or reject it as off-topic: Google Gemini's free tier when the `GEMINI_API_KEY` secret is set, otherwise GitHub Models. The run first probes each provider, logs what it returned and fails visibly if none works. The source date comes only from the page's own metadata, never from the model;
-4. validates and de-duplicates by canonical URL and DOI (IDs are computed exactly as the live writer does), then writes `snapshots/auto-<time>.json`, commits it and starts the Pages deploy.
+Each run targets up to 20 new News records when enough relevant, nonduplicate sources can be verified. It:
 
-Every automated record is Pending, marked `auto: true` with an "Auto-collected" badge, and flagged "machine-written summary, verify against source". Per-run caps: 20 records, 30 model calls, 60 page downloads. A backlog item is retried at most three times; repeat search results reuse the existing discovery item instead of bypassing its retry limit. The run summary on the Actions page lists every record added and retrieval error.
+1. reads the current main branch, merges the archive and snapshots, and searches Bangla and English reporting;
+2. reads original article pages, retains their stated publication/update dates, and attributes allegations rather than treating search snippets as evidence;
+3. prepares bilingual summaries, checks canonical URLs, DOI and reported incidents for duplicates, and keeps new records Pending review;
+4. validates the full JSON payload and its blob hash, then commits a new snapshot using an expected-head check so concurrent edits are preserved;
+5. follows the exact commit's GitHub Pages build and deployment, parses the deployed archive JSON, and verifies every new ID and the expected record-count increase before reporting completion.
 
+Scheduled records are marked `auto: true` and show the "Auto-collected" badge. Run and discovery entries identify the collector as `scheduled-chat`. These summaries still need editorial review. A green workflow or a run with zero additions does not establish successful collection.
+
+The first scheduled test on 25 October 2026 added three distinct News records and verified all three on the public site, increasing the archive from 270 to 273 records. The test snapshot is `snapshots/2026-10-25-scheduled-chat-first-success.json`.
+
+## Legacy manual collector
+
+`.github/workflows/collect.yml` retains `workflow_dispatch` for manual diagnostics and its dry-run option. Its daily cron trigger is disabled after the successful scheduled-chat test. `collector/collect.mjs` needs a working supported provider credential, currently `GEMINI_API_KEY`, in repository Actions secrets. [GitHub Models was retired on 30 July 2026](https://docs.github.com/en/github-models); the script's historical fallback is not a working model provider. Without a valid supported provider, the script stops before collecting articles.
+
+The manual script gathers discovery backlog, Bing News RSS, GDELT and OpenAlex candidates; it reads pages directly and can use Firecrawl v2 when `FIRECRAWL_API_KEY` is configured. Its limits remain 20 records, 30 model calls and 60 page reads per run, with at most three retrieval attempts per backlog item. This script is separate from the active scheduled chat.
 
 
 Public address: https://sadiulchyon.github.io/bangladesh-sand-watch/
