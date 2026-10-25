@@ -14,3 +14,19 @@ For the public site the images were resized (largest edge 2400 px, plus small th
 | lubha-timelapse.mp4, -poster.jpg | 1fFkSqeLPN1Lco2WmWbMKrpu21RJs4Oor | 26-second Lubha timelapse; no audio track |
 
 Paper: https://doi.org/10.1016/j.crsus.2025.100605
+
+## Field photograph selection, 25 October 2026
+
+Five photographs were selected from 161 visually reviewed images in the owner-provided Bangladesh Field Media Staging archive. The opening image now uses Someshwari `DJI_0330.JPG`; four field photographs lead the gallery. The earlier opening photograph is retained as an unused asset. Existing satellite videos and published research figures remain in the gallery.
+
+| Website image | Original camera filename | Date and visit area |
+| --- | --- | --- |
+| field-someshwari-DJI_0330.jpg | DJI_0330.JPG | 26 January 2023, Someshwari |
+| field-jadukata-DJI_0066.jpg | DJI_0066.JPG | 10 January 2023, Sunamganj / Jadukata visit |
+| field-lubha-DJI_0042.jpg | DJI_0042.JPG | 8 January 2023, Lubha |
+| field-someshwari-IMG_2901.jpg | 20230126134015_IMG_2901.JPG | 26 January 2023, Someshwari |
+| field-bholaganj-DJI_0051.jpg | DJI_0051.JPG | 9 January 2023, Bholaganj |
+
+Dates are supported by capture metadata and archive manifests; place names follow the field archive's visit labels. The Sunamganj / Jadukata caption identifies the visit area without asserting a more precise river reach. These historical photographs do not establish present conditions or the legal status of any activity. No photographer identity is inferred for the ground-camera image.
+
+Only resized JPEG derivatives are published, with EXIF/GPS and other source metadata omitted. No objects were added or removed and no scene content was generated. Selected frames contain no recognizable faces. Source files and archive classifications are unchanged. Original filenames, source hashes, and manifest references are recorded in `FIELD-PHOTOS.json`; exact coordinates and local source paths are not published.

@@ -447,12 +447,12 @@ html[data-mode=public] #review-progress{display:none!important}
 
 /* ---------- Field photo in hero ---------- */
 .intro{background:var(--hero-1)}
-.intro-photo{position:absolute;inset:0;z-index:-2;width:100%;height:100%;object-fit:cover;object-position:center 57%}
+.intro-photo{position:absolute;inset:0;z-index:-2;width:100%;height:100%;object-fit:cover;object-position:center 52%}
 .intro:before{z-index:-1;opacity:1;mask-image:none;-webkit-mask-image:none;background:
   url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='60' viewBox='0 0 240 60' fill='none' stroke='%23ffffff' stroke-opacity='.05' stroke-width='1.2'%3E%3Cpath d='M0 30c40-22 80 22 120 0s80-22 120 0'/%3E%3C/svg%3E") 0 0/240px 60px,
   radial-gradient(60% 90% at 88% 10%,color-mix(in srgb,var(--hero-glow) 35%,transparent),transparent 70%),
-  linear-gradient(100deg,rgb(9 30 24 / .94) 0%,rgb(12 38 31 / .86) 45%,rgb(14 44 36 / .55) 100%)}
-.intro-credit{position:absolute;right:22px;bottom:16px;font-size:10.5px;color:rgb(255 255 255 / .6);letter-spacing:.2px}
+  linear-gradient(100deg,rgb(9 30 24 / .92) 0%,rgb(12 38 31 / .72) 45%,rgb(14 44 36 / .20) 100%)}
+.intro-credit{position:absolute;right:22px;bottom:16px;font-size:10.5px;color:rgb(255 255 255 / .9);letter-spacing:.2px;text-shadow:0 1px 4px #081612}
 
 /* ---------- Field & research media ---------- */
 .visuals{margin:0 0 44px}
@@ -543,6 +543,7 @@ html[lang=bn] .insights .section-heading h2{font-size:30px}
 .slide{grid-area:1/1;margin:0;display:flex;flex-direction:column;opacity:0;visibility:hidden;transition:opacity .7s ease,visibility 0s .7s}
 .slide.is-active{opacity:1;visibility:visible;transition:opacity .7s ease}
 .slide video,.slide img{display:block;width:100%;aspect-ratio:16/9;object-fit:contain;background:#081612}
+.photo-slide img{height:auto}
 .figure-slide img{background:#f4f4ef;padding:16px}
 .slide figcaption{padding:20px 32px 70px;display:flex;flex-wrap:wrap;align-items:baseline;column-gap:16px;row-gap:4px}
 .slide figcaption .media-kind{width:100%;color:#9fd3b1;margin:0}

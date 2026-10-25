@@ -14,6 +14,9 @@ document.querySelectorAll('[data-figure]').forEach(card=>card.addEventListener('
  const thumb=card.closest('.slide')?.querySelector('img')??card.querySelector('img'),bn=lang()==='bn';
  $('#media-image').src=card.dataset.figure;$('#media-image').alt=thumb.alt;
  $('#media-credit').textContent=card.dataset[bn?'creditBn':'creditEn'];
+ const photo=card.closest('.slide')?.classList.contains('photo-slide');
+ dialog.setAttribute('aria-label',bn?(photo?'মাঠের ছবি':'গবেষণার চিত্র'):(photo?'Field photograph':'Research figure'));
+ dialog.querySelector('.media-dialog-foot').hidden=photo;
  dialog.showModal();
 }));
 $('#close-media').addEventListener('click',()=>dialog.close());
