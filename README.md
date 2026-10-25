@@ -1,13 +1,13 @@
 # Automated collection (GitHub Actions, free)
 
-`.github/workflows/collect.yml` runs `collector/collect.mjs` daily at 06:17 Bangladesh time, and can be started by hand from the Actions tab (with a dry-run option). It:
+`.github/workflows/collect.yml` runs `collector/collect.mjs` daily at 06:17 Bangladesh time, and can be started by hand from the Actions tab (with a dry-run option). Each run now targets up to 20 new records. It:
 
 1. gathers candidates from the unread discovery-log backlog, Bing News RSS (Bangla and English), the GDELT news index and OpenAlex research abstracts;
-2. **reads each page** (direct download with Mozilla Readability; Firecrawl only as a fallback when the `FIRECRAWL_API_KEY` secret is set) and never writes a record from a search snippet;
-3. asks an AI model to write the bilingual record or reject it as off-topic: Google Gemini's free tier when the `GEMINI_API_KEY` secret is set (recommended; GitHub Models returned only a placeholder `OK` for this account), otherwise GitHub Models. The run first probes each provider, logs what it returned and fails visibly if none works. The source date comes only from the page's own metadata, never from the model;
+2. **reads each page** (direct download with Mozilla Readability, then the current Firecrawl v2 API as a fallback when the `FIRECRAWL_API_KEY` secret is set) and never writes a record from a search snippet; publisher queues rotate so one blocked site cannot use the whole page-read budget;
+3. asks an AI model to write the bilingual record or reject it as off-topic: Google Gemini's free tier when the `GEMINI_API_KEY` secret is set, otherwise GitHub Models. The run first probes each provider, logs what it returned and fails visibly if none works. The source date comes only from the page's own metadata, never from the model;
 4. validates and de-duplicates by canonical URL and DOI (IDs are computed exactly as the live writer does), then writes `snapshots/auto-<time>.json`, commits it and starts the Pages deploy.
 
-Every automated record is Pending, marked `auto: true` with an "Auto-collected" badge, and flagged "machine-written summary, verify against source". Per-run caps: 12 records, 30 model calls, 60 page downloads. A backlog item is retried at most three times. The run summary on the Actions page lists every record added.
+Every automated record is Pending, marked `auto: true` with an "Auto-collected" badge, and flagged "machine-written summary, verify against source". Per-run caps: 20 records, 30 model calls, 60 page downloads. A backlog item is retried at most three times; repeat search results reuse the existing discovery item instead of bypassing its retry limit. The run summary on the Actions page lists every record added and retrieval error.
 
 
 

@@ -14,7 +14,7 @@ import path from 'node:path';
 import {loadArchive,categories,root} from '../scripts/archive-data.mjs';
 
 const env=process.env;
-const MAX_RECORDS=Number(env.MAX_RECORDS||12);
+const MAX_RECORDS=Number(env.MAX_RECORDS||20);
 const MAX_MODEL_CALLS=Number(env.MAX_MODEL_CALLS||30);
 const MAX_FETCHES=Number(env.MAX_FETCHES||60); // page downloads per run
 const MAX_ATTEMPTS=3; // automated retrieval attempts before a backlog item is left for a person
@@ -119,9 +119,10 @@ async function readPage(url){
   }catch(e){
     if(!env.FIRECRAWL_API_KEY)return {ok:false,error:e.message};
     try{
-      const res=await fetch('https://api.firecrawl.dev/v1/scrape',{method:'POST',headers:{'Authorization':`Bearer ${env.FIRECRAWL_API_KEY}`,'Content-Type':'application/json'},body:JSON.stringify({url,formats:['markdown'],onlyMainContent:true}),signal:AbortSignal.timeout(60000)});
-      const data=await res.json();
-      if(!res.ok||!data.success)throw new Error(data.error??`Firecrawl HTTP ${res.status}`);
+      const res=await fetch('https://api.firecrawl.dev/v2/scrape',{method:'POST',headers:{'Authorization':`Bearer ${env.FIRECRAWL_API_KEY}`,'Content-Type':'application/json'},body:JSON.stringify({url,formats:['markdown'],onlyMainContent:true}),signal:AbortSignal.timeout(60000)});
+      const raw=await res.text();let data;
+      try{data=JSON.parse(raw);}catch{throw new Error(`Firecrawl returned non-JSON (HTTP ${res.status}, ${res.headers.get('content-type')??'no content type'}): ${raw.slice(0,120)}`);}
+      if(!res.ok||!data.success)throw new Error(data.error??data.message??`Firecrawl HTTP ${res.status}`);
       const m=data.data.metadata??{},text=String(data.data.markdown??'').replace(/!\[[^\]]*\]\([^)]*\)/g,'').replace(/\s+/g,' ').trim();
       if(text.length<600)throw new Error(`Firecrawl text too short (${text.length} chars)`);
       return {ok:true,via:'firecrawl',url:m.sourceURL??url,text,title:cleanTitle(m.ogTitle??m.title,m.ogSiteName),site:m.ogSiteName??'',dates:{published:m.publishedTime??m['article:published_time']??'',modified:m.modifiedTime??m['article:modified_time']??''}};
@@ -254,6 +255,8 @@ const archive=loadArchive({log:()=>{}});
 const knownUrls=new Set(),knownDois=new Set(archive.records.map(r=>String(r.documentId??'').toLowerCase()).filter(Boolean));
 for(const r of archive.records){try{knownUrls.add(canonicalUrl(r.url));}catch{}}
 const knownIds=new Set(archive.records.map(r=>r.id));
+const previousDiscovery=new Map();
+for(const d of archive.discovery){if(!d.url)continue;try{const url=canonicalUrl(d.url),old=previousDiscovery.get(url);if(!old||(d.loggedAt??'')>(old.loggedAt??''))previousDiscovery.set(url,d);}catch{}}
 
 const fresh=[...await bing(),...await gdelt()].filter(c=>c.url&&relevant.test(c.title??''));
 const research=await openalex();
@@ -264,7 +267,12 @@ for(const c of queue){
   let url;try{url=canonicalUrl(c.url);}catch{continue;}
   if(seen.has(url)||knownUrls.has(url)||knownIds.has(keyFor(url)))continue;
   if(c.work&&knownDois.has(c.work.doi.replace(/^https?:\/\/doi.org\//,'').toLowerCase()))continue;
-  seen.add(url);candidates.push({...c,url});
+  seen.add(url);
+  const prior=previousDiscovery.get(url);
+  if(prior){
+    if(!backlogStatuses.has(prior.status)||(prior.autoAttempts??0)>=MAX_ATTEMPTS)continue;
+    candidates.push({url,title:prior.title??c.title,query:prior.query??c.query,origin:'backlog',discovery:prior});
+  }else candidates.push({...c,url});
 }
 log(`Candidates: ${candidates.length} (backlog ${candidates.filter(c=>c.origin==='backlog').length}, news search ${candidates.filter(c=>c.origin==='bing'||c.origin==='gdelt').length}, research ${candidates.filter(c=>c.origin==='openalex').length})`);
 
@@ -272,7 +280,12 @@ const records=[],discovery=[],errors=[];let fetches=0,modelFailures=0;
 const logEntry=(c,status,reason,recordId)=>discovery.push({...(c.discovery??{}),autoAttempts:(c.discovery?.autoAttempts??0)+(status==='Awaiting retrieval'?0:1),id:c.discovery?.id??discoveryId(c.url),url:c.url,title:c.discovery?.title??c.title??c.url,query:c.discovery?.query??c.query,status,reason,recordId:recordId??c.discovery?.recordId,loggedAt:stamp,collector:'github-actions'});
 // Alternate news and research so one source type cannot use up the whole budget.
 const ordered=[];const news=candidates.filter(c=>c.origin!=='openalex'),papers=candidates.filter(c=>c.origin==='openalex');
-while(news.length||papers.length){ordered.push(...news.splice(0,3));if(papers.length)ordered.push(papers.shift());}
+// Round-robin publishers so one blocked site cannot consume the whole page-read budget.
+const publishers=new Map();
+for(const c of news){let host;try{host=new URL(c.url).hostname.replace(/^www\./,'');}catch{host=c.url;}if(!publishers.has(host))publishers.set(host,[]);publishers.get(host).push(c);}
+const publisherQueues=[...publishers.values()];
+let turn=0;while(publisherQueues.some(q=>q.length)){const q=publisherQueues[turn++%publisherQueues.length];if(q.length)ordered.push(q.shift());if(ordered.length%3===0&&papers.length)ordered.push(papers.shift());}
+ordered.push(...papers);
 
 for(const c of ordered){
   if(records.length>=MAX_RECORDS||modelCalls>=MAX_MODEL_CALLS||fetches>=MAX_FETCHES)break;

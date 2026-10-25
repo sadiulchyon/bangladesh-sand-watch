@@ -8,7 +8,7 @@ on:
     inputs:
       max_records:
         description: Maximum new records this run
-        default: '12'
+        default: '20'
       dry_run:
         description: Collect and report only; do not save or publish
         type: boolean
@@ -41,7 +41,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           FIRECRAWL_API_KEY: ${{ secrets.FIRECRAWL_API_KEY }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-          MAX_RECORDS: ${{ inputs.max_records || '12' }}
+          MAX_RECORDS: ${{ inputs.max_records || '20' }}
           DRY_RUN: ${{ inputs.dry_run || 'false' }}
       # The same checks and build the Pages workflow runs, so a bad file never reaches main.
       - run: node scripts/check.mjs && node scripts/build-pages.mjs
