@@ -1,0 +1,148 @@
+{
+  "records": [
+    {
+      "type": "News",
+      "dateKind": "Published",
+      "material": "Sand",
+      "language": "Bangla",
+      "documentId": "",
+      "otherDate": "",
+      "alternateUrl": "",
+      "decision": "Pending",
+      "reviewNotes": "",
+      "collectedAt": "2026-10-25T13:43:21Z",
+      "auto": true,
+      "source": "Bangladesh Bulletin",
+      "title": "কচা নদীতে বালু উত্তোলন বন্ধের দাবিতে মানববন্ধন",
+      "date": "2026-10-18",
+      "district": "Pirojpur",
+      "river": "Kacha River; Charkhali mouth and ferry terminal, Bhandaria",
+      "topics": "Sand extraction; erosion concerns; community protest",
+      "en": "Residents formed a human chain at Charkhali ferry terminal in Bhandaria, demanding an end to alleged illegal sand extraction at the Kacha River mouth and measures against erosion. The protest blocked ferry services for about 90 minutes; participants lifted the blockade after assurances from the upazila administration.",
+      "bn": "ভাণ্ডারিয়ার চরখালী ফেরিঘাটে মানববন্ধন করে কচা নদীর মোহনায় অবৈধ বালু উত্তোলন বন্ধ ও ভাঙন প্রতিরোধের দাবি জানান বাসিন্দারা। কর্মসূচি অবরোধে রূপ নিলে প্রায় দেড় ঘণ্টা ফেরি চলাচল বন্ধ থাকে। উপজেলা প্রশাসনের আশ্বাসের পর অবরোধ তুলে নেওয়া হয় বলে প্রতিবেদনে জানানো হয়েছে।",
+      "evidence": "Original article read directly: correspondent's protest report, named local speakers, and the reported administrative assurance. Publisher date label: ১৮ অক্টোবর ২০২৬, ১৯:১৫.",
+      "flag": "Scheduled collection; Pending editorial review. Extraction illegality and erosion impacts are residents' allegations; no independent riverbank assessment or lease document was examined.",
+      "url": "https://www.bd-bulletin.com/country/8832",
+      "id": "BSW-736cfc88c5271519"
+    },
+    {
+      "type": "News",
+      "dateKind": "Published",
+      "material": "Sand",
+      "language": "Bangla",
+      "documentId": "",
+      "otherDate": "",
+      "alternateUrl": "",
+      "decision": "Pending",
+      "reviewNotes": "",
+      "collectedAt": "2026-10-25T13:43:21Z",
+      "auto": true,
+      "source": "Alokito Bangladesh",
+      "title": "ফুলজোড় নদীতে অবৈধ বালু উত্তোলন থামছে না",
+      "date": "2026-10-25",
+      "district": "Sirajganj",
+      "river": "Fuljor River; Ullapara and Raiganj",
+      "topics": "Sand extraction; riverbank soil removal; enforcement; erosion concerns",
+      "en": "Alokito Bangladesh reported residents' allegations of continuing dredger extraction and riverbank soil removal along the Fuljor in Ullapara and Raiganj. A Water Development Board engineer said no extraction permission had been given; the Raiganj UNO said enforcement was continuing and a trader had been fined Tk700,000 the previous day.",
+      "bn": "উল্লাপাড়া ও রায়গঞ্জে ফুলজোড় নদীতে ড্রেজার দিয়ে বালু এবং তীর থেকে মাটি তোলা অব্যাহত থাকার স্থানীয় অভিযোগ তুলে ধরেছে আলোকিত বাংলাদেশ। পানি উন্নয়ন বোর্ডের এক প্রকৌশলী উত্তোলনের অনুমতি দেওয়া হয়নি বলেন। রায়গঞ্জের ইউএনও জানান, আগের দিন এক ব্যবসায়ীকে সাত লাখ টাকা জরিমানা করা হয়েছে এবং অভিযান চলবে।",
+      "evidence": "Original print-edition article read directly: residents' accounts and quoted responses from BWDB engineer Sazzad Hossain and Raiganj UNO Abdul Khalek Patwary. Publisher date label: ০০:০০, ২৫ অক্টোবর, ২০২৬.",
+      "flag": "Scheduled collection; Pending editorial review. Patronage and erosion claims are attributed to residents or the report's sources. The fine is an official's reported account; court and permit documents were not independently retrieved.",
+      "url": "https://www.alokitobangladesh.com/print-edition/desh/355269/%E0%A6%AB%E0%A7%81%E0%A6%B2%E0%A6%9C%E0%A7%8B%E0%A7%9C-%E0%A6%A8%E0%A6%A6%E0%A7%80%E0%A6%A4%E0%A7%87-%E0%A6%85%E0%A6%AC%E0%A7%88%E0%A6%A7-%E0%A6%AC%E0%A6%BE%E0%A6%B2%E0%A7%81-%E0%A6%89%E0%A6%A4%E0%A7%8D%E0%A6%A4%E0%A7%8B%E0%A6%B2%E0%A6%A8-%E0%A6%A5%E0%A6%BE%E0%A6%AE%E0%A6%9B%E0%A7%87-%E0%A6%A8%E0%A6%BE",
+      "id": "BSW-f774559b05d04434"
+    },
+    {
+      "type": "News",
+      "dateKind": "Published",
+      "material": "Sand",
+      "language": "Bangla",
+      "documentId": "",
+      "otherDate": "",
+      "alternateUrl": "",
+      "decision": "Pending",
+      "reviewNotes": "",
+      "collectedAt": "2026-10-25T13:43:21Z",
+      "auto": true,
+      "source": "Prothom Alo",
+      "title": "খননযন্ত্র দিয়ে নদী থেকে অবৈধভাবে বালু উত্তোলন",
+      "date": "2023-02-13",
+      "district": "Jamalpur",
+      "river": "Katakhali River; west of Beltail Bridge, Ghosherpara Union, Melandaha",
+      "topics": "Sand extraction; historical reporting; cropland erosion; bridge risk",
+      "en": "In a February 2023 field report, Prothom Alo described three dredgers operating west of Beltail Bridge on the Katakhali, with sections of cropland collapsing into the river. Residents linked extraction to erosion and bridge risk. Two dredger owners acknowledged equipment or extraction; the UNO said nobody had official permission and promised action.",
+      "bn": "২০২৩ সালের ফেব্রুয়ারির এই মাঠপ্রতিবেদনে বেলতৈল সেতুর পশ্চিমে কাটাখালী নদীতে তিনটি ড্রেজারে বালু তোলা ও ফসলি জমির অংশ ভেঙে পড়ার দৃশ্য তুলে ধরে প্রথম আলো। বাসিন্দারা উত্তোলনের সঙ্গে ভাঙন ও সেতুর ঝুঁকির সম্পর্কের অভিযোগ করেন। দুই মালিক যন্ত্র থাকা বা বালু তোলার কথা স্বীকার করেন; ইউএনও বলেন, কাউকে অনুমতি দেওয়া হয়নি এবং ব্যবস্থা নেওয়া হবে।",
+      "evidence": "Original article read directly: correspondent's 5 February field observations, residents' accounts, responses from two dredger owners, and Melandaha UNO Selim Mia. Publisher publication label: ১৩ ফেব্রুয়ারি ২০২৩, ০০:৩৩.",
+      "flag": "Scheduled collection; Pending editorial review. Historical report from February 2023, not evidence of current activity. Long-term erosion and bridge risks are residents' claims; no engineering assessment was retrieved.",
+      "url": "https://www.prothomalo.com/bangladesh/district/h38bjhdiw3",
+      "id": "BSW-2112c89fee891590"
+    }
+  ],
+  "runs": [
+    {
+      "id": "scheduled-chat-2026-10-25-13-43",
+      "finishedAt": "2026-10-25T13:43:21Z",
+      "status": "completed",
+      "found": 4,
+      "added": 3,
+      "fetches": 4,
+      "duplicates": 0,
+      "recordIds": [
+        "BSW-736cfc88c5271519",
+        "BSW-f774559b05d04434",
+        "BSW-2112c89fee891590"
+      ],
+      "errors": [],
+      "queries": [
+        "বাংলাদেশ বালু উত্তোলন ২৫ অক্টোবর ২০২৬",
+        "Bangladesh sand extraction mining October 2026",
+        "Historical backlog source review"
+      ],
+      "collector": "scheduled-chat",
+      "notes": "First scheduled end-to-end test. Four original pages reviewed; three distinct reports retained and one related court report deferred. New records remain Pending. Publication and live-ID checks are performed after the commit deploys."
+    }
+  ],
+  "discovery": [
+    {
+      "id": "auto-736cfc88c5271519",
+      "url": "https://www.bd-bulletin.com/country/8832",
+      "title": "কচা নদীতে বালু উত্তোলন বন্ধের দাবিতে মানববন্ধন",
+      "query": "Bangla and English news search: 25 October 2026",
+      "status": "Added to archive",
+      "reason": "Original page read in full; date, source attribution, bilingual summary and duplicate checks completed.",
+      "recordId": "BSW-736cfc88c5271519",
+      "loggedAt": "2026-10-25T13:43:21Z",
+      "collector": "scheduled-chat"
+    },
+    {
+      "id": "auto-f774559b05d04434",
+      "url": "https://www.alokitobangladesh.com/print-edition/desh/355269/%E0%A6%AB%E0%A7%81%E0%A6%B2%E0%A6%9C%E0%A7%8B%E0%A7%9C-%E0%A6%A8%E0%A6%A6%E0%A7%80%E0%A6%A4%E0%A7%87-%E0%A6%85%E0%A6%AC%E0%A7%88%E0%A6%A7-%E0%A6%AC%E0%A6%BE%E0%A6%B2%E0%A7%81-%E0%A6%89%E0%A6%A4%E0%A7%8D%E0%A6%A4%E0%A7%8B%E0%A6%B2%E0%A6%A8-%E0%A6%A5%E0%A6%BE%E0%A6%AE%E0%A6%9B%E0%A7%87-%E0%A6%A8%E0%A6%BE",
+      "title": "ফুলজোড় নদীতে অবৈধ বালু উত্তোলন থামছে না",
+      "query": "Bangla and English news search: 25 October 2026",
+      "status": "Added to archive",
+      "reason": "Original page read in full; date, source attribution, bilingual summary and duplicate checks completed.",
+      "recordId": "BSW-f774559b05d04434",
+      "loggedAt": "2026-10-25T13:43:21Z",
+      "collector": "scheduled-chat"
+    },
+    {
+      "id": "auto-2112c89fee891590",
+      "url": "https://www.prothomalo.com/bangladesh/district/h38bjhdiw3",
+      "title": "খননযন্ত্র দিয়ে নদী থেকে অবৈধভাবে বালু উত্তোলন",
+      "query": "Historical backlog source review",
+      "status": "Added to archive",
+      "reason": "Original page read in full; date, source attribution, bilingual summary and duplicate checks completed.",
+      "recordId": "BSW-2112c89fee891590",
+      "loggedAt": "2026-10-25T13:43:21Z",
+      "collector": "scheduled-chat"
+    },
+    {
+      "id": "scheduled-chat-deferred-jadukata-2026-10-25",
+      "url": "https://sylhetvoice24.com/news/100001138",
+      "title": "এবার যাদুকাটার দুই বালুমহালে বালু উত্তোলনে হাইকোর্টের স্থগিতাদেশ",
+      "query": "বাংলাদেশ বালু উত্তোলন ২৫ অক্টোবর ২০২৬",
+      "status": "Awaiting source review",
+      "reason": "Related Jadukata leasing litigation is already covered in the archive. The article reports an interim order; primary order and later developments need reconciliation before adding this as a distinct finding.",
+      "loggedAt": "2026-10-25T13:43:21Z",
+      "collector": "scheduled-chat"
+    }
+  ]
+}
