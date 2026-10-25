@@ -42,7 +42,7 @@ const htmlIds=[...html.matchAll(/\bid="([^"]+)"/g)].map(m=>m[1]);assert.equal(ne
 const app=readFileSync(path.join(root,'public/app.js'),'utf8');
 const dynamicIds=['detail-decision','detail-notes','review-form'];
 for(const m of app.matchAll(/\$\('#([a-z-]+)'\)/g))assert.ok(htmlIds.includes(m[1])||dynamicIds.includes(m[1]),'Missing DOM target '+m[1]);
-for(const m of html.matchAll(/(?:src|href)="([^"#]+)"/g)){if(!/^(https?:|data:)/.test(m[1]))assert.ok(existsSync(path.join(root,'public',m[1])),m[1]+' missing');}
+for(const m of html.matchAll(/(?:src|href)="([^"#]+)"/g)){if(!/^(https?:|data:)/.test(m[1]))assert.ok(existsSync(path.join(root,'public',m[1].split(/[?#]/)[0])),m[1]+' missing');}
 assert.ok(existsSync(path.join(root,'public/assets/NotoSansBengali.ttf')));
 execFileSync(process.execPath,['--check',path.join(root,'public/app.js')]);
 execFileSync(process.execPath,['--check',path.join(root,'public/core.js')]);
