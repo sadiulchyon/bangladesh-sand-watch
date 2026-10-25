@@ -6,13 +6,15 @@ Each run targets up to 20 new News records when enough relevant, nonduplicate so
 
 1. reads the current main branch, merges the archive and snapshots, and searches Bangla and English reporting;
 2. reads original article pages, retains their stated publication/update dates, and attributes allegations rather than treating search snippets as evidence;
-3. prepares bilingual summaries, checks canonical URLs, DOI and reported incidents for duplicates, and keeps new records Pending review;
+3. prepares bilingual summaries naming the river/site and location and retaining source-stated monetary amounts, volumes, distances, areas and other substantive figures with their units and attribution; checks canonical URLs, DOI and reported incidents for duplicates, and keeps new records Pending review;
 4. validates the full JSON payload and its blob hash, then commits a new snapshot using an expected-head check so concurrent edits are preserved;
 5. follows the exact commit's GitHub Pages build and deployment, parses the deployed archive JSON, and verifies every new ID and the expected record-count increase before reporting completion.
 
 Scheduled records are marked `auto: true` and show the "Auto-collected" badge. Run and discovery entries identify the collector as `scheduled-chat`. These summaries still need editorial review. A green workflow or a run with zero additions does not establish successful collection.
 
 The first scheduled test on 25 October 2026 added three distinct News records and verified all three on the public site, increasing the archive from 270 to 273 records. The test snapshot is `snapshots/2026-10-25-scheduled-chat-first-success.json`.
+
+The owner approved all 273 existing records for editorial inclusion on 25 October 2026. Their decisions and summary maintenance are saved in `snapshots/2026-10-25-zz-editorial-review-all-current.json`. Later records still require review. [Editorial policy](EDITORIAL_POLICY.md) defines acceptance, mandatory river/location names, and preservation of source-stated figures and units in both summaries.
 
 ## Legacy manual collector
 
