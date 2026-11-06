@@ -1,0 +1,645 @@
+{
+  "records": [
+    {
+      "url": "https://www.bssnews.net/district/442784",
+      "source": "Bangladesh Sangbad Sangstha (BSS)",
+      "title": "Dredgers, bulkheads seized for illegal sand extraction in Barishal",
+      "date": "2026-11-06",
+      "district": "Under Dapdapia Bridge, Barishal Sadar, Barishal",
+      "river": "Kirtankhola River",
+      "material": "Sand",
+      "topics": "Mobile court; dredger seizure; fines",
+      "language": "English",
+      "en": "At about 1:30 a.m. on 6 November, a mobile court and Coast Guard team raided sand extraction beneath Dapdapia Bridge on the Kirtankhola River in Barishal Sadar. Officials seized one dredger and two bulkhead boats; one boat carried about 7,500 cubic feet of sand. Four people were detained, fined a combined Tk500,000 (Tk5 lakh) and released. This is a separate operation from the October action at the same bridge.",
+      "bn": "৬ নভেম্বর রাত প্রায় ১টা ৩০ মিনিটে বরিশাল সদরে দপদপিয়া সেতুর নিচে কীর্তনখোলা নদী থেকে বালু তোলার স্থানে ভ্রাম্যমাণ আদালত ও কোস্ট গার্ড অভিযান চালায়। কর্মকর্তারা একটি ড্রেজার ও দুটি বালুবাহী বাল্কহেড জব্দ করেন; একটি নৌকায় প্রায় ৭ হাজার ৫০০ ঘনফুট বালু ছিল। চারজনকে আটক করে মোট ৫ লাখ টাকা জরিমানা নিয়ে ছেড়ে দেওয়া হয়। এটি একই সেতুতে অক্টোবরের অভিযানের থেকে আলাদা ঘটনা।",
+      "evidence": "Original BSS article body and displayed 6 November 2026 date; 1:30 a.m. raid, equipment, sand stock, four fines and release verified.",
+      "id": "BSW-484bb2c34e7ae8d0",
+      "dateKind": "Published",
+      "flag": "",
+      "type": "News",
+      "documentId": "",
+      "otherDate": "",
+      "alternateUrl": "",
+      "decision": "Accept",
+      "reviewNotes": "",
+      "collectedAt": "2026-11-06T17:14:44.229Z",
+      "auto": true,
+      "collector": "scheduled-chat"
+    },
+    {
+      "url": "https://observerbd.com/news/575432",
+      "source": "The Daily Observer",
+      "title": "Illegal sand extraction threatens Kushiyara-Kalni embankment",
+      "date": "2026-05-07",
+      "district": "Azmiriganj upazila, Habiganj",
+      "river": "Kushiyara-Kalni River",
+      "material": "Sand",
+      "topics": "Night dredging; erosion risk; embankment",
+      "language": "English",
+      "en": "The Daily Observer reported active dredging on the Kushiyara-Kalni River in Azmiriganj, Habiganj, with sand carried by steel boats for sale. Residents alleged mostly nighttime extraction was weakening banks and threatening farmland and protective embankments; the report gave no measured extraction volume or damaged length. The upazila executive officer said complaints had been received and action would be taken.",
+      "bn": "দ্য ডেইলি অবজারভার হবিগঞ্জের আজমিরীগঞ্জে কুশিয়ারা–কালনী নদীতে ড্রেজিং চলতে দেখেছে; তোলা বালু স্টিলের নৌকায় বিক্রির জন্য নেওয়া হচ্ছিল। বাসিন্দাদের অভিযোগ, প্রধানত রাতের উত্তোলনে তীর দুর্বল হয়ে কৃষিজমি ও রক্ষাবাঁধ ঝুঁকিতে পড়ছে; প্রতিবেদনে উত্তোলনের পরিমাণ বা ক্ষতিগ্রস্ত দৈর্ঘ্যের পরিমাপ নেই। উপজেলা নির্বাহী কর্মকর্তা অভিযোগ পাওয়ার কথা জানান এবং ব্যবস্থা নেওয়ার আশ্বাস দেন।",
+      "evidence": "Original Daily Observer body and displayed publication 7 May 2026, distinct from current site header; allegations and lack of measurements preserved.",
+      "id": "BSW-8b705285e176e036",
+      "dateKind": "Published",
+      "flag": "",
+      "type": "News",
+      "documentId": "",
+      "otherDate": "",
+      "alternateUrl": "",
+      "decision": "Accept",
+      "reviewNotes": "",
+      "collectedAt": "2026-11-06T17:14:44.229Z",
+      "auto": true,
+      "collector": "scheduled-chat"
+    },
+    {
+      "url": "https://www.jugantor.com/country-news/319677",
+      "source": "Jugantor",
+      "title": "নদী থেকে বালু উত্তোলন, তাহিরপুরে সাবেক ইউপি সদস্যকে জরিমানা",
+      "date": "2020-06-25",
+      "district": "Madhuyarchar, Uttar Bordal union, Tahirpur, Sunamganj",
+      "river": "Maharam River",
+      "material": "Sand",
+      "topics": "Mobile court; unleased extraction; boat seizure",
+      "language": "Bangla",
+      "en": "A Tahirpur mobile court collected Tk50,000 in fines over unauthorized removal and sale of sand from the unleased Maharam River char near Madhuyarchar, Uttar Bordal union, Sunamganj. Officials said former union member Golam Kibria had arranged several hundred workers daily for about two weeks, and they intercepted four loaded boats. Kibria said he paid Tk12,500 for one boat and another trader paid Tk37,500 for three boats, totalling Tk50,000; the boats were then released. The amounts are fine payments, not sand-sale revenue.",
+      "bn": "সুনামগঞ্জের তাহিরপুরের উত্তর বড়দল ইউনিয়নের মধুয়ারচরের কাছে ইজারাবিহীন মাহারাম নদীর চর থেকে অননুমোদিত বালু তোলা ও বিক্রির ঘটনায় ভ্রাম্যমাণ আদালত মোট ৫০ হাজার টাকা জরিমানা আদায় করে। প্রশাসনের ভাষ্য, সাবেক ইউপি সদস্য গোলাম কিবরিয়া প্রায় দুই সপ্তাহ ধরে প্রতিদিন কয়েক শ শ্রমিক দিয়ে বালু তোলাচ্ছিলেন; অভিযানে বালুবোঝাই চারটি নৌকা আটক হয়। কিবরিয়া বলেন, একটি নৌকার জন্য তিনি ১২ হাজার ৫০০ এবং অন্য ব্যবসায়ী তিনটির জন্য ৩৭ হাজার ৫০০ টাকা, মোট ৫০ হাজার টাকা জরিমানা দিয়ে নৌকাগুলো ছাড়ান। অঙ্কগুলো জরিমানা, বালু বিক্রির আয় নয়।",
+      "evidence": "Original Jugantor body visibly published 25 June 2020; ignored current print clock and duplicate layout; fine breakdown and four boats verified.",
+      "id": "BSW-5337783518ec55dc",
+      "dateKind": "Published",
+      "flag": "",
+      "type": "News",
+      "documentId": "",
+      "otherDate": "",
+      "alternateUrl": "",
+      "decision": "Accept",
+      "reviewNotes": "",
+      "collectedAt": "2026-11-06T17:14:44.229Z",
+      "auto": true,
+      "collector": "scheduled-chat"
+    },
+    {
+      "url": "https://www.jugantor.com/country-news/305403",
+      "source": "Jugantor",
+      "title": "মানিকগঞ্জে দুটি অবৈধ ড্রেজারে আগুন দিল ভ্রাম্যমাণ আদালত",
+      "date": "2020-05-08",
+      "district": "Gopalpur and Rajair stretches, Baraid union, Saturia, Manikganj",
+      "river": "Dhaleshwari River",
+      "material": "Sand",
+      "topics": "Mobile court; dredger destruction; erosion risk",
+      "language": "Bangla",
+      "en": "On 8 May 2020, a mobile court on the Dhaleshwari River at Baraid union, Saturia, Manikganj, burned two dredgers and destroyed 150 dredger pipes over unauthorized sand extraction. Officials also detained one excavator operator. Residents alleged dredging around Gopalpur and Rajair was threatening riverbanks and cropland; the report did not quantify the area of damage.",
+      "bn": "৮ মে ২০২০ মানিকগঞ্জের সাটুরিয়ার বরাইদ ইউনিয়নে ধলেশ্বরী নদী থেকে অননুমোদিত বালু উত্তোলনের বিরুদ্ধে ভ্রাম্যমাণ আদালত দুটি ড্রেজার পুড়িয়ে এবং ১৫০টি ড্রেজার পাইপ নষ্ট করে। কর্মকর্তারা একজন ভেকুচালককেও আটক করেন। বাসিন্দাদের অভিযোগ, গোপালপুর ও রাজৈর অংশে ড্রেজিংয়ে নদীতীর ও ফসলি জমি ঝুঁকিতে পড়ছিল; প্রতিবেদনে ক্ষতিগ্রস্ত এলাকার পরিমাপ নেই।",
+      "evidence": "Original Jugantor body visibly published 8 May 2020; current print clock ignored; two dredgers, 150 pipes and one detention checked.",
+      "id": "BSW-cb3fe24301946637",
+      "dateKind": "Published",
+      "flag": "",
+      "type": "News",
+      "documentId": "",
+      "otherDate": "",
+      "alternateUrl": "",
+      "decision": "Accept",
+      "reviewNotes": "",
+      "collectedAt": "2026-11-06T17:14:44.229Z",
+      "auto": true,
+      "collector": "scheduled-chat"
+    },
+    {
+      "url": "https://www.prothomalo.com/bangladesh/district/latrdkxy8f",
+      "source": "Prothom Alo",
+      "title": "আদালতের আদেশ অমান্য করে বালু তোলায় সেই সেলিম খানের মেয়ের জরিমানা",
+      "date": "2024-06-03",
+      "district": "Charjagannathpur, Logimara and Thakchar Logimara mouzas, Chandpur Sadar, Chandpur",
+      "river": "Meghna River",
+      "material": "Sand",
+      "topics": "Mobile court; stayed court order; fine and seizure",
+      "language": "Bangla",
+      "en": "On 3 June 2024, a Chandpur mobile court raided sand lifting from the Meghna River in Charjagannathpur, Logimara and Thakchar Logimara mouzas, Chandpur Sadar, after a chamber court had stayed an earlier High Court protection for the operator on 2 June. The administration fined M/S Nipa Enterprise Tk10 lakh and detained five workers; officials said they collected the fine, seized Tk11.78 lakh in cash and one speedboat, and deposited the seized and fine money in the treasury. The owner and her father were not present at the raid.",
+      "bn": "২ জুন অপারেটরের পক্ষে দেওয়া আগের হাইকোর্টের আদেশ চেম্বার আদালত স্থগিত করার পর ৩ জুন ২০২৪ চাঁদপুর সদরের চরজগন্নাথপুর, লগীমারা ও থাকচর লগীমারা মৌজায় মেঘনা নদী থেকে বালু তোলার স্থানে জেলা প্রশাসন অভিযান চালায়। ভ্রাম্যমাণ আদালত মেসার্স নিপা এন্টারপ্রাইজকে ১০ লাখ টাকা জরিমানা করে এবং পাঁচ শ্রমিককে আটক করে; কর্মকর্তাদের হিসাবে জরিমানা আদায়, নগদ ১১ লাখ ৭৮ হাজার টাকা ও একটি স্পিডবোট জব্দ এবং জব্দ ও জরিমানার অর্থ রাষ্ট্রীয় কোষাগারে জমা হয়। অভিযানে মালিক বা তাঁর বাবা উপস্থিত ছিলেন না।",
+      "evidence": "Original Prothom Alo body and displayed publication 3 June 2024 verified by Firecrawl after TinyFish omitted the date; monetary amounts, three mouzas, five detentions and order chronology checked.",
+      "id": "BSW-a13dc9124495ec3a",
+      "dateKind": "Published",
+      "flag": "",
+      "type": "News",
+      "documentId": "",
+      "otherDate": "",
+      "alternateUrl": "",
+      "decision": "Accept",
+      "reviewNotes": "",
+      "collectedAt": "2026-11-06T17:14:44.229Z",
+      "auto": true,
+      "collector": "scheduled-chat"
+    }
+  ],
+  "reviews": {
+    "BSW-484bb2c34e7ae8d0": {
+      "decision": "Accept",
+      "notes": "",
+      "auto": true,
+      "reviewer": "assistant",
+      "reviewedAt": "2026-11-06T17:14:44.229Z"
+    },
+    "BSW-8b705285e176e036": {
+      "decision": "Accept",
+      "notes": "",
+      "auto": true,
+      "reviewer": "assistant",
+      "reviewedAt": "2026-11-06T17:14:44.229Z"
+    },
+    "BSW-5337783518ec55dc": {
+      "decision": "Accept",
+      "notes": "",
+      "auto": true,
+      "reviewer": "assistant",
+      "reviewedAt": "2026-11-06T17:14:44.229Z"
+    },
+    "BSW-cb3fe24301946637": {
+      "decision": "Accept",
+      "notes": "",
+      "auto": true,
+      "reviewer": "assistant",
+      "reviewedAt": "2026-11-06T17:14:44.229Z"
+    },
+    "BSW-a13dc9124495ec3a": {
+      "decision": "Accept",
+      "notes": "",
+      "auto": true,
+      "reviewer": "assistant",
+      "reviewedAt": "2026-11-06T17:14:44.229Z"
+    }
+  },
+  "runs": [
+    {
+      "id": "scheduled-chat-2026-11-06-daily-tinyfish",
+      "startedAt": "2026-11-06T17:08:26.000Z",
+      "finishedAt": "2026-11-06T17:14:44.229Z",
+      "status": "completed",
+      "collector": "scheduled-chat",
+      "retrievalProvider": "tinyfish-first",
+      "fallbackProvider": "firecrawl",
+      "found": 22,
+      "added": 5,
+      "fetches": 10,
+      "duplicates": 7,
+      "recordIds": [
+        "BSW-484bb2c34e7ae8d0",
+        "BSW-8b705285e176e036",
+        "BSW-5337783518ec55dc",
+        "BSW-cb3fe24301946637",
+        "BSW-a13dc9124495ec3a"
+      ],
+      "queries": [
+        "site:bd-pratidin.com/country/ বালু উত্তোলন নদী নভেম্বর ২০২৬",
+        "site:prothomalo.com/bangladesh/district/ বালু উত্তোলন নদী নভেম্বর ২০২৬",
+        "site:bssnews.net sand extraction river Bangladesh November 2026",
+        "site:thedailystar.net/news/bangladesh sand extraction river November 2026",
+        "site:bssnews.net/district/ illegal sand extraction dredger November 2026 Bangladesh",
+        "site:observerbd.com/news/ illegal sand extraction Bangladesh 2026 river",
+        "site:jugantor.com/country-news/ বালু উত্তোলন জরিমানা নদী ২০২০",
+        "site:ittefaq.com.bd/ বালু উত্তোলন নদী জরিমানা ২০১৮"
+      ],
+      "creditUsage": {
+        "primaryProvider": "tinyfish",
+        "tinyfish": {
+          "searchRequests": 8,
+          "fetchURLs": 10,
+          "paidAgentCalls": 0,
+          "paidBrowserCalls": 0,
+          "paidMonitorCalls": 0,
+          "note": "Search and Fetch only; client quota reservations include earlier local-day activity."
+        },
+        "firecrawl": {
+          "before": 30,
+          "after": 30,
+          "observedNetBalanceChange": 0,
+          "scrapes": 9,
+          "reportedCreditsUsedByScrapeReceipts": 9,
+          "fallbackReasons": {
+            "tinyfishBotBlocked": 8,
+            "dateMissingFromTinyfishBacklog": 1
+          },
+          "note": "Each fallback scrape reported one credit; credit-usage balance still reported 30 before and after, so billing reconciliation may lag. Four Ittefaq pages yielded only a site shell and were excluded."
+        }
+      },
+      "editorialDecision": "Accept",
+      "editorialReviewer": "assistant",
+      "errors": [
+        {
+          "provider": "tinyfish",
+          "kind": "bot_blocked",
+          "count": 8,
+          "action": "Firecrawl fallback attempted."
+        },
+        {
+          "provider": "firecrawl",
+          "kind": "article_body_missing",
+          "count": 4,
+          "action": "Excluded Ittefaq pages; no snippet-only records."
+        }
+      ],
+      "notes": "Five source-checked distinct dated reports from 2020, 2024 and 2026. Duplicates and inaccessible article shells excluded; existing records, reviews and media preserved."
+    }
+  ],
+  "searches": [
+    {
+      "id": "scheduled-chat-2026-11-06-daily-tinyfish-search-1",
+      "query": "site:bd-pratidin.com/country/ বালু উত্তোলন নদী নভেম্বর ২০২৬",
+      "checkedAt": "2026-11-06T17:09:14.332793+00:00",
+      "status": "Checked",
+      "count": 3,
+      "limit": 10,
+      "collector": "scheduled-chat",
+      "retrievalProvider": "tinyfish"
+    },
+    {
+      "id": "scheduled-chat-2026-11-06-daily-tinyfish-search-2",
+      "query": "site:prothomalo.com/bangladesh/district/ বালু উত্তোলন নদী নভেম্বর ২০২৬",
+      "checkedAt": "2026-11-06T17:09:09.172771+00:00",
+      "status": "Checked",
+      "count": 0,
+      "limit": 10,
+      "collector": "scheduled-chat",
+      "retrievalProvider": "tinyfish"
+    },
+    {
+      "id": "scheduled-chat-2026-11-06-daily-tinyfish-search-3",
+      "query": "site:bssnews.net sand extraction river Bangladesh November 2026",
+      "checkedAt": "2026-11-06T17:09:19.130098+00:00",
+      "status": "Checked",
+      "count": 3,
+      "limit": 10,
+      "collector": "scheduled-chat",
+      "retrievalProvider": "tinyfish"
+    },
+    {
+      "id": "scheduled-chat-2026-11-06-daily-tinyfish-search-4",
+      "query": "site:thedailystar.net/news/bangladesh sand extraction river November 2026",
+      "checkedAt": "2026-11-06T17:09:14.879270+00:00",
+      "status": "Checked",
+      "count": 3,
+      "limit": 10,
+      "collector": "scheduled-chat",
+      "retrievalProvider": "tinyfish"
+    },
+    {
+      "id": "scheduled-chat-2026-11-06-daily-tinyfish-search-5",
+      "query": "site:bssnews.net/district/ illegal sand extraction dredger November 2026 Bangladesh",
+      "checkedAt": "2026-11-06T17:09:37.569598+00:00",
+      "status": "Checked",
+      "count": 2,
+      "limit": 10,
+      "collector": "scheduled-chat",
+      "retrievalProvider": "tinyfish"
+    },
+    {
+      "id": "scheduled-chat-2026-11-06-daily-tinyfish-search-6",
+      "query": "site:observerbd.com/news/ illegal sand extraction Bangladesh 2026 river",
+      "checkedAt": "2026-11-06T17:09:46.304753+00:00",
+      "status": "Checked",
+      "count": 3,
+      "limit": 10,
+      "collector": "scheduled-chat",
+      "retrievalProvider": "tinyfish"
+    },
+    {
+      "id": "scheduled-chat-2026-11-06-daily-tinyfish-search-7",
+      "query": "site:jugantor.com/country-news/ বালু উত্তোলন জরিমানা নদী ২০২০",
+      "checkedAt": "2026-11-06T17:09:42.921370+00:00",
+      "status": "Checked",
+      "count": 2,
+      "limit": 10,
+      "collector": "scheduled-chat",
+      "retrievalProvider": "tinyfish"
+    },
+    {
+      "id": "scheduled-chat-2026-11-06-daily-tinyfish-search-8",
+      "query": "site:ittefaq.com.bd/ বালু উত্তোলন নদী জরিমানা ২০১৮",
+      "checkedAt": "2026-11-06T17:09:40.873676+00:00",
+      "status": "Checked",
+      "count": 6,
+      "limit": 10,
+      "collector": "scheduled-chat",
+      "retrievalProvider": "tinyfish"
+    }
+  ],
+  "discovery": [
+    {
+      "id": "scheduled-chat-2026-11-06-daily-tinyfish-discovery-1",
+      "url": "https://www.bssnews.net/district/442784",
+      "title": "Dredgers, bulkheads seized for illegal sand extraction in ...",
+      "query": "site:bssnews.net sand extraction river Bangladesh November 2026",
+      "rank": 1,
+      "status": "Added to archive",
+      "reason": "Full original article and displayed date verified; bilingual editorial Accept.",
+      "recordId": "BSW-484bb2c34e7ae8d0",
+      "loggedAt": "2026-11-06T17:14:44.229Z",
+      "collector": "scheduled-chat",
+      "retrievalProvider": "tinyfish-first",
+      "runId": "scheduled-chat-2026-11-06-daily-tinyfish"
+    },
+    {
+      "id": "scheduled-chat-2026-11-06-daily-tinyfish-discovery-2",
+      "url": "https://observerbd.com/news/575432",
+      "title": "Illegal sand extraction threatens Kushiyara-Kalni ...",
+      "query": "site:observerbd.com/news/ illegal sand extraction Bangladesh 2026 river",
+      "rank": 2,
+      "status": "Added to archive",
+      "reason": "Full original article and displayed date verified; bilingual editorial Accept.",
+      "recordId": "BSW-8b705285e176e036",
+      "loggedAt": "2026-11-06T17:14:44.229Z",
+      "collector": "scheduled-chat",
+      "retrievalProvider": "tinyfish-first",
+      "runId": "scheduled-chat-2026-11-06-daily-tinyfish"
+    },
+    {
+      "id": "scheduled-chat-2026-11-06-daily-tinyfish-discovery-3",
+      "url": "https://www.jugantor.com/country-news/319677",
+      "title": "নদী থেকে বালু উত্তোলন, তাহিরপুরে সাবেক ইউপি সদস্যকে জরিমানা",
+      "query": "site:jugantor.com/country-news/ বালু উত্তোলন জরিমানা নদী ২০২০",
+      "rank": 1,
+      "status": "Added to archive",
+      "reason": "Full original article and displayed date verified; bilingual editorial Accept.",
+      "recordId": "BSW-5337783518ec55dc",
+      "loggedAt": "2026-11-06T17:14:44.229Z",
+      "collector": "scheduled-chat",
+      "retrievalProvider": "tinyfish-first",
+      "runId": "scheduled-chat-2026-11-06-daily-tinyfish"
+    },
+    {
+      "id": "scheduled-chat-2026-11-06-daily-tinyfish-discovery-4",
+      "url": "https://www.jugantor.com/country-news/305403",
+      "title": "মানিকগঞ্জে দুটি অবৈধ ড্রেজারে আগুন দিল ভ্রাম্যমাণ আদালত",
+      "query": "site:jugantor.com/country-news/ বালু উত্তোলন জরিমানা নদী ২০২০",
+      "rank": 2,
+      "status": "Added to archive",
+      "reason": "Full original article and displayed date verified; bilingual editorial Accept.",
+      "recordId": "BSW-cb3fe24301946637",
+      "loggedAt": "2026-11-06T17:14:44.229Z",
+      "collector": "scheduled-chat",
+      "retrievalProvider": "tinyfish-first",
+      "runId": "scheduled-chat-2026-11-06-daily-tinyfish"
+    },
+    {
+      "id": "scheduled-chat-2026-11-06-daily-tinyfish-discovery-5",
+      "url": "https://www.prothomalo.com/bangladesh/district/latrdkxy8f",
+      "title": "আদালতের আদেশ অমান্য করে বালু তোলায় সেই সেলিম খানের মেয়ের জরিমানা",
+      "query": "prior verified discovery backlog",
+      "rank": 0,
+      "status": "Added to archive",
+      "reason": "Full original article and displayed date verified; bilingual editorial Accept.",
+      "recordId": "BSW-a13dc9124495ec3a",
+      "loggedAt": "2026-11-06T17:14:44.229Z",
+      "collector": "scheduled-chat",
+      "retrievalProvider": "tinyfish-first",
+      "runId": "scheduled-chat-2026-11-06-daily-tinyfish"
+    },
+    {
+      "id": "scheduled-chat-2026-11-06-daily-tinyfish-discovery-6",
+      "url": "https://www.bssnews.net/others/441839",
+      "title": "HC issues rule on writ to stop sand extraction from Padma ...",
+      "query": "site:bssnews.net sand extraction river Bangladesh November 2026",
+      "rank": 2,
+      "status": "Duplicate incident",
+      "reason": "Same 4 November Padma High Court rule already represented in the archive.",
+      "recordId": "",
+      "loggedAt": "2026-11-06T17:14:44.229Z",
+      "collector": "scheduled-chat",
+      "retrievalProvider": "tinyfish-first",
+      "runId": "scheduled-chat-2026-11-06-daily-tinyfish"
+    },
+    {
+      "id": "scheduled-chat-2026-11-06-daily-tinyfish-discovery-7",
+      "url": "https://www.thedailystar.net/news/bangladesh/news/bakkhalis-revival-hinges-political-administrative-will-4315876",
+      "title": "Bakkhali's revival hinges on political, administrative will",
+      "query": "site:thedailystar.net/news/bangladesh sand extraction river November 2026",
+      "rank": 1,
+      "status": "Duplicate incident",
+      "reason": "Alternative Daily Star URL for the same Bakkhali discussion already archived.",
+      "recordId": "",
+      "loggedAt": "2026-11-06T17:14:44.229Z",
+      "collector": "scheduled-chat",
+      "retrievalProvider": "tinyfish-first",
+      "runId": "scheduled-chat-2026-11-06-daily-tinyfish"
+    },
+    {
+      "id": "scheduled-chat-2026-11-06-daily-tinyfish-discovery-8",
+      "url": "https://observerbd.com/news/602260",
+      "title": "Illegal sand mining threatens Meghna riverbank",
+      "query": "site:observerbd.com/news/ illegal sand extraction Bangladesh 2026 river",
+      "rank": 1,
+      "status": "Deferred duplicate coverage",
+      "reason": "Ongoing Sonargaon Meghna erosion and extraction overlaps the archived 2 November report; no clearly separate incident selected.",
+      "recordId": "",
+      "loggedAt": "2026-11-06T17:14:44.229Z",
+      "collector": "scheduled-chat",
+      "retrievalProvider": "tinyfish-first",
+      "runId": "scheduled-chat-2026-11-06-daily-tinyfish"
+    },
+    {
+      "id": "scheduled-chat-2026-11-06-daily-tinyfish-discovery-9",
+      "url": "https://observerbd.com/news/567292",
+      "title": "15 villagers shot while resisting illegal sand dredging in Meghna",
+      "query": "site:observerbd.com/news/ illegal sand extraction Bangladesh 2026 river",
+      "rank": 3,
+      "status": "Duplicate incident",
+      "reason": "22 February Charlapang shooting incident already represented by earlier reporting; accounts differ on injured count.",
+      "recordId": "",
+      "loggedAt": "2026-11-06T17:14:44.229Z",
+      "collector": "scheduled-chat",
+      "retrievalProvider": "tinyfish-first",
+      "runId": "scheduled-chat-2026-11-06-daily-tinyfish"
+    },
+    {
+      "id": "scheduled-chat-2026-11-06-daily-tinyfish-discovery-10",
+      "url": "https://www.ittefaq.com.bd/5900/%E0%A6%B6%E0%A6%99%E0%A7%8D%E0%A6%96-%E0%A6%A8%E0%A6%A6%E0%A7%87-%E0%A6%85%E0%A6%AC%E0%A7%88%E0%A6%A7%E0%A6%AD%E0%A6%BE%E0%A6%AC%E0%A7%87-%E0%A6%AC%E0%A6%BE%E0%A6%B2%E0%A7%81-%E0%A6%89%E0%A6%A4%E0%A7%8D%E0%A6%A4%E0%A7%8B%E0%A6%B2%E0%A6%A8%E0%A7%87%E0%A6%B0-%E0%A6%A6%E0%A6%BE%E0%A7%9F%E0%A7%87-%E0%A6%9C%E0%A6%B0%E0%A6%BF%E0%A6%AE%E0%A6%BE%E0%A6%A8%E0%A6%BE",
+      "title": "শঙ্খ নদে অবৈধভাবে বালু উত্তোলনের দায়ে জরিমানা",
+      "query": "site:ittefaq.com.bd/ বালু উত্তোলন নদী জরিমানা ২০১৮",
+      "rank": 1,
+      "status": "Deferred inaccessible article",
+      "reason": "TinyFish bot-blocked; Firecrawl returned site shell without article body or reliable original date.",
+      "recordId": "",
+      "loggedAt": "2026-11-06T17:14:44.229Z",
+      "collector": "scheduled-chat",
+      "retrievalProvider": "tinyfish-first",
+      "runId": "scheduled-chat-2026-11-06-daily-tinyfish"
+    },
+    {
+      "id": "scheduled-chat-2026-11-06-daily-tinyfish-discovery-11",
+      "url": "https://www.ittefaq.com.bd/2601/%E0%A6%AC%E0%A6%BE%E0%A6%81%E0%A6%B6%E0%A6%96%E0%A6%BE%E0%A6%B2%E0%A7%80%E0%A6%A4%E0%A7%87-%E0%A6%85%E0%A6%AC%E0%A7%88%E0%A6%A7%E0%A6%AD%E0%A6%BE%E0%A6%AC%E0%A7%87-%E0%A6%AC%E0%A6%BE%E0%A6%B2%E0%A7%81-%E0%A6%89%E0%A6%A4%E0%A7%8D%E0%A6%A4%E0%A7%8B%E0%A6%B2%E0%A6%A8%E0%A7%87%E0%A6%B0-%E0%A6%A6%E0%A6%BE%E0%A7%9F%E0%A7%87-%E0%A6%A6%E0%A7%81%E0%A6%87%E0%A6%9C%E0%A6%A8%E0%A7%87%E0%A6%B0",
+      "title": "বাঁশখালীতে অবৈধভাবে বালু উত্তোলনের দায়ে দুইজনের জরিমানা",
+      "query": "site:ittefaq.com.bd/ বালু উত্তোলন নদী জরিমানা ২০১৮",
+      "rank": 3,
+      "status": "Deferred inaccessible article",
+      "reason": "TinyFish bot-blocked; Firecrawl returned site shell without article body or reliable original date.",
+      "recordId": "",
+      "loggedAt": "2026-11-06T17:14:44.229Z",
+      "collector": "scheduled-chat",
+      "retrievalProvider": "tinyfish-first",
+      "runId": "scheduled-chat-2026-11-06-daily-tinyfish"
+    },
+    {
+      "id": "scheduled-chat-2026-11-06-daily-tinyfish-discovery-12",
+      "url": "https://www.ittefaq.com.bd/454485/%E0%A6%AA%E0%A6%A6%E0%A7%8D%E0%A6%AE%E0%A6%BE-%E0%A6%93-%E0%A6%86%E0%A7%9C%E0%A6%BF%E0%A7%9F%E0%A6%BE%E0%A6%B2-%E0%A6%96%E0%A6%BE%E0%A6%81%E0%A7%9F-%E0%A6%A1%E0%A7%8D%E0%A6%B0%E0%A7%87%E0%A6%9C%E0%A6%BE%E0%A6%B0-%E0%A6%AD%E0%A7%87%E0%A6%95%E0%A7%81-%E0%A6%A6%E0%A6%BF%E0%A7%9F%E0%A7%87-%E0%A6%AC%E0%A6%BE%E0%A6%B2%E0%A7%81-%E0%A6%89%E0%A6%A4%E0%A7%8D%E0%A6%A4%E0%A7%8B%E0%A6%B2%E0%A6%A8",
+      "title": "পদ্মা ও আড়িয়াল খাঁয় ড্রেজার-ভেকু দিয়ে বালু উত্তোলন বন্ধ হচ্ছে না",
+      "query": "site:ittefaq.com.bd/ বালু উত্তোলন নদী জরিমানা ২০১৮",
+      "rank": 4,
+      "status": "Deferred inaccessible article",
+      "reason": "TinyFish bot-blocked; Firecrawl returned site shell without article body or reliable original date.",
+      "recordId": "",
+      "loggedAt": "2026-11-06T17:14:44.229Z",
+      "collector": "scheduled-chat",
+      "retrievalProvider": "tinyfish-first",
+      "runId": "scheduled-chat-2026-11-06-daily-tinyfish"
+    },
+    {
+      "id": "scheduled-chat-2026-11-06-daily-tinyfish-discovery-13",
+      "url": "https://www.ittefaq.com.bd/4046/%E0%A6%AC%E0%A6%A6%E0%A6%B2%E0%A6%97%E0%A6%BE%E0%A6%9B%E0%A7%80%E0%A6%A4%E0%A7%87-%E0%A6%AC%E0%A6%A8%E0%A7%8D%E0%A6%A7-%E0%A6%B9%E0%A6%9A%E0%A7%8D%E0%A6%9B%E0%A7%87-%E0%A6%A8%E0%A6%BE-%E0%A6%85%E0%A6%AC%E0%A6%BE%E0%A6%A7%E0%A7%87-%E0%A6%AC%E0%A6%BE%E0%A6%B2%E0%A7%81-%E0%A6%89%E0%A6%A4%E0%A7%8D%E0%A6%A4%E0%A7%8B%E0%A6%B2%E0%A6%A8",
+      "title": "বদলগাছীতে বন্ধ হচ্ছে না অবাধে বালু উত্তোলন, হুমকিতে ব্রিজ-ফসলি জমি",
+      "query": "site:ittefaq.com.bd/ বালু উত্তোলন নদী জরিমানা ২০১৮",
+      "rank": 6,
+      "status": "Deferred inaccessible article",
+      "reason": "TinyFish bot-blocked; Firecrawl returned site shell without article body or reliable original date.",
+      "recordId": "",
+      "loggedAt": "2026-11-06T17:14:44.229Z",
+      "collector": "scheduled-chat",
+      "retrievalProvider": "tinyfish-first",
+      "runId": "scheduled-chat-2026-11-06-daily-tinyfish"
+    }
+  ],
+  "editorialReviews": {
+    "BSW-484bb2c34e7ae8d0": {
+      "decision": "Accept",
+      "auto": true,
+      "reviewer": "assistant",
+      "reviewedAt": "2026-11-06T17:14:44.229Z",
+      "sourceReads": [
+        {
+          "provider": "firecrawl",
+          "sourceUrl": "https://www.bssnews.net/district/442784",
+          "sourceBodySha256": "580baba4f9dd435a24fdedaa4ad30dde0443fa2347ab526896fc17f040a24970",
+          "sourceCharacters": 5075,
+          "scrapeId": "01a1b1d7-8cba-71b4-9b7a-e04ce3c5a9cc",
+          "usedAsArticleAndDateEvidence": true,
+          "publisherDisplayedDate": "2026-11-06"
+        }
+      ],
+      "incidentReview": "Original article, date, event, place, quantities and caveats checked against 524 merged records and proposed batch; distinct incident or dated action.",
+      "checksPassed": [
+        "original article body and displayed publisher date",
+        "Bangladesh extraction relevance and incident-level deduplication",
+        "named river or extraction site and administrative place in both languages",
+        "source quantities, units, time bases and money in equivalent English and Bangla",
+        "attributed allegations and evidence limits",
+        "canonical URL SHA256 ID and News schema"
+      ],
+      "authorization": "Owner authorized source-checked assistant editorial Accept and publication."
+    },
+    "BSW-8b705285e176e036": {
+      "decision": "Accept",
+      "auto": true,
+      "reviewer": "assistant",
+      "reviewedAt": "2026-11-06T17:14:44.229Z",
+      "sourceReads": [
+        {
+          "provider": "firecrawl",
+          "sourceUrl": "https://observerbd.com/news/575432",
+          "sourceBodySha256": "733565a46dec541714e8851c1fd9e1bf363871010ef109cedbb279b69ea77532",
+          "sourceCharacters": 11165,
+          "scrapeId": "01a1b1d7-8d8e-7502-9ac0-3473f942d0b6",
+          "usedAsArticleAndDateEvidence": true,
+          "publisherDisplayedDate": "2026-05-07"
+        }
+      ],
+      "incidentReview": "Original article, date, event, place, quantities and caveats checked against 524 merged records and proposed batch; distinct incident or dated action.",
+      "checksPassed": [
+        "original article body and displayed publisher date",
+        "Bangladesh extraction relevance and incident-level deduplication",
+        "named river or extraction site and administrative place in both languages",
+        "source quantities, units, time bases and money in equivalent English and Bangla",
+        "attributed allegations and evidence limits",
+        "canonical URL SHA256 ID and News schema"
+      ],
+      "authorization": "Owner authorized source-checked assistant editorial Accept and publication."
+    },
+    "BSW-5337783518ec55dc": {
+      "decision": "Accept",
+      "auto": true,
+      "reviewer": "assistant",
+      "reviewedAt": "2026-11-06T17:14:44.229Z",
+      "sourceReads": [
+        {
+          "provider": "tinyfish",
+          "sourceUrl": "https://www.jugantor.com/country-news/319677",
+          "sourceBodySha256": "dc83c43aecf60f2689c20960e7810db151a715c55e832470be15e330999e87e5",
+          "sourceCharacters": 5080,
+          "usedAsArticleAndDateEvidence": true,
+          "publisherDisplayedDate": "2020-06-25"
+        }
+      ],
+      "incidentReview": "Original article, date, event, place, quantities and caveats checked against 524 merged records and proposed batch; distinct incident or dated action.",
+      "checksPassed": [
+        "original article body and displayed publisher date",
+        "Bangladesh extraction relevance and incident-level deduplication",
+        "named river or extraction site and administrative place in both languages",
+        "source quantities, units, time bases and money in equivalent English and Bangla",
+        "attributed allegations and evidence limits",
+        "canonical URL SHA256 ID and News schema"
+      ],
+      "authorization": "Owner authorized source-checked assistant editorial Accept and publication."
+    },
+    "BSW-cb3fe24301946637": {
+      "decision": "Accept",
+      "auto": true,
+      "reviewer": "assistant",
+      "reviewedAt": "2026-11-06T17:14:44.229Z",
+      "sourceReads": [
+        {
+          "provider": "tinyfish",
+          "sourceUrl": "https://www.jugantor.com/country-news/305403",
+          "sourceBodySha256": "ed41fddc72ece6c9597c809b786dbc18c640dee0d5d81ac2e3240ca19cd9269b",
+          "sourceCharacters": 3018,
+          "usedAsArticleAndDateEvidence": true,
+          "publisherDisplayedDate": "2020-05-08"
+        }
+      ],
+      "incidentReview": "Original article, date, event, place, quantities and caveats checked against 524 merged records and proposed batch; distinct incident or dated action.",
+      "checksPassed": [
+        "original article body and displayed publisher date",
+        "Bangladesh extraction relevance and incident-level deduplication",
+        "named river or extraction site and administrative place in both languages",
+        "source quantities, units, time bases and money in equivalent English and Bangla",
+        "attributed allegations and evidence limits",
+        "canonical URL SHA256 ID and News schema"
+      ],
+      "authorization": "Owner authorized source-checked assistant editorial Accept and publication."
+    },
+    "BSW-a13dc9124495ec3a": {
+      "decision": "Accept",
+      "auto": true,
+      "reviewer": "assistant",
+      "reviewedAt": "2026-11-06T17:14:44.229Z",
+      "sourceReads": [
+        {
+          "provider": "firecrawl",
+          "sourceUrl": "https://www.prothomalo.com/bangladesh/district/latrdkxy8f",
+          "sourceBodySha256": "fd720099b6b456ed4680ca8426a149ab17fbabd873a2c704487fc8493c8c1555",
+          "sourceCharacters": 11712,
+          "scrapeId": "01a1b1d8-8b40-770a-988c-6f7adedfd23a",
+          "usedAsArticleAndDateEvidence": true,
+          "publisherDisplayedDate": "2024-06-03"
+        }
+      ],
+      "incidentReview": "Original article, date, event, place, quantities and caveats checked against 524 merged records and proposed batch; distinct incident or dated action.",
+      "checksPassed": [
+        "original article body and displayed publisher date",
+        "Bangladesh extraction relevance and incident-level deduplication",
+        "named river or extraction site and administrative place in both languages",
+        "source quantities, units, time bases and money in equivalent English and Bangla",
+        "attributed allegations and evidence limits",
+        "canonical URL SHA256 ID and News schema"
+      ],
+      "authorization": "Owner authorized source-checked assistant editorial Accept and publication."
+    }
+  },
+  "baselineCommit": "6ab42fb51fc95543ac7cb84f9fbdb0870961f4b2"
+}
