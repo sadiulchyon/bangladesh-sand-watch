@@ -1,0 +1,618 @@
+{
+  "records": [
+    {
+      "dateKind": "Published",
+      "flag": "",
+      "type": "News",
+      "documentId": "",
+      "otherDate": "",
+      "alternateUrl": "",
+      "decision": "Accept",
+      "reviewNotes": "",
+      "collectedAt": "2026-11-08T16:50:35.000Z",
+      "auto": true,
+      "collector": "scheduled-chat",
+      "url": "https://www.bd-pratidin.com/country/2026/11/08/1323342",
+      "id": "BSW-0933406d24b94513",
+      "source": "Bangladesh Pratidin",
+      "title": "শেরপুরে অবৈধ বালু পরিবহনের অভিযোগে অটোভ্যান-লরি জব্দ, আটক ৬",
+      "date": "2026-11-08",
+      "district": "Bakakura Khal and Dhanshail Bazar, Jhenaigati, Sherpur",
+      "river": "Bakakura Khal",
+      "material": "Red sand",
+      "topics": "Illegal extraction and transport; vehicle seizure; arrests",
+      "language": "Bangla",
+      "en": "Police said sand had been taken illegally from Bakakura Khal in Jhenaigati, Sherpur, and intercepted vehicles near Dhanshail Bazar at about 3 a.m. on 8 November. They seized six sand-laden battery vans and one Mahindra lorry, detained the six van drivers, and filed a case against those six and a lorry driver who fled. The court later ordered the six detainees to jail.",
+      "bn": "পুলিশের ভাষ্য অনুযায়ী, শেরপুরের ঝিনাইগাতীতে বাকাকুড়া খাল থেকে অবৈধভাবে তোলা লাল বালু পরিবহনের সময় ৮ নভেম্বর রাত প্রায় ৩টায় ধানশাইল বাজার এলাকায় অভিযান হয়। ছয়টি বালুবোঝাই ব্যাটারিচালিত অটোভ্যান ও একটি মাহিন্দ্রা লরি জব্দ, ছয় অটোভ্যানচালককে আটক এবং তাঁদের সঙ্গে পালিয়ে যাওয়া লরিচালকের বিরুদ্ধে মামলা করা হয়। পরে আদালত আটক ছয়জনকে কারাগারে পাঠানোর নির্দেশ দেন।",
+      "evidence": "Original Bangladesh Pratidin body and displayed 8 November 2026 date; Bakakura Khal, Dhanshail Bazar, six vans/drivers, one lorry/fugitive, seven accused and court order checked."
+    },
+    {
+      "dateKind": "Published",
+      "flag": "",
+      "type": "News",
+      "documentId": "",
+      "otherDate": "",
+      "alternateUrl": "",
+      "decision": "Accept",
+      "reviewNotes": "",
+      "collectedAt": "2026-11-08T16:50:35.000Z",
+      "auto": true,
+      "collector": "scheduled-chat",
+      "url": "https://www.bssnews.net/bangla/national/357613",
+      "id": "BSW-cc91a19080088507",
+      "source": "Bangladesh Sangbad Sangstha (BSS)",
+      "title": "বরিশালে অবৈধভাবে বালু উত্তোলনকালে ড্রেজার ও বাল্কহেড জব্দ",
+      "date": "2026-11-07",
+      "district": "Charbaria, Barishal Sadar, Barishal",
+      "river": "Kirtankhola River",
+      "material": "Sand",
+      "topics": "Coast Guard patrol; equipment seizure; mobile court fine",
+      "language": "Bangla",
+      "en": "During a 7 November patrol beside Charbaria in Barishal Sadar, the Coast Guard said it seized two dredgers and two bulkhead boats being used for illegal sand extraction from the Kirtankhola River. Operators fled; a mobile court collected Tk400,000 (Tk4 lakh) in fines from equipment owners, then released the vessels and dredgers after undertakings. This Charbaria action is separate from the 6 November Dapdapia Bridge raid.",
+      "bn": "৭ নভেম্বর বরিশাল সদরের চরবাড়িয়া সংলগ্ন কীর্তনখোলা নদীতে টহলকালে অবৈধ বালু উত্তোলনের কাজে ব্যবহৃত দুটি ড্রেজার ও দুটি বাল্কহেড জব্দের কথা জানায় কোস্ট গার্ড। উত্তোলনকারীরা পালিয়ে যান; পরে ভ্রাম্যমাণ আদালত মালিকদের কাছ থেকে ৪ লাখ টাকা জরিমানা আদায় করে মুচলেকায় নৌযান ও ড্রেজার ছেড়ে দেয়। চরবাড়িয়ার এ অভিযান ৬ নভেম্বরের দপদপিয়া সেতুর অভিযান থেকে আলাদা।",
+      "evidence": "Original BSS body and displayed 7 November 2026 date; Charbaria location, two dredgers, two bulkheads, Tk4 lakh fine, operators fled and release on undertaking checked."
+    },
+    {
+      "dateKind": "Published",
+      "flag": "",
+      "type": "News",
+      "documentId": "",
+      "otherDate": "",
+      "alternateUrl": "",
+      "decision": "Accept",
+      "reviewNotes": "",
+      "collectedAt": "2026-11-08T16:50:35.000Z",
+      "auto": true,
+      "collector": "scheduled-chat",
+      "url": "https://www.thedailystar.net/news/bangladesh/news/chunarughat-habiganj-unregulated-sand-lifting-threatens-deochara-bridge",
+      "id": "BSW-2d4546a2e67cba14",
+      "source": "The Daily Star",
+      "title": "Chunarughat in Habiganj: Unregulated sand lifting threatens Deochara bridge",
+      "date": "2025-08-17",
+      "district": "Deochara Bridge, Daragaon village, Satiajuri union, Chunarughat, Habiganj",
+      "river": "Watercourse beneath Deochara Bridge (not named)",
+      "material": "Sand",
+      "topics": "Alleged illegal extraction; bridge risk; dredging",
+      "language": "English",
+      "en": "Residents of Daragaon village in Satiajuri union, Chunarughat, Habiganj, alleged that dredgers were removing sand at night from the unnamed watercourse beneath Deochara Bridge. They reported a deep cavity beside the bridge, subsidence of its surface and damage to roads from overloaded sand trucks. The article cites a one-kilometre no-extraction zone on either side of a bridge; three people named by locals denied involvement, while the upazila administration said it was conducting raids.",
+      "bn": "হবিগঞ্জের চুনারুঘাটে সাতিয়াজুড়ি ইউনিয়নের দারাগাঁও গ্রামে দেওছড়া সেতুর নিচের নাম উল্লেখ না করা জলধারা থেকে রাতে ড্রেজার দিয়ে বালু তোলার অভিযোগ করেন বাসিন্দারা। তাঁদের মতে, সেতুর পাশে গভীর গর্ত ও সেতুর উপরিভাগে বসে যাওয়ার লক্ষণ দেখা গেছে এবং অতিরিক্ত বোঝাই বালুবাহী ট্রাকে রাস্তা ক্ষতিগ্রস্ত হচ্ছে। প্রতিবেদনে সেতুর দুই পাশে এক কিলোমিটারের মধ্যে বালু তোলার নিষেধের কথা আছে; স্থানীয়দের অভিযোগে নাম আসা তিনজন জড়িত থাকার কথা অস্বীকার করেছেন, আর উপজেলা প্রশাসন অভিযানের কথা জানিয়েছে।",
+      "evidence": "Daily Star original body displays Published 17 August 2025 and Updated same day; TinyFish metadata incorrectly says 8 November 2026. Deochara Bridge, Daragaon, unnamed watercourse, one-kilometre reported buffer and denials checked."
+    },
+    {
+      "dateKind": "Published",
+      "flag": "",
+      "type": "News",
+      "documentId": "",
+      "otherDate": "",
+      "alternateUrl": "",
+      "decision": "Accept",
+      "reviewNotes": "",
+      "collectedAt": "2026-11-08T16:50:35.000Z",
+      "auto": true,
+      "collector": "scheduled-chat",
+      "url": "https://www.thedailystar.net/news/bangladesh/crime-justice/news/hc-orders-action-over-bholaganj-stone-looting-3962541",
+      "id": "BSW-b0072792c41c3924",
+      "source": "The Daily Star",
+      "title": "HC orders action over Bholaganj stone looting",
+      "date": "2025-08-14",
+      "district": "Sada Pathor, Bholaganj, Companiganj, Sylhet",
+      "river": "Sada Pathor extraction site (river not named)",
+      "material": "Stone",
+      "topics": "High Court order; alleged stone looting; governance",
+      "language": "English",
+      "en": "Following a petition concerning stone looting at Sada Pathor in Bholaganj, Companiganj, Sylhet, the High Court on 14 August 2025 directed the government to submit a list of those involved within three months and the district administration to return looted stones to the site within seven days. The report also describes a separate petition, listed for a later hearing, seeking an inquiry and measures against further extraction; it does not name a river.",
+      "bn": "সিলেটের কোম্পানীগঞ্জে ভোলাগঞ্জের সাদাপাথর এলাকায় পাথর লুটের বিষয়ে আবেদনের শুনানি শেষে ২০২৫ সালের ১৪ আগস্ট হাইকোর্ট সরকারকে তিন মাসের মধ্যে জড়িত ব্যক্তিদের তালিকা দিতে এবং জেলা প্রশাসনকে সাত দিনের মধ্যে লুট হওয়া পাথর সেখানে ফেরত রাখতে নির্দেশ দেন। প্রতিবেদনে আরও একটি পৃথক আবেদনের পরবর্তী শুনানির কথা আছে, যেখানে তদন্ত ও নতুন উত্তোলন ঠেকানোর ব্যবস্থা চাওয়া হয়েছে; কোনো নদীর নাম দেওয়া হয়নি।",
+      "evidence": "Daily Star original body displays Published 14 August 2025 and Updated same day; TinyFish metadata incorrectly says 8 November 2026. Court directions, three-month and seven-day periods, separate petition and site checked."
+    },
+    {
+      "dateKind": "Published",
+      "flag": "",
+      "type": "News",
+      "documentId": "",
+      "otherDate": "",
+      "alternateUrl": "",
+      "decision": "Accept",
+      "reviewNotes": "",
+      "collectedAt": "2026-11-08T16:50:35.000Z",
+      "auto": true,
+      "collector": "scheduled-chat",
+      "url": "https://today.thefinancialexpress.com.bd/country/five-jailed-for-illegal-sand-extraction-from-jamuna-1721064413",
+      "id": "BSW-a9c355e7c4ce9d24",
+      "source": "The Financial Express (UNB report)",
+      "title": "Five jailed for illegal sand extraction from Jamuna",
+      "date": "2024-07-16",
+      "district": "Crossbar Dam-1 near Brahmanboyra, Sirajganj Sadar, Sirajganj",
+      "river": "Jamuna River",
+      "material": "Sand",
+      "topics": "Illegal extraction; mobile court; jail sentences",
+      "language": "English",
+      "en": "A UNB report published by The Financial Express said a mobile court raided the Jamuna River at Crossbar Dam-1 near Brahmanboyra in Sirajganj Sadar on 14 July 2024 and sentenced five people to six months in jail each for illegal sand extraction. The article was published on 16 July and describes the raid as occurring on the preceding Sunday.",
+      "bn": "দ্য ফিন্যান্সিয়াল এক্সপ্রেসে প্রকাশিত ইউএনবির প্রতিবেদন অনুযায়ী, ২০২৪ সালের ১৪ জুলাই সিরাজগঞ্জ সদরের ব্রাহ্মণবয়ড়া এলাকার কাছে যমুনা নদীর ক্রসবার বাঁধ-১ এলাকায় ভ্রাম্যমাণ আদালত অভিযান চালিয়ে অবৈধ বালু উত্তোলনের দায়ে পাঁচজনকে প্রত্যেককে ছয় মাসের কারাদণ্ড দেন। প্রতিবেদনটি ১৬ জুলাই প্রকাশিত হয় এবং অভিযানটি আগের রোববারের ঘটনা হিসেবে উল্লেখ করে।",
+      "evidence": "Financial Express full UNB report displays 16 July 2024 publication date; preceding Sunday raid at Crossbar Dam-1, five people and six-month sentences checked."
+    }
+  ],
+  "reviews": {
+    "BSW-0933406d24b94513": {
+      "decision": "Accept",
+      "notes": "",
+      "auto": true,
+      "reviewer": "assistant",
+      "reviewedAt": "2026-11-08T16:50:35.000Z"
+    },
+    "BSW-cc91a19080088507": {
+      "decision": "Accept",
+      "notes": "",
+      "auto": true,
+      "reviewer": "assistant",
+      "reviewedAt": "2026-11-08T16:50:35.000Z"
+    },
+    "BSW-2d4546a2e67cba14": {
+      "decision": "Accept",
+      "notes": "",
+      "auto": true,
+      "reviewer": "assistant",
+      "reviewedAt": "2026-11-08T16:50:35.000Z"
+    },
+    "BSW-b0072792c41c3924": {
+      "decision": "Accept",
+      "notes": "",
+      "auto": true,
+      "reviewer": "assistant",
+      "reviewedAt": "2026-11-08T16:50:35.000Z"
+    },
+    "BSW-a9c355e7c4ce9d24": {
+      "decision": "Accept",
+      "notes": "",
+      "auto": true,
+      "reviewer": "assistant",
+      "reviewedAt": "2026-11-08T16:50:35.000Z"
+    }
+  },
+  "runs": [
+    {
+      "id": "scheduled-chat-2026-11-08-daily-tinyfish",
+      "startedAt": "2026-11-08T14:39:56.272Z",
+      "finishedAt": "2026-11-08T16:50:35.000Z",
+      "status": "completed",
+      "collector": "scheduled-chat",
+      "retrievalProvider": "tinyfish-first",
+      "fallbackProvider": "firecrawl",
+      "found": 25,
+      "added": 5,
+      "fetches": 8,
+      "duplicates": 2,
+      "recordIds": [
+        "BSW-0933406d24b94513",
+        "BSW-cc91a19080088507",
+        "BSW-2d4546a2e67cba14",
+        "BSW-b0072792c41c3924",
+        "BSW-a9c355e7c4ce9d24"
+      ],
+      "queries": [
+        "site:bssnews.net/bangla/national/ অবৈধ বালু উত্তোলন নভেম্বর ২০২৬",
+        "site:bssnews.net/bangla/national/ অবৈধ বালু উত্তোলন নভেম্বর ২০২৬",
+        "site:bd-pratidin.com/country/ বালু উত্তোলন নদী নভেম্বর ২০২৬",
+        "site:jugantor.com/country-news/ বালু উত্তোলন অভিযান নভেম্বর ২০২৬",
+        "site:prothomalo.com/bangladesh/district/ বালু উত্তোলন নদী নভেম্বর ২০২৬",
+        "site:today.thefinancialexpress.com.bd/country/ sand extraction Bangladesh 2024 river",
+        "site:bdnews24.com/bangladesh/ sand dredging 2023 river",
+        "site:thedailystar.net/news/bangladesh/news/ sand mining 2025 river"
+      ],
+      "creditUsage": {
+        "primaryProvider": "tinyfish",
+        "tinyfish": {
+          "searchRequests": 8,
+          "successfulSearches": 7,
+          "fetchURLs": 8,
+          "paidAgentCalls": 0,
+          "paidBrowserCalls": 0,
+          "paidMonitorCalls": 0,
+          "note": "Search and Fetch only; one initial network-restricted search failed before a successful rerun and was counted by the local quota helper."
+        },
+        "firecrawl": {
+          "before": 30,
+          "after": 30,
+          "observedNetBalanceChange": 0,
+          "scrapes": 1,
+          "reportedCreditsUsedByScrapeReceipts": 1,
+          "fallbackReasons": {
+            "tinyfishBotBlocked": 1
+          },
+          "note": "Fallback BSS scrape reported one credit; account balance endpoint remained at 30 before and after, so billing reconciliation may lag."
+        }
+      },
+      "editorialDecision": "Accept",
+      "editorialReviewer": "assistant",
+      "errors": [
+        {
+          "provider": "tinyfish",
+          "kind": "restricted_network_transport",
+          "count": 1,
+          "action": "Recovered with approved network access; counted within eight search attempts."
+        },
+        {
+          "provider": "tinyfish",
+          "kind": "bot_blocked",
+          "count": 1,
+          "action": "Read BSS original via Firecrawl fallback."
+        }
+      ],
+      "notes": "Five source-checked distinct reports from 2024, 2025 and 2026. Displayed Daily Star dates override incorrect fetch metadata. Unresolved or duplicate material excluded; existing records, reviews and media preserved."
+    }
+  ],
+  "searches": [
+    {
+      "id": "scheduled-chat-2026-11-08-daily-tinyfish-search-1",
+      "query": "site:bssnews.net/bangla/national/ অবৈধ বালু উত্তোলন নভেম্বর ২০২৬",
+      "checkedAt": "2026-11-08T16:47:01.101283Z",
+      "status": "Transport error",
+      "count": 0,
+      "limit": 10,
+      "collector": "scheduled-chat",
+      "retrievalProvider": "tinyfish",
+      "error": "DNS unavailable in restricted execution; repeated once with approved network access."
+    },
+    {
+      "id": "scheduled-chat-2026-11-08-daily-tinyfish-search-2",
+      "query": "site:bssnews.net/bangla/national/ অবৈধ বালু উত্তোলন নভেম্বর ২০২৬",
+      "checkedAt": "2026-11-08T16:47:20.254395+00:00",
+      "status": "Checked",
+      "count": 3,
+      "limit": 10,
+      "collector": "scheduled-chat",
+      "retrievalProvider": "tinyfish"
+    },
+    {
+      "id": "scheduled-chat-2026-11-08-daily-tinyfish-search-3",
+      "query": "site:bd-pratidin.com/country/ বালু উত্তোলন নদী নভেম্বর ২০২৬",
+      "checkedAt": "2026-11-08T16:47:44.497672+00:00",
+      "status": "Checked",
+      "count": 2,
+      "limit": 10,
+      "collector": "scheduled-chat",
+      "retrievalProvider": "tinyfish"
+    },
+    {
+      "id": "scheduled-chat-2026-11-08-daily-tinyfish-search-4",
+      "query": "site:jugantor.com/country-news/ বালু উত্তোলন অভিযান নভেম্বর ২০২৬",
+      "checkedAt": "2026-11-08T16:47:44.521991+00:00",
+      "status": "Checked",
+      "count": 0,
+      "limit": 10,
+      "collector": "scheduled-chat",
+      "retrievalProvider": "tinyfish"
+    },
+    {
+      "id": "scheduled-chat-2026-11-08-daily-tinyfish-search-5",
+      "query": "site:prothomalo.com/bangladesh/district/ বালু উত্তোলন নদী নভেম্বর ২০২৬",
+      "checkedAt": "2026-11-08T16:47:42.789298+00:00",
+      "status": "Checked",
+      "count": 0,
+      "limit": 10,
+      "collector": "scheduled-chat",
+      "retrievalProvider": "tinyfish"
+    },
+    {
+      "id": "scheduled-chat-2026-11-08-daily-tinyfish-search-6",
+      "query": "site:today.thefinancialexpress.com.bd/country/ sand extraction Bangladesh 2024 river",
+      "checkedAt": "2026-11-08T16:47:43.142467+00:00",
+      "status": "Checked",
+      "count": 9,
+      "limit": 10,
+      "collector": "scheduled-chat",
+      "retrievalProvider": "tinyfish"
+    },
+    {
+      "id": "scheduled-chat-2026-11-08-daily-tinyfish-search-7",
+      "query": "site:bdnews24.com/bangladesh/ sand dredging 2023 river",
+      "checkedAt": "2026-11-08T16:47:42.160238+00:00",
+      "status": "Checked",
+      "count": 1,
+      "limit": 10,
+      "collector": "scheduled-chat",
+      "retrievalProvider": "tinyfish"
+    },
+    {
+      "id": "scheduled-chat-2026-11-08-daily-tinyfish-search-8",
+      "query": "site:thedailystar.net/news/bangladesh/news/ sand mining 2025 river",
+      "checkedAt": "2026-11-08T16:47:45.107447+00:00",
+      "status": "Checked",
+      "count": 10,
+      "limit": 10,
+      "collector": "scheduled-chat",
+      "retrievalProvider": "tinyfish"
+    }
+  ],
+  "discovery": [
+    {
+      "id": "scheduled-chat-2026-11-08-daily-tinyfish-discovery-1",
+      "url": "https://www.bd-pratidin.com/country/2026/11/08/1323342",
+      "title": "শেরপুরে অবৈধ বালু পরিবহনের অভিযোগে অটোভ্যান-লরি জব্দ, আটক ৬",
+      "query": "site:bd-pratidin.com/country/ বালু উত্তোলন নদী নভেম্বর ২০২৬",
+      "rank": 1,
+      "status": "Added to archive",
+      "reason": "Full original body and displayed publisher date checked; distinct event or follow-up; bilingual editorial Accept.",
+      "recordId": "BSW-0933406d24b94513",
+      "loggedAt": "2026-11-08T16:50:35.000Z",
+      "collector": "scheduled-chat",
+      "retrievalProvider": "tinyfish",
+      "runId": "scheduled-chat-2026-11-08-daily-tinyfish"
+    },
+    {
+      "id": "scheduled-chat-2026-11-08-daily-tinyfish-discovery-2",
+      "url": "https://www.bssnews.net/bangla/national/357613",
+      "title": "বরিশালে অবৈধভাবে বালু উত্তোলনকালে ড্রেজার ও বাল্কহেড জব্দ",
+      "query": "site:bssnews.net/bangla/national/ অবৈধ বালু উত্তোলন নভেম্বর ২০২৬",
+      "rank": 3,
+      "status": "Added to archive",
+      "reason": "Full original body and displayed publisher date checked; distinct event or follow-up; bilingual editorial Accept.",
+      "recordId": "BSW-cc91a19080088507",
+      "loggedAt": "2026-11-08T16:50:35.000Z",
+      "collector": "scheduled-chat",
+      "retrievalProvider": "tinyfish-blocked-firecrawl-fallback",
+      "runId": "scheduled-chat-2026-11-08-daily-tinyfish"
+    },
+    {
+      "id": "scheduled-chat-2026-11-08-daily-tinyfish-discovery-3",
+      "url": "https://www.thedailystar.net/news/bangladesh/news/chunarughat-habiganj-unregulated-sand-lifting-threatens-deochara-bridge",
+      "title": "Chunarughat in Habiganj: Unregulated sand lifting threatens Deochara bridge",
+      "query": "site:thedailystar.net/news/bangladesh/news/ sand mining 2025 river",
+      "rank": 10,
+      "status": "Added to archive",
+      "reason": "Full original body and displayed publisher date checked; distinct event or follow-up; bilingual editorial Accept.",
+      "recordId": "BSW-2d4546a2e67cba14",
+      "loggedAt": "2026-11-08T16:50:35.000Z",
+      "collector": "scheduled-chat",
+      "retrievalProvider": "tinyfish",
+      "runId": "scheduled-chat-2026-11-08-daily-tinyfish"
+    },
+    {
+      "id": "scheduled-chat-2026-11-08-daily-tinyfish-discovery-4",
+      "url": "https://www.thedailystar.net/news/bangladesh/crime-justice/news/hc-orders-action-over-bholaganj-stone-looting-3962541",
+      "title": "HC orders action over Bholaganj stone looting",
+      "query": "verified prior-day discovery backlog",
+      "rank": 0,
+      "status": "Added to archive",
+      "reason": "Full original body and displayed publisher date checked; distinct event or follow-up; bilingual editorial Accept.",
+      "recordId": "BSW-b0072792c41c3924",
+      "loggedAt": "2026-11-08T16:50:35.000Z",
+      "collector": "scheduled-chat",
+      "retrievalProvider": "tinyfish",
+      "runId": "scheduled-chat-2026-11-08-daily-tinyfish"
+    },
+    {
+      "id": "scheduled-chat-2026-11-08-daily-tinyfish-discovery-5",
+      "url": "https://today.thefinancialexpress.com.bd/country/five-jailed-for-illegal-sand-extraction-from-jamuna-1721064413",
+      "title": "Five jailed for illegal sand extraction from Jamuna",
+      "query": "site:today.thefinancialexpress.com.bd/country/ sand extraction Bangladesh 2024 river",
+      "rank": 7,
+      "status": "Added to archive",
+      "reason": "Full original body and displayed publisher date checked; distinct event or follow-up; bilingual editorial Accept.",
+      "recordId": "BSW-a9c355e7c4ce9d24",
+      "loggedAt": "2026-11-08T16:50:35.000Z",
+      "collector": "scheduled-chat",
+      "retrievalProvider": "tinyfish",
+      "runId": "scheduled-chat-2026-11-08-daily-tinyfish"
+    },
+    {
+      "id": "scheduled-chat-2026-11-08-daily-tinyfish-discovery-6",
+      "url": "https://www.bssnews.net/bangla/national/357342",
+      "query": "site:bssnews.net/bangla/national/ অবৈধ বালু উত্তোলন নভেম্বর ২০২৬",
+      "rank": 1,
+      "title": "",
+      "status": "Duplicate incident",
+      "reason": "Same 6 November 2026 Dapdapia Bridge raid already archived through BSS English.",
+      "recordId": "",
+      "loggedAt": "2026-11-08T16:50:35.000Z",
+      "collector": "scheduled-chat",
+      "retrievalProvider": "tinyfish-first",
+      "runId": "scheduled-chat-2026-11-08-daily-tinyfish"
+    },
+    {
+      "id": "scheduled-chat-2026-11-08-daily-tinyfish-discovery-7",
+      "url": "https://www.thedailystar.net/news/bangladesh/news/looting-white-stones-sylhet-acc-launches-probe-3962016",
+      "query": "verified prior-day discovery backlog",
+      "rank": 0,
+      "title": "",
+      "status": "Duplicate incident",
+      "reason": "Same 13 August 2025 ACC site visit and inquiry already archived through The Business Standard.",
+      "recordId": "",
+      "loggedAt": "2026-11-08T16:50:35.000Z",
+      "collector": "scheduled-chat",
+      "retrievalProvider": "tinyfish-first",
+      "runId": "scheduled-chat-2026-11-08-daily-tinyfish"
+    },
+    {
+      "id": "scheduled-chat-2026-11-08-daily-tinyfish-discovery-8",
+      "url": "https://today.thefinancialexpress.com.bd/country/six-resource-rich-areas-in-sylhet-to-be-declared-ecas-1778168010",
+      "query": "site:today.thefinancialexpress.com.bd/country/ sand extraction Bangladesh 2024 river",
+      "rank": 4,
+      "title": "",
+      "status": "Deferred conflicting quantity",
+      "reason": "Headline and lead say six sites, but the body names seven; needs source clarification before bilingual Accept.",
+      "recordId": "",
+      "loggedAt": "2026-11-08T16:50:35.000Z",
+      "collector": "scheduled-chat",
+      "retrievalProvider": "tinyfish-first",
+      "runId": "scheduled-chat-2026-11-08-daily-tinyfish"
+    },
+    {
+      "id": "scheduled-chat-2026-11-08-daily-tinyfish-discovery-9",
+      "url": "https://today.thefinancialexpress.com.bd/country/300-structures-disappear-as-bakkhali-erosion-fury-rages-1726761157",
+      "query": "site:today.thefinancialexpress.com.bd/country/ sand extraction Bangladesh 2024 river",
+      "rank": 5,
+      "title": "",
+      "status": "Deferred relevance",
+      "reason": "Article primarily concerns flood-driven erosion; sand extraction is only one environmental activist's causal explanation.",
+      "recordId": "",
+      "loggedAt": "2026-11-08T16:50:35.000Z",
+      "collector": "scheduled-chat",
+      "retrievalProvider": "tinyfish-first",
+      "runId": "scheduled-chat-2026-11-08-daily-tinyfish"
+    },
+    {
+      "id": "scheduled-chat-2026-11-08-daily-tinyfish-discovery-10",
+      "url": "https://today.thefinancialexpress.com.bd/country/sunamganj-villages-under-threat-for-rampant-river-dredging-1706030667",
+      "query": "site:today.thefinancialexpress.com.bd/country/ sand extraction Bangladesh 2024 river",
+      "rank": 3,
+      "title": "",
+      "status": "Deferred syndicated source",
+      "reason": "Article credits bdnews24; original agency source not yet located and checked.",
+      "recordId": "",
+      "loggedAt": "2026-11-08T16:50:35.000Z",
+      "collector": "scheduled-chat",
+      "retrievalProvider": "tinyfish-first",
+      "runId": "scheduled-chat-2026-11-08-daily-tinyfish"
+    },
+    {
+      "id": "scheduled-chat-2026-11-08-daily-tinyfish-discovery-11",
+      "url": "https://www.bssnews.net/bangla/national/357332",
+      "query": "site:bssnews.net/bangla/national/ অবৈধ বালু উত্তোলন নভেম্বর ২০২৬",
+      "rank": 2,
+      "title": "",
+      "status": "Existing URL",
+      "reason": "Already added on 7 November 2026.",
+      "recordId": "",
+      "loggedAt": "2026-11-08T16:50:35.000Z",
+      "collector": "scheduled-chat",
+      "retrievalProvider": "tinyfish-first",
+      "runId": "scheduled-chat-2026-11-08-daily-tinyfish"
+    }
+  ],
+  "editorialReviews": {
+    "BSW-0933406d24b94513": {
+      "decision": "Accept",
+      "auto": true,
+      "reviewer": "assistant",
+      "reviewedAt": "2026-11-08T16:50:35.000Z",
+      "sourceReads": [
+        {
+          "provider": "tinyfish",
+          "sourceUrl": "https://www.bd-pratidin.com/country/2026/11/08/1323342",
+          "sourceBodySha256": "03e61240319779b8e538e7eeaff24177dabffb49e87e99d3551882a1fa0c3712",
+          "sourceCharacters": 9041,
+          "usedAsArticleAndDateEvidence": true,
+          "publisherDisplayedDate": "2026-11-08"
+        }
+      ],
+      "incidentReview": "Original body, displayed date, event, place, figures and caveats checked against 537 merged records and this batch; distinct dated event or follow-up.",
+      "checksPassed": [
+        "original article body and displayed publisher date",
+        "Bangladesh extraction relevance and incident-level deduplication",
+        "named river or extraction site and administrative place in both languages",
+        "source quantities, units, time bases and money in equivalent English and Bangla",
+        "attributed allegations and evidence limits",
+        "canonical URL SHA256 ID and News schema"
+      ],
+      "authorization": "Owner authorized source-checked assistant editorial Accept and publication."
+    },
+    "BSW-cc91a19080088507": {
+      "decision": "Accept",
+      "auto": true,
+      "reviewer": "assistant",
+      "reviewedAt": "2026-11-08T16:50:35.000Z",
+      "sourceReads": [
+        {
+          "provider": "firecrawl",
+          "sourceUrl": "https://www.bssnews.net/bangla/national/357613",
+          "sourceBodySha256": "381d28b0502c7bc450f0cd56c42eb2dc362acd3779c323230906f125f980f37e",
+          "sourceCharacters": 4444,
+          "usedAsArticleAndDateEvidence": true,
+          "publisherDisplayedDate": "2026-11-07",
+          "scrapeId": "01a1bc10-4520-7667-a89c-7d2e330c5118"
+        }
+      ],
+      "incidentReview": "Original body, displayed date, event, place, figures and caveats checked against 537 merged records and this batch; distinct dated event or follow-up.",
+      "checksPassed": [
+        "original article body and displayed publisher date",
+        "Bangladesh extraction relevance and incident-level deduplication",
+        "named river or extraction site and administrative place in both languages",
+        "source quantities, units, time bases and money in equivalent English and Bangla",
+        "attributed allegations and evidence limits",
+        "canonical URL SHA256 ID and News schema"
+      ],
+      "authorization": "Owner authorized source-checked assistant editorial Accept and publication."
+    },
+    "BSW-2d4546a2e67cba14": {
+      "decision": "Accept",
+      "auto": true,
+      "reviewer": "assistant",
+      "reviewedAt": "2026-11-08T16:50:35.000Z",
+      "sourceReads": [
+        {
+          "provider": "tinyfish",
+          "sourceUrl": "https://www.thedailystar.net/news/bangladesh/news/chunarughat-habiganj-unregulated-sand-lifting-threatens-deochara-bridge",
+          "sourceBodySha256": "d75a189aa11dfb8288ea929153f52cc67f8273743cc64d8e628fc22d89f31f9b",
+          "sourceCharacters": 2517,
+          "usedAsArticleAndDateEvidence": true,
+          "publisherDisplayedDate": "2025-08-17"
+        }
+      ],
+      "incidentReview": "Original body, displayed date, event, place, figures and caveats checked against 537 merged records and this batch; distinct dated event or follow-up.",
+      "checksPassed": [
+        "original article body and displayed publisher date",
+        "Bangladesh extraction relevance and incident-level deduplication",
+        "named river or extraction site and administrative place in both languages",
+        "source quantities, units, time bases and money in equivalent English and Bangla",
+        "attributed allegations and evidence limits",
+        "canonical URL SHA256 ID and News schema"
+      ],
+      "authorization": "Owner authorized source-checked assistant editorial Accept and publication.",
+      "dateNote": "TinyFish metadata incorrectly returned 2026-11-08; original article displays 2025-08-17."
+    },
+    "BSW-b0072792c41c3924": {
+      "decision": "Accept",
+      "auto": true,
+      "reviewer": "assistant",
+      "reviewedAt": "2026-11-08T16:50:35.000Z",
+      "sourceReads": [
+        {
+          "provider": "tinyfish",
+          "sourceUrl": "https://www.thedailystar.net/news/bangladesh/crime-justice/news/hc-orders-action-over-bholaganj-stone-looting-3962541",
+          "sourceBodySha256": "82c3237144afea9fd612c92bed5b86336e2f6381530a7123341ca653f07dc9be",
+          "sourceCharacters": 1679,
+          "usedAsArticleAndDateEvidence": true,
+          "publisherDisplayedDate": "2025-08-14"
+        }
+      ],
+      "incidentReview": "Original body, displayed date, event, place, figures and caveats checked against 537 merged records and this batch; distinct dated event or follow-up.",
+      "checksPassed": [
+        "original article body and displayed publisher date",
+        "Bangladesh extraction relevance and incident-level deduplication",
+        "named river or extraction site and administrative place in both languages",
+        "source quantities, units, time bases and money in equivalent English and Bangla",
+        "attributed allegations and evidence limits",
+        "canonical URL SHA256 ID and News schema"
+      ],
+      "authorization": "Owner authorized source-checked assistant editorial Accept and publication.",
+      "dateNote": "TinyFish metadata incorrectly returned 2026-11-08; original article displays 2025-08-14."
+    },
+    "BSW-a9c355e7c4ce9d24": {
+      "decision": "Accept",
+      "auto": true,
+      "reviewer": "assistant",
+      "reviewedAt": "2026-11-08T16:50:35.000Z",
+      "sourceReads": [
+        {
+          "provider": "tinyfish",
+          "sourceUrl": "https://today.thefinancialexpress.com.bd/country/five-jailed-for-illegal-sand-extraction-from-jamuna-1721064413",
+          "sourceBodySha256": "6c2523e34b7104979efe1ebe43fc0f3241af85876525e5df2425a80e34ad388a",
+          "sourceCharacters": 747,
+          "usedAsArticleAndDateEvidence": true,
+          "publisherDisplayedDate": "2024-07-16"
+        }
+      ],
+      "incidentReview": "Original body, displayed date, event, place, figures and caveats checked against 537 merged records and this batch; distinct dated event or follow-up.",
+      "checksPassed": [
+        "original article body and displayed publisher date",
+        "Bangladesh extraction relevance and incident-level deduplication",
+        "named river or extraction site and administrative place in both languages",
+        "source quantities, units, time bases and money in equivalent English and Bangla",
+        "attributed allegations and evidence limits",
+        "canonical URL SHA256 ID and News schema"
+      ],
+      "authorization": "Owner authorized source-checked assistant editorial Accept and publication."
+    }
+  },
+  "baselineCommit": "9a6a10a28ead35aac381d24668c1cc313e2885c0"
+}
