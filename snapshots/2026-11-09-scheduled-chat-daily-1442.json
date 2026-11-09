@@ -1,0 +1,433 @@
+{
+  "records": [
+    {
+      "dateKind": "Published",
+      "flag": "",
+      "type": "News",
+      "documentId": "",
+      "otherDate": "",
+      "alternateUrl": "",
+      "decision": "Accept",
+      "reviewNotes": "",
+      "collectedAt": "2026-11-09T14:46:18.000Z",
+      "auto": true,
+      "collector": "scheduled-chat",
+      "url": "https://www.prothomalo.com/bangladesh/district/9e5jmyhur2",
+      "id": "BSW-be8d474849824ae3",
+      "source": "Prothom Alo",
+      "title": "জাদুকাটা নদে ‘মব সৃষ্টি করে’ বালু লুট, বন্ধ না হলে ভাঙন ‘নিয়ন্ত্রণের বাইরে চলে যাবে’",
+      "date": "2025-10-15",
+      "district": "Laurergarh, Tahirpur, Sunamganj",
+      "river": "Jadukata River",
+      "material": "Sand",
+      "topics": "BGB warning; alleged out-of-lease extraction; erosion risk; lease governance",
+      "language": "Bangla",
+      "en": "At a 15 October 2025 briefing, the Sunamganj 28 BGB commander warned that alleged sand removal outside leased areas of the Jadukata River near Laurergarh, Tahirpur, could make bank erosion uncontrollable and threaten a BGB outpost and nearby villages. He said 1,500–2,000 boats and 15,000–20,000 workers had extracted sand together, often at night. The report says two Jadukata leases worth about Tk107 crore resumed after a five-month legal hold; this briefing adds new evidence beyond the separately archived police case.",
+      "bn": "২০২৫ সালের ১৫ অক্টোবর সংবাদ সম্মেলনে সুনামগঞ্জ ২৮ বিজিবির অধিনায়ক বলেন, তাহিরপুরের লাউড়েরগড় এলাকায় যাদুকাটা নদের ইজারার বাইরের অংশ থেকে কথিত বালু উত্তোলন বন্ধ না হলে তীরভাঙন নিয়ন্ত্রণের বাইরে গিয়ে বিজিবির বিওপি ও পাশের গ্রাম হুমকিতে পড়তে পারে। তাঁর ভাষ্য, একসঙ্গে দেড়–দুই হাজার নৌকা ও ১৫–২০ হাজার শ্রমিক বালু তুলেছেন, বিশেষত রাতে। প্রতিবেদনে বলা হয়, প্রায় ১০৭ কোটি টাকার দুটি যাদুকাটা বালুমহাল আইনি জটিলতায় পাঁচ মাস বন্ধ থাকার পর আবার চালু হয়েছে; এ সংবাদ সম্মেলনের তথ্য আগে নথিভুক্ত পুলিশ মামলা থেকে আলাদা।",
+      "evidence": "Original Prothom Alo body and displayed 15 October 2025 publication date; BGB briefing, 1,500–2,000 boats, 15,000–20,000 workers, two leases worth about Tk107 crore and five-month hold checked. Distinct from same-day 51-person police case."
+    },
+    {
+      "dateKind": "Published",
+      "flag": "",
+      "type": "News",
+      "documentId": "",
+      "otherDate": "",
+      "alternateUrl": "",
+      "decision": "Accept",
+      "reviewNotes": "",
+      "collectedAt": "2026-11-09T14:46:18.000Z",
+      "auto": true,
+      "collector": "scheduled-chat",
+      "url": "https://www.prothomalo.com/bangladesh/district/z1al2xfz08",
+      "id": "BSW-cbef168a23c6ff6b",
+      "source": "Prothom Alo",
+      "title": "রাতারগুল–সংলগ্ন নদী থেকে অবৈধ বালু উত্তোলন বন্ধের দাবি এলাকাবাসীর",
+      "date": "2022-09-29",
+      "district": "Ratargul village and swamp forest, Fatehpur union, Goainghat, Sylhet",
+      "river": "Goyain River",
+      "material": "Sand",
+      "topics": "Alleged illegal extraction; residents' memorandum; forest erosion risk",
+      "language": "Bangla",
+      "en": "On 29 September 2022, residents of Ratargul village in Fatehpur union, Goainghat, Sylhet, petitioned the divisional forest office to stop alleged night-time sand extraction from the Goyain River beside Ratargul swamp forest. The petition said resulting erosion threatened the forest and residents faced intimidation when they protested. The article describes Ratargul as a 504.50-acre protected forest; that figure is its total area, not an estimate of erosion damage.",
+      "bn": "২০২২ সালের ২৯ সেপ্টেম্বর সিলেটের গোয়াইনঘাটে ফতেপুর ইউনিয়নের রাতারগুল গ্রামের বাসিন্দারা রাতারগুল জলাবনের পাশে গোয়াইন নদ থেকে রাতে কথিত অবৈধ বালু উত্তোলন বন্ধের দাবিতে বিভাগীয় বন কর্মকর্তার কাছে স্মারকলিপি দেন। স্মারকলিপিতে ভাঙনে বনটি হুমকিতে পড়া এবং প্রতিবাদকারীদের ভয়ভীতি দেখানোর অভিযোগ আছে। প্রতিবেদনে রাতারগুলের সংরক্ষিত বনের মোট আয়তন ৫০৪ দশমিক ৫০ একর বলা হয়েছে; এটি ভাঙনে ক্ষতিগ্রস্ত এলাকার মাপ নয়।",
+      "evidence": "Original Prothom Alo body and displayed 29 September 2022 publication date; Goyain River, Fatehpur union, memorandum and 504.50-acre total forest area checked."
+    },
+    {
+      "dateKind": "Updated",
+      "flag": "",
+      "type": "News",
+      "documentId": "",
+      "otherDate": "",
+      "alternateUrl": "",
+      "decision": "Accept",
+      "reviewNotes": "",
+      "collectedAt": "2026-11-09T14:46:18.000Z",
+      "auto": true,
+      "collector": "scheduled-chat",
+      "url": "https://www.prothomalo.com/bangladesh/district/%E0%A6%87%E0%A6%9C%E0%A6%BE%E0%A6%B0%E0%A6%BE-%E0%A6%9B%E0%A6%BE%E0%A7%9C%E0%A6%BE%E0%A6%87-%E0%A6%AA%E0%A6%A6%E0%A7%8D%E0%A6%AE%E0%A6%BE%E0%A6%B0-%E0%A6%AC%E0%A6%BE%E0%A6%B2%E0%A7%81-%E0%A6%A4%E0%A7%81%E0%A6%B2%E0%A7%87-%E0%A6%AC%E0%A6%BF%E0%A6%95%E0%A7%8D%E0%A6%B0%E0%A6%BF",
+      "id": "BSW-c249592bdfb4799e",
+      "source": "Prothom Alo",
+      "title": "ইজারা ছাড়াই পদ্মার বালু তুলে বিক্রি",
+      "date": "2021-05-06",
+      "district": "Char Sadipur and Shilaidaha ferry ghat, Kumarkhali, Kushtia, beside Pabna Sadar",
+      "river": "Padma River",
+      "material": "Sand",
+      "topics": "Alleged unleased extraction; truck transport; road damage",
+      "language": "Bangla",
+      "en": "In an article marked updated 6 May 2021, Prothom Alo reported sand excavation from at least eight sites on a Padma River char at Char Sadipur's Shilaidaha ferry ghat, Kumarkhali, Kushtia, beside Pabna Sadar. It described hundreds of sand-laden trucks each day and damaged local roads; the nearby ferry crossing was about 7 km long, not an eroded reach. A Kushtia revenue official said no lease had been issued for this point; villagers alleged a Dogachhi union chairman was involved, which he denied.",
+      "bn": "২০২১ সালের ৬ মে আপডেট হওয়া প্রথম আলোর প্রতিবেদনে কুষ্টিয়ার কুমারখালীর চরসাদীপুরে শিলাইদহ খেয়াঘাটের কাছে পদ্মা নদের চরে অন্তত আটটি স্থান থেকে বালু তোলার কথা বলা হয়। প্রতিদিন শত শত বালুবাহী ট্রাক চলাচলে স্থানীয় সড়ক ক্ষতিগ্রস্ত হওয়ার বিবরণ আছে; পাশের খেয়াপথটি প্রায় সাত কিলোমিটার দীর্ঘ, এটি ভাঙনে ক্ষতিগ্রস্ত নদীখণ্ডের দৈর্ঘ্য নয়। কুষ্টিয়ার রাজস্ব কর্মকর্তা জানান, এই স্থানে কোনো ইজারা দেওয়া হয়নি; দোগাছী ইউনিয়নের চেয়ারম্যানের সম্পৃক্ততার স্থানীয় অভিযোগ তিনি অস্বীকার করেন।",
+      "evidence": "Prothom Alo full body shows only Updated 6 May 2021, not an original publication date; eight extraction sites, hundreds of truck trips, about 7-km crossing, no lease, allegation and denial checked."
+    }
+  ],
+  "reviews": {
+    "BSW-be8d474849824ae3": {
+      "decision": "Accept",
+      "notes": "",
+      "auto": true,
+      "reviewer": "assistant",
+      "reviewedAt": "2026-11-09T14:46:18.000Z"
+    },
+    "BSW-cbef168a23c6ff6b": {
+      "decision": "Accept",
+      "notes": "",
+      "auto": true,
+      "reviewer": "assistant",
+      "reviewedAt": "2026-11-09T14:46:18.000Z"
+    },
+    "BSW-c249592bdfb4799e": {
+      "decision": "Accept",
+      "notes": "",
+      "auto": true,
+      "reviewer": "assistant",
+      "reviewedAt": "2026-11-09T14:46:18.000Z"
+    }
+  },
+  "runs": [
+    {
+      "id": "scheduled-chat-2026-11-09-daily-tinyfish",
+      "startedAt": "2026-11-09T14:42:11.653Z",
+      "finishedAt": "2026-11-09T14:46:18.000Z",
+      "status": "completed",
+      "collector": "scheduled-chat",
+      "retrievalProvider": "tinyfish-first",
+      "fallbackProvider": "firecrawl",
+      "found": 17,
+      "added": 3,
+      "fetches": 3,
+      "duplicates": 2,
+      "recordIds": [
+        "BSW-be8d474849824ae3",
+        "BSW-cbef168a23c6ff6b",
+        "BSW-c249592bdfb4799e"
+      ],
+      "queries": [
+        "site:bssnews.net/bangla/national/ বালু উত্তোলন নভেম্বর ২০২৬",
+        "site:bd-pratidin.com/country/ বালু উত্তোলন নদী নভেম্বর ২০২৬",
+        "site:jagonews24.com/country/news/ অবৈধ বালু উত্তোলন নভেম্বর ২০২৬",
+        "site:jugantor.com/country-news/ বালু উত্তোলন অভিযান নভেম্বর ২০২৬",
+        "site:thedailystar.net/news/bangladesh/news/ sand extraction river November 2026",
+        "site:bssnews.net/district/ sand extraction dredger November 2026 Bangladesh",
+        "site:today.thefinancialexpress.com.bd/country/ illegal sand extraction river 2022",
+        "site:prothomalo.com/bangladesh/district/ অবৈধ বালু উত্তোলন নদী ২০২১"
+      ],
+      "creditUsage": {
+        "primaryProvider": "tinyfish",
+        "tinyfish": {
+          "searchRequests": 8,
+          "fetchURLs": 3,
+          "paidAgentCalls": 0,
+          "paidBrowserCalls": 0,
+          "paidMonitorCalls": 0,
+          "note": "Search and Fetch only, within the local helper's free quota reservations."
+        },
+        "firecrawl": {
+          "before": 30,
+          "after": 30,
+          "observedNetBalanceChange": 0,
+          "scrapes": 3,
+          "reportedCreditsUsedByScrapeReceipts": 3,
+          "fallbackReasons": {
+            "dateMissingFromTinyfish": 3
+          },
+          "note": "Each fallback scrape reported one credit while account balance still showed 30 before and after; billing reconciliation may lag."
+        }
+      },
+      "editorialDecision": "Accept",
+      "editorialReviewer": "assistant",
+      "errors": [],
+      "notes": "Three source-checked distinct historical reports from 2021, 2022 and 2025. One article shows only an Updated date, preserved as such. Existing records, reviews and media preserved."
+    }
+  ],
+  "searches": [
+    {
+      "id": "scheduled-chat-2026-11-09-daily-tinyfish-search-1",
+      "query": "site:bssnews.net/bangla/national/ বালু উত্তোলন নভেম্বর ২০২৬",
+      "checkedAt": "2026-11-09T14:43:21.475673+00:00",
+      "status": "Checked",
+      "count": 1,
+      "limit": 10,
+      "collector": "scheduled-chat",
+      "retrievalProvider": "tinyfish"
+    },
+    {
+      "id": "scheduled-chat-2026-11-09-daily-tinyfish-search-2",
+      "query": "site:bd-pratidin.com/country/ বালু উত্তোলন নদী নভেম্বর ২০২৬",
+      "checkedAt": "2026-11-09T14:43:22.582600+00:00",
+      "status": "Checked",
+      "count": 1,
+      "limit": 10,
+      "collector": "scheduled-chat",
+      "retrievalProvider": "tinyfish"
+    },
+    {
+      "id": "scheduled-chat-2026-11-09-daily-tinyfish-search-3",
+      "query": "site:jagonews24.com/country/news/ অবৈধ বালু উত্তোলন নভেম্বর ২০২৬",
+      "checkedAt": "2026-11-09T14:43:23.580045+00:00",
+      "status": "Checked",
+      "count": 4,
+      "limit": 10,
+      "collector": "scheduled-chat",
+      "retrievalProvider": "tinyfish"
+    },
+    {
+      "id": "scheduled-chat-2026-11-09-daily-tinyfish-search-4",
+      "query": "site:jugantor.com/country-news/ বালু উত্তোলন অভিযান নভেম্বর ২০২৬",
+      "checkedAt": "2026-11-09T14:43:20.611771+00:00",
+      "status": "Checked",
+      "count": 0,
+      "limit": 10,
+      "collector": "scheduled-chat",
+      "retrievalProvider": "tinyfish"
+    },
+    {
+      "id": "scheduled-chat-2026-11-09-daily-tinyfish-search-5",
+      "query": "site:thedailystar.net/news/bangladesh/news/ sand extraction river November 2026",
+      "checkedAt": "2026-11-09T14:43:20.289972+00:00",
+      "status": "Checked",
+      "count": 0,
+      "limit": 10,
+      "collector": "scheduled-chat",
+      "retrievalProvider": "tinyfish"
+    },
+    {
+      "id": "scheduled-chat-2026-11-09-daily-tinyfish-search-6",
+      "query": "site:bssnews.net/district/ sand extraction dredger November 2026 Bangladesh",
+      "checkedAt": "2026-11-09T14:43:20.474486+00:00",
+      "status": "Checked",
+      "count": 0,
+      "limit": 10,
+      "collector": "scheduled-chat",
+      "retrievalProvider": "tinyfish"
+    },
+    {
+      "id": "scheduled-chat-2026-11-09-daily-tinyfish-search-7",
+      "query": "site:today.thefinancialexpress.com.bd/country/ illegal sand extraction river 2022",
+      "checkedAt": "2026-11-09T14:43:20.800136+00:00",
+      "status": "Checked",
+      "count": 2,
+      "limit": 10,
+      "collector": "scheduled-chat",
+      "retrievalProvider": "tinyfish"
+    },
+    {
+      "id": "scheduled-chat-2026-11-09-daily-tinyfish-search-8",
+      "query": "site:prothomalo.com/bangladesh/district/ অবৈধ বালু উত্তোলন নদী ২০২১",
+      "checkedAt": "2026-11-09T14:43:22.240409+00:00",
+      "status": "Checked",
+      "count": 9,
+      "limit": 10,
+      "collector": "scheduled-chat",
+      "retrievalProvider": "tinyfish"
+    }
+  ],
+  "discovery": [
+    {
+      "id": "scheduled-chat-2026-11-09-daily-tinyfish-discovery-1",
+      "url": "https://www.prothomalo.com/bangladesh/district/9e5jmyhur2",
+      "title": "জাদুকাটা নদে ‘মব সৃষ্টি করে’ বালু লুট, বন্ধ না হলে ভাঙন ‘নিয়ন্ত্রণের বাইরে চলে যাবে’",
+      "query": "site:prothomalo.com/bangladesh/district/ অবৈধ বালু উত্তোলন নদী ২০২১",
+      "rank": 2,
+      "status": "Added to archive",
+      "reason": "TinyFish original body and Firecrawl displayed date verified; distinct incident or dated action; bilingual editorial Accept.",
+      "recordId": "BSW-be8d474849824ae3",
+      "loggedAt": "2026-11-09T14:46:18.000Z",
+      "collector": "scheduled-chat",
+      "retrievalProvider": "tinyfish-first-firecrawl-date-fallback",
+      "runId": "scheduled-chat-2026-11-09-daily-tinyfish"
+    },
+    {
+      "id": "scheduled-chat-2026-11-09-daily-tinyfish-discovery-2",
+      "url": "https://www.prothomalo.com/bangladesh/district/z1al2xfz08",
+      "title": "রাতারগুল–সংলগ্ন নদী থেকে অবৈধ বালু উত্তোলন বন্ধের দাবি এলাকাবাসীর",
+      "query": "site:prothomalo.com/bangladesh/district/ অবৈধ বালু উত্তোলন নদী ২০২১",
+      "rank": 4,
+      "status": "Added to archive",
+      "reason": "TinyFish original body and Firecrawl displayed date verified; distinct incident or dated action; bilingual editorial Accept.",
+      "recordId": "BSW-cbef168a23c6ff6b",
+      "loggedAt": "2026-11-09T14:46:18.000Z",
+      "collector": "scheduled-chat",
+      "retrievalProvider": "tinyfish-first-firecrawl-date-fallback",
+      "runId": "scheduled-chat-2026-11-09-daily-tinyfish"
+    },
+    {
+      "id": "scheduled-chat-2026-11-09-daily-tinyfish-discovery-3",
+      "url": "https://www.prothomalo.com/bangladesh/district/%E0%A6%87%E0%A6%9C%E0%A6%BE%E0%A6%B0%E0%A6%BE-%E0%A6%9B%E0%A6%BE%E0%A7%9C%E0%A6%BE%E0%A6%87-%E0%A6%AA%E0%A6%A6%E0%A7%8D%E0%A6%AE%E0%A6%BE%E0%A6%B0-%E0%A6%AC%E0%A6%BE%E0%A6%B2%E0%A7%81-%E0%A6%A4%E0%A7%81%E0%A6%B2%E0%A7%87-%E0%A6%AC%E0%A6%BF%E0%A6%95%E0%A7%8D%E0%A6%B0%E0%A6%BF",
+      "title": "ইজারা ছাড়াই পদ্মার বালু তুলে বিক্রি",
+      "query": "site:prothomalo.com/bangladesh/district/ অবৈধ বালু উত্তোলন নদী ২০২১",
+      "rank": 8,
+      "status": "Added to archive",
+      "reason": "TinyFish original body and Firecrawl displayed date verified; distinct incident or dated action; bilingual editorial Accept.",
+      "recordId": "BSW-c249592bdfb4799e",
+      "loggedAt": "2026-11-09T14:46:18.000Z",
+      "collector": "scheduled-chat",
+      "retrievalProvider": "tinyfish-first-firecrawl-date-fallback",
+      "runId": "scheduled-chat-2026-11-09-daily-tinyfish"
+    },
+    {
+      "id": "scheduled-chat-2026-11-09-daily-tinyfish-discovery-4",
+      "url": "https://www.bssnews.net/bangla/national/357613",
+      "query": "site:bssnews.net/bangla/national/ বালু উত্তোলন নভেম্বর ২০২৬",
+      "rank": 1,
+      "title": "",
+      "status": "Existing URL",
+      "reason": "7 November 2026 Charbaria Coast Guard action already archived.",
+      "recordId": "",
+      "loggedAt": "2026-11-09T14:46:18.000Z",
+      "collector": "scheduled-chat",
+      "retrievalProvider": "tinyfish-first",
+      "runId": "scheduled-chat-2026-11-09-daily-tinyfish"
+    },
+    {
+      "id": "scheduled-chat-2026-11-09-daily-tinyfish-discovery-5",
+      "url": "https://www.jagonews24.com/country/news/1177176",
+      "query": "site:jagonews24.com/country/news/ অবৈধ বালু উত্তোলন নভেম্বর ২০২৬",
+      "rank": 1,
+      "title": "",
+      "status": "Duplicate incident",
+      "reason": "Same 8 November 2026 Sherpur Bakakura Khal six-driver seizure already archived through Bangladesh Pratidin.",
+      "recordId": "",
+      "loggedAt": "2026-11-09T14:46:18.000Z",
+      "collector": "scheduled-chat",
+      "retrievalProvider": "tinyfish-first",
+      "runId": "scheduled-chat-2026-11-09-daily-tinyfish"
+    },
+    {
+      "id": "scheduled-chat-2026-11-09-daily-tinyfish-discovery-6",
+      "url": "https://www.bd-pratidin.com/country/2026/11/07/1322790",
+      "query": "site:bd-pratidin.com/country/ বালু উত্তোলন নদী নভেম্বর ২০২৬",
+      "rank": 1,
+      "title": "",
+      "status": "Unrelated result",
+      "reason": "Article concerns bomb and cocktail explosions, not sand extraction.",
+      "recordId": "",
+      "loggedAt": "2026-11-09T14:46:18.000Z",
+      "collector": "scheduled-chat",
+      "retrievalProvider": "tinyfish-first",
+      "runId": "scheduled-chat-2026-11-09-daily-tinyfish"
+    },
+    {
+      "id": "scheduled-chat-2026-11-09-daily-tinyfish-discovery-7",
+      "url": "https://today.thefinancialexpress.com.bd/country/padma-hilsa-catches-drop-46pc-in-five-years-in-manikganj-1789400739",
+      "query": "site:today.thefinancialexpress.com.bd/country/ illegal sand extraction river 2022",
+      "rank": 2,
+      "title": "",
+      "status": "Deferred relevance",
+      "reason": "Search result concerns fisheries decline; no original article evidence connecting a distinct sand-extraction incident reviewed.",
+      "recordId": "",
+      "loggedAt": "2026-11-09T14:46:18.000Z",
+      "collector": "scheduled-chat",
+      "retrievalProvider": "tinyfish-first",
+      "runId": "scheduled-chat-2026-11-09-daily-tinyfish"
+    }
+  ],
+  "editorialReviews": {
+    "BSW-be8d474849824ae3": {
+      "decision": "Accept",
+      "auto": true,
+      "reviewer": "assistant",
+      "reviewedAt": "2026-11-09T14:46:18.000Z",
+      "sourceReads": [
+        {
+          "provider": "firecrawl",
+          "sourceUrl": "https://www.prothomalo.com/bangladesh/district/9e5jmyhur2",
+          "sourceBodySha256": "30b87b103f370ad176bbef9f4c8b45fe9ac732ba904ec4963df9a18fda8f4364",
+          "sourceCharacters": 11231,
+          "scrapeId": "01a1c0c4-ff6e-738f-96e6-f91b1501bf1f",
+          "usedAsArticleAndDateEvidence": true,
+          "publisherDisplayedDate": "2025-10-15",
+          "publisherDateKind": "Published"
+        }
+      ],
+      "incidentReview": "BGB's dated press briefing and quantified warning are distinct from the separately archived same-day 51-person police case; source body and date checked.",
+      "checksPassed": [
+        "original article body and displayed publisher publication or update date",
+        "Bangladesh extraction relevance and incident-level deduplication",
+        "named river or extraction site and administrative place in both languages",
+        "source quantities, units, time bases and money in equivalent English and Bangla",
+        "attributed allegations and evidence limits",
+        "canonical URL SHA256 ID and News schema"
+      ],
+      "authorization": "Owner authorized source-checked assistant editorial Accept and publication.",
+      "retrievalNote": "TinyFish supplied the article body but stripped its displayed date; Firecrawl fallback verified the original publisher date and body."
+    },
+    "BSW-cbef168a23c6ff6b": {
+      "decision": "Accept",
+      "auto": true,
+      "reviewer": "assistant",
+      "reviewedAt": "2026-11-09T14:46:18.000Z",
+      "sourceReads": [
+        {
+          "provider": "firecrawl",
+          "sourceUrl": "https://www.prothomalo.com/bangladesh/district/z1al2xfz08",
+          "sourceBodySha256": "17ef9ab1d725a9786ec449e7ea32b185c9b2133f13289247933553285dade6a9",
+          "sourceCharacters": 9744,
+          "scrapeId": "01a1c0c4-ff1d-72bf-9eca-063fa40e801b",
+          "usedAsArticleAndDateEvidence": true,
+          "publisherDisplayedDate": "2022-09-29",
+          "publisherDateKind": "Published"
+        }
+      ],
+      "incidentReview": "Original body, displayed date, event, place, figures and caveats checked against 542 merged records and this batch; distinct incident.",
+      "checksPassed": [
+        "original article body and displayed publisher publication or update date",
+        "Bangladesh extraction relevance and incident-level deduplication",
+        "named river or extraction site and administrative place in both languages",
+        "source quantities, units, time bases and money in equivalent English and Bangla",
+        "attributed allegations and evidence limits",
+        "canonical URL SHA256 ID and News schema"
+      ],
+      "authorization": "Owner authorized source-checked assistant editorial Accept and publication.",
+      "retrievalNote": "TinyFish supplied the article body but stripped its displayed date; Firecrawl fallback verified the original publisher date and body."
+    },
+    "BSW-c249592bdfb4799e": {
+      "decision": "Accept",
+      "auto": true,
+      "reviewer": "assistant",
+      "reviewedAt": "2026-11-09T14:46:18.000Z",
+      "sourceReads": [
+        {
+          "provider": "firecrawl",
+          "sourceUrl": "https://www.prothomalo.com/bangladesh/district/%E0%A6%87%E0%A6%9C%E0%A6%BE%E0%A6%B0%E0%A6%BE-%E0%A6%9B%E0%A6%BE%E0%A7%9C%E0%A6%BE%E0%A6%87-%E0%A6%AA%E0%A6%A6%E0%A7%8D%E0%A6%AE%E0%A6%BE%E0%A6%B0-%E0%A6%AC%E0%A6%BE%E0%A6%B2%E0%A7%81-%E0%A6%A4%E0%A7%81%E0%A6%B2%E0%A7%87-%E0%A6%AC%E0%A6%BF%E0%A6%95%E0%A7%8D%E0%A6%B0%E0%A6%BF",
+          "sourceBodySha256": "ec97f5553adda5c7ee03703917905d82062f2e4c2f13e686678869c29058942b",
+          "sourceCharacters": 11761,
+          "scrapeId": "01a1c0c4-ffec-75d5-bca2-8cb13b0be21a",
+          "usedAsArticleAndDateEvidence": true,
+          "publisherDisplayedDate": "2021-05-06",
+          "publisherDateKind": "Updated"
+        }
+      ],
+      "incidentReview": "Original body, displayed date, event, place, figures and caveats checked against 542 merged records and this batch; distinct incident.",
+      "checksPassed": [
+        "original article body and displayed publisher publication or update date",
+        "Bangladesh extraction relevance and incident-level deduplication",
+        "named river or extraction site and administrative place in both languages",
+        "source quantities, units, time bases and money in equivalent English and Bangla",
+        "attributed allegations and evidence limits",
+        "canonical URL SHA256 ID and News schema"
+      ],
+      "authorization": "Owner authorized source-checked assistant editorial Accept and publication.",
+      "retrievalNote": "TinyFish supplied the article body but stripped its displayed date; Firecrawl fallback verified the original publisher date and body."
+    }
+  },
+  "baselineCommit": "3d30f55be08342612a7071b0ae53798ec7674b90"
+}
