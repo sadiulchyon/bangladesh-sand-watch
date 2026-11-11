@@ -4,6 +4,7 @@
   "type": "module",
   "description": "Automated collector for the public archive. Runs in GitHub Actions.",
   "dependencies": {
+    "@anthropic-ai/sdk": "1.3.0",
     "@mozilla/readability": "0.6.0",
     "linkedom": "0.18.13"
   }
