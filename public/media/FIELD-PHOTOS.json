@@ -8,7 +8,8 @@
     "captureDate": "2023-01-26",
     "dateEvidence": "Capture metadata and field archive manifest",
     "sourceManifest": "Next upload batch - Someshwari Box DJI photos 2023-01-26.csv",
-    "processing": "Resized and JPEG encoded; EXIF, GPS and other source metadata omitted. No scene content changed."
+    "processing": "Resized and JPEG encoded; EXIF, GPS and other source metadata omitted. No scene content changed.",
+    "shownInGallery": true
   },
   {
     "image": "field-jadukata-DJI_0066.jpg",
@@ -19,7 +20,8 @@
     "captureDate": "2023-01-10",
     "dateEvidence": "Capture metadata and field archive manifest",
     "sourceManifest": "Next upload batch - Box Jan 10 Sunamganj and Jadukata drone JPG and DNG.csv",
-    "processing": "Resized and JPEG encoded; EXIF, GPS and other source metadata omitted. No scene content changed."
+    "processing": "Resized and JPEG encoded; EXIF, GPS and other source metadata omitted. No scene content changed.",
+    "shownInGallery": false
   },
   {
     "image": "field-lubha-DJI_0042.jpg",
@@ -30,7 +32,8 @@
     "captureDate": "2023-01-08",
     "dateEvidence": "Capture metadata and field archive manifest",
     "sourceManifest": "Next upload batch - Lubha DJI 2023-01-08 photos.csv",
-    "processing": "Resized and JPEG encoded; EXIF, GPS and other source metadata omitted. No scene content changed."
+    "processing": "Resized and JPEG encoded; EXIF, GPS and other source metadata omitted. No scene content changed.",
+    "shownInGallery": true
   },
   {
     "image": "field-someshwari-IMG_2901.jpg",
@@ -41,7 +44,8 @@
     "captureDate": "2023-01-26",
     "dateEvidence": "Capture metadata and field archive manifest",
     "sourceManifest": "Next upload batch - Someshwari Box 50 ground photos 2023-01-26.csv",
-    "processing": "Resized and JPEG encoded; EXIF, GPS and other source metadata omitted. No scene content changed."
+    "processing": "Resized and JPEG encoded; EXIF, GPS and other source metadata omitted. No scene content changed.",
+    "shownInGallery": false
   },
   {
     "image": "field-bholaganj-DJI_0051.jpg",
@@ -52,7 +56,8 @@
     "captureDate": "2023-01-09",
     "dateEvidence": "Capture metadata and field archive manifest",
     "sourceManifest": "Next upload batch - Box Jan 9 Bholaganj drone photos.csv",
-    "processing": "Resized and JPEG encoded; EXIF, GPS and other source metadata omitted. No scene content changed."
+    "processing": "Resized and JPEG encoded; EXIF, GPS and other source metadata omitted. No scene content changed.",
+    "shownInGallery": true
   },
   {
     "image": "field-bichanakandi-20230106_133400.jpg",
@@ -63,7 +68,8 @@
     "captureDate": "2023-01-06",
     "dateEvidence": "Original filename and visit manifest; no EXIF capture date",
     "sourceManifest": "Next upload batch - Box Bichanakandi field photos - Amer and Jim - 2023-01-06.csv",
-    "processing": "Resized and JPEG encoded; EXIF, GPS and other source metadata omitted. No scene content changed."
+    "processing": "Resized and JPEG encoded; EXIF, GPS and other source metadata omitted. No scene content changed.",
+    "shownInGallery": true
   },
   {
     "image": "field-bholaganj-SYL_3019.jpg",
@@ -74,7 +80,8 @@
     "captureDate": "2023-01-09",
     "dateEvidence": "Capture metadata and field archive manifest",
     "sourceManifest": "Next upload batch - Box Bholaganj field photos - Amer and Jim - 2023-01-09.csv",
-    "processing": "Resized and JPEG encoded; EXIF, GPS and other source metadata omitted. No scene content changed."
+    "processing": "Resized and JPEG encoded; EXIF, GPS and other source metadata omitted. No scene content changed.",
+    "shownInGallery": true
   },
   {
     "image": "field-jadukata-SYL_3185.jpg",
@@ -85,7 +92,8 @@
     "captureDate": "2023-01-10",
     "dateEvidence": "Capture metadata and field archive manifest",
     "sourceManifest": "Next upload batch - Box Sunamganj and Jadukata field photos - Amer and Jim - 2023-01-10.csv",
-    "processing": "Resized and JPEG encoded; EXIF, GPS and other source metadata omitted. No scene content changed."
+    "processing": "Resized and JPEG encoded; EXIF, GPS and other source metadata omitted. No scene content changed.",
+    "shownInGallery": false
   },
   {
     "image": "field-someshwari-DJI_0300.jpg",
@@ -96,7 +104,8 @@
     "captureDate": "2023-01-26",
     "dateEvidence": "Capture metadata and field archive manifest",
     "sourceManifest": "Next upload batch - Someshwari Box DJI photos 2023-01-26.csv",
-    "processing": "Resized and JPEG encoded; EXIF, GPS and other source metadata omitted. No scene content changed."
+    "processing": "Resized and JPEG encoded; EXIF, GPS and other source metadata omitted. No scene content changed.",
+    "shownInGallery": true
   },
   {
     "image": "field-jadukata-DJI_0070.jpg",
@@ -107,6 +116,78 @@
     "captureDate": "2023-01-10",
     "dateEvidence": "Capture metadata and field archive manifest",
     "sourceManifest": "Next upload batch - Box Jan 10 Sunamganj and Jadukata drone JPG and DNG.csv",
-    "processing": "Resized and JPEG encoded; EXIF, GPS and other source metadata omitted. No scene content changed."
+    "processing": "Resized and JPEG encoded; EXIF, GPS and other source metadata omitted. No scene content changed.",
+    "shownInGallery": true
+  },
+  {
+    "image": "field-someshwari-DJI_0325.jpg",
+    "smallImage": "field-someshwari-DJI_0325-sm.jpg",
+    "originalFilename": "DJI_0325.JPG",
+    "originalSha256": "ee4e864fc934a565cff0f9a8873653d6a2d263ba245edb441a7452fcb330f10d",
+    "place": "Someshwari River",
+    "captureDate": "2023-01-26",
+    "dateEvidence": "Capture metadata and field archive manifest",
+    "sourceManifest": "Next upload batch - Someshwari Box DJI photos 2023-01-26.csv",
+    "processing": "Resized and JPEG encoded; EXIF, GPS and other source metadata omitted. No scene content changed.",
+    "shownInGallery": true
+  },
+  {
+    "image": "field-jadukata-DJI_0081.jpg",
+    "smallImage": "field-jadukata-DJI_0081-sm.jpg",
+    "originalFilename": "DJI_0081.JPG",
+    "originalSha256": "06d6758d5382193e6aac6cbf2533bb63b66fc55241405745ac3576d4301d6b29",
+    "place": "Sunamganj / Jadukata visit",
+    "captureDate": "2023-01-10",
+    "dateEvidence": "Capture metadata and field archive manifest",
+    "sourceManifest": "Next upload batch - Box Jan 10 Sunamganj and Jadukata drone JPG and DNG.csv",
+    "processing": "Resized and JPEG encoded; EXIF, GPS and other source metadata omitted. No scene content changed.",
+    "shownInGallery": true
+  },
+  {
+    "image": "field-jadukata-DJI_0073.jpg",
+    "smallImage": "field-jadukata-DJI_0073-sm.jpg",
+    "originalFilename": "DJI_0073.JPG",
+    "originalSha256": "fe68808ab8f74e84ccff67c160069049841f219c5d92804376da4d9c8af6f6c6",
+    "place": "Sunamganj / Jadukata visit",
+    "captureDate": "2023-01-10",
+    "dateEvidence": "Capture metadata and field archive manifest",
+    "sourceManifest": "Next upload batch - Box Jan 10 Sunamganj and Jadukata drone JPG and DNG.csv",
+    "processing": "Resized and JPEG encoded; EXIF, GPS and other source metadata omitted. No scene content changed.",
+    "shownInGallery": true
+  },
+  {
+    "image": "field-lubha-DJI_0045.jpg",
+    "smallImage": "field-lubha-DJI_0045-sm.jpg",
+    "originalFilename": "DJI_0045.JPG",
+    "originalSha256": "d4003b4cd167c0f435c06a316a8c53c72506ae697739f719aff235cb0c79b8d4",
+    "place": "Lubha River",
+    "captureDate": "2023-01-08",
+    "dateEvidence": "Capture metadata and field archive manifest",
+    "sourceManifest": "Next upload batch - Lubha DJI 2023-01-08 photos.csv",
+    "processing": "Resized and JPEG encoded; EXIF, GPS and other source metadata omitted. No scene content changed.",
+    "shownInGallery": true
+  },
+  {
+    "image": "field-someshwari-IMG_2841.jpg",
+    "smallImage": "field-someshwari-IMG_2841-sm.jpg",
+    "originalFilename": "20230126121624_IMG_2841.JPG",
+    "originalSha256": "76cc97113a405006e6a79b52d37d12b78504e8fa15141f954e20ffc4ffa25a3a",
+    "place": "Someshwari River",
+    "captureDate": "2023-01-26",
+    "dateEvidence": "Capture metadata and field archive manifest",
+    "sourceManifest": "Next upload batch - Someshwari Box 50 ground photos 2023-01-26.csv",
+    "processing": "Resized and JPEG encoded; EXIF, GPS and other source metadata omitted. No scene content changed.",
+    "shownInGallery": true
+  },
+  {
+    "video": "hero-someshwari.mp4",
+    "poster": "hero-someshwari-poster.jpg",
+    "originalFilename": "DJI_151.mp4 (archived as 2023-01-26 01-37-00.mp4)",
+    "originalSha256": "8744ff5eb1a268b01727c27509c35c13a493da4bf471e320063b02fe0862935a",
+    "place": "Someshwari River",
+    "captureDate": "2023-01-26",
+    "dateEvidence": "Field archive manifest (embedded recording date)",
+    "sourceManifest": "Next upload batch - Durgapur drone 2023-01-26 part 1.csv",
+    "processing": "Seconds 4 to 16 of a 33-second drone clip, downscaled from 3840x2160 to 1280x720, re-encoded as H.264 at about 1.7 Mbps without sound. No source metadata copied. No scene content changed. The poster is the first frame of the clip."
   }
 ]
