@@ -362,14 +362,16 @@ if (env.TINYFISH_API_KEY) {
   }
 }
 hits.push(...await bing(), ...await gdelt());
-const backlog = archive.discovery.filter(d => retryable.has(d.status) && d.url && (d.autoAttempts ?? 0) < 3 && !/instagram|facebook|youtube|scribd|academia\.edu/.test(d.url))
+// Video and social pages carry no article body to read, so they never become records.
+const notArticle = /(^|\.)(youtube\.com|youtu\.be|facebook\.com|fb\.watch|instagram\.com|tiktok\.com|x\.com|twitter\.com|scribd\.com|academia\.edu)$/;
+const backlog = archive.discovery.filter(d => retryable.has(d.status) && d.url && (d.autoAttempts ?? 0) < 3 && !notArticle.test(hostOf(d.url)))
   .map(d => ({url: d.url, title: d.title, query: d.query ?? 'backlog', origin: 'backlog', prior: d}));
 
 // 2. Candidates: new, relevant-looking, not archived, publisher round-robin so one site cannot use the budget.
 const seen = new Set(), byHost = new Map();
 for (const c of [...hits, ...backlog]) {
   let url; try { url = canonicalUrl(c.url); } catch { continue; }
-  if (seen.has(url) || knownUrls.has(url) || knownIds.has(keyFor(url))) continue;
+  if (seen.has(url) || knownUrls.has(url) || knownIds.has(keyFor(url)) || notArticle.test(hostOf(url))) continue;
   if (c.origin !== 'backlog' && !relevant.test(c.title ?? '')) continue;
   const prior = c.prior ?? priorDiscovery.get(url);
   if (prior && c.origin !== 'backlog' && (!retryable.has(prior.status) || (prior.autoAttempts ?? 0) >= 3)) continue;
@@ -404,6 +406,7 @@ for (let start = 0; start < candidates.length && records.length < MAX_RECORDS &&
       if (!page?.ok) { try { page = await directRead(c.url); } catch (e) { why += `; direct: ${e.message}`; page = null; } }
       if (!page?.ok) { try { page = await firecrawlRead(c.url, 'blocked_or_incomplete'); } catch (e) { why += `; ${e.message}`; } }
       if (!page?.ok) { logEntry(c, 'Failed retrieval', why); errors.push(`${c.url}: ${why}`); continue; }
+      if (notArticle.test(hostOf(page.url))) { logEntry(c, 'Excluded', 'redirects to a video or social media page'); continue; }
       try { const finalUrl = canonicalUrl(page.url); if (knownUrls.has(finalUrl) || knownIds.has(keyFor(finalUrl))) { logEntry(c, 'Already archived', 'redirects to an archived URL', keyFor(finalUrl)); continue; } } catch { page.url = c.url; }
       if (!relevant.test(page.title + ' ' + page.text.slice(0, 5000))) { logEntry(c, 'Excluded', 'no extraction terms in article body'); continue; }
 
