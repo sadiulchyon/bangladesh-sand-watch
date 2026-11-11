@@ -1,7 +1,10 @@
 name: Collect new records
 
-# Manual diagnostics only; the daily collector is the scheduled chat task documented in README.md.
+# Daily collector: TinyFish search/fetch first, Firecrawl fallback, Claude for bilingual summaries
+# and editorial review. See README.md and EDITORIAL_POLICY.md.
 on:
+  schedule:
+    - cron: '40 14 * * *'   # 08:40 Chicago in winter (09:40 in summer)
   workflow_dispatch:
     inputs:
       max_records:
@@ -14,7 +17,6 @@ on:
 
 permissions:
   contents: write   # commit the new snapshot file
-  models: read      # GitHub Models, used only when no GEMINI_API_KEY secret is set
   actions: write    # start the Pages deploy (pushes made by this workflow do not trigger it)
 
 concurrency:
@@ -24,7 +26,7 @@ concurrency:
 jobs:
   collect:
     runs-on: ubuntu-latest
-    timeout-minutes: 45
+    timeout-minutes: 60
     steps:
       - uses: actions/checkout@v4
         with:
@@ -36,14 +38,15 @@ jobs:
       - id: collect
         run: node collector/collect.mjs
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          TINYFISH_API_KEY: ${{ secrets.TINYFISH_API_KEY }}
           FIRECRAWL_API_KEY: ${{ secrets.FIRECRAWL_API_KEY }}
-          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           MAX_RECORDS: ${{ inputs.max_records || '20' }}
           DRY_RUN: ${{ inputs.dry_run || 'false' }}
       # The same checks and build the Pages workflow runs, so a bad file never reaches main.
       - run: node scripts/check.mjs && node scripts/build-pages.mjs
       - name: Commit and publish
+        id: publish
         if: ${{ inputs.dry_run != true }}
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -52,7 +55,24 @@ jobs:
           if git diff --cached --quiet; then echo "Nothing new to publish."; exit 0; fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git commit -m "Auto-collect: ${{ steps.collect.outputs.added }} new records"
+          git commit -m "Add ${{ steps.collect.outputs.added }} source-reviewed Bangladesh sand records ($(date -u +%F) daily collection)"
           git pull --rebase origin main
           git push origin HEAD:main
           gh workflow run pages.yml --ref main
+          echo "published=true" >> "$GITHUB_OUTPUT"
+      # A green run is not enough: confirm every new record is on the live site.
+      - name: Verify the deployed archive
+        if: ${{ steps.publish.outputs.published == 'true' && steps.collect.outputs.added != '0' }}
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          IDS: ${{ steps.collect.outputs.ids }}
+        run: |
+          sleep 20
+          run_id=$(gh run list --workflow pages.yml --event workflow_dispatch --limit 1 --json databaseId --jq '.[0].databaseId')
+          gh run watch "$run_id" --exit-status --interval 15
+          for attempt in 1 2 3 4 5 6; do
+            curl -sf "https://sadiulchyon.github.io/bangladesh-sand-watch/data/archive.json?t=$(date +%s)" -o live.json && \
+              node -e 'const a=require("./live.json"),ids=new Set(a.records.map(r=>r.id)),want=process.env.IDS.split(",").filter(Boolean),miss=want.filter(i=>!ids.has(i));console.log(`Live archive: ${a.records.length} records; ${want.length-miss.length}/${want.length} new IDs present.`);process.exit(miss.length?1:0)' && exit 0
+            sleep 30
+          done
+          echo "::error::New records are not on the live site yet."; exit 1
