@@ -1,27 +1,23 @@
-# Scheduled news collection
+# Daily news collection
 
-The active daily collector is the **Bangladesh Sand Watch daily news** scheduled chat task (`bangladesh-sand-watch-daily-news`), configured for **08:40 America/Chicago**. Its schedule is managed in the desktop app, not by a GitHub Actions cron trigger. Keep the computer awake and the app running for this local task. Following the owner's 26 October 2026 instruction, it uses **TinyFish Search and Fetch first**, with the connected **Firecrawl** tools as a fallback for blocked, incomplete or date-ambiguous pages, and GitHub tools for publication. A separate Gemini API key is not required for this workflow. The TinyFish credential is stored privately on the execution host outside the repository and is never included in the public site, snapshots, logs or automation prompt.
+The daily collector is the GitHub Actions workflow `.github/workflows/collect.yml`, running `collector/collect.mjs` every day at **14:40 UTC** (08:40 Chicago in winter, 09:40 in summer). It runs on GitHub's servers, so no computer needs to stay awake. You can also start it from the Actions tab ("Collect new records" → Run workflow), with an optional dry run that collects and reports without saving. It replaced the ChatGPT scheduled chat task on 11 November 2026; the earlier `scheduled-chat` snapshots remain part of the archive.
 
-Each run targets up to 20 new News records when enough relevant, nonduplicate sources can be verified. It prioritizes the newest years, then works through appropriate reporting from any available year, with no lower-year cutoff. TinyFish use is limited to Search and Fetch within the documented free allowances, with local usage tracking and conservative caps; paid Agent, Browser and Monitor endpoints are not used. If Firecrawl fallback is needed, the task checks its balance before and after collection and normally uses no more than 40 net credits per run, reducing fallback work when the balance is low. It:
+It needs three repository secrets (Settings → Secrets and variables → Actions). None of them is ever written to the repository, snapshots or logs:
 
-1. reads the current main branch, merges the archive and snapshots, and searches Bangla and English reporting;
-2. reads original article pages, retains their stated publication/update dates, and attributes allegations rather than treating search snippets as evidence; checks actual article dates because extracted provider metadata may be absent or disagree with the page, and falls back when an extraction strips date evidence or article content;
-3. prepares bilingual summaries naming the river/site and location and retaining source-stated monetary amounts, volumes, distances, areas and other substantive figures with their units and attribution; checks canonical URLs, DOI and reported incidents for duplicates, and performs an assistant editorial pass before assigning Accept;
-4. validates the full JSON payload and its blob hash, then commits a new snapshot using an expected-head check so concurrent edits are preserved;
-5. follows the exact commit's GitHub Pages build and deployment, parses the deployed archive JSON, and verifies every new ID and the expected record-count increase before reporting completion.
+- `ANTHROPIC_API_KEY`: Claude API key. Claude Sonnet 5.5 writes and reviews the bilingual summaries; a typical run costs roughly $1–3, is capped at 70 model calls, and the estimate is reported in each run summary.
+- `TINYFISH_API_KEY`: TinyFish Search and Fetch, used first, within the free daily allowance (12,000 searches and 1,000 fetched URLs per day). Each run uses about 20 searches and at most 60 fetches. Paid Agent, Browser and Monitor endpoints are never called.
+- `FIRECRAWL_API_KEY` (optional): fallback only, for pages TinyFish and a direct read cannot get, or pages without a readable date. The run checks the balance first, spends at most 10 credits, and never takes the balance below 5. It never buys credits.
 
-Scheduled records are marked `auto: true` and show the "Auto-collected" badge. Run and discovery entries identify the collector as `scheduled-chat` and record the assistant's editorial checks. The owner authorizes Accept after those checks; unread, duplicate or unresolved content is deferred or excluded. Accept is archive inclusion and faithful source representation, not independent verification of allegations. A green workflow or a run with zero additions does not establish successful collection.
+Each run:
 
-The first scheduled test on 25 October 2026 added three distinct News records and verified all three on the public site, increasing the archive from 270 to 273 records. The test snapshot is `snapshots/2026-10-25-scheduled-chat-first-success.json`.
+1. searches newest reporting first (the last 14 days, Bangla and English), then a rotating set of publishers for the current year, then two earlier years per day back to 2010, plus free Bing News RSS, GDELT and the discovery backlog;
+2. reads each original article through TinyFish Fetch, then a direct page read, then Firecrawl; search snippets are never evidence;
+3. has Claude decide relevance and draft the record, quoting the article's date line and every figure verbatim. The code rejects the draft if any quote is not actually in the article. The publication date comes from the article text or the publisher's own page metadata; a date from a provider's metadata is only a hint;
+4. has a second Claude pass act as editor: it checks named places, every figure in both languages, attribution of allegations, and whether the report duplicates an incident already in the archive. It may correct the summaries once;
+5. publishes only records that pass as **Accept** (see the [editorial policy](EDITORIAL_POLICY.md)). Failed, undated, unresolved or duplicate items go to the discovery log with the reason, and blocked or undated pages are retried on later runs;
+6. writes `snapshots/<date>-github-actions-<time>.json`, runs the site checks and build, commits, starts the Pages deployment, and then confirms every new record ID in the live `data/archive.json`. The job fails if they are missing.
 
-The owner approved all 273 existing records for editorial inclusion on 25 October 2026, then authorized recurring assistant collection and editorial acceptance of new records that pass the source checks. The original decisions and summary maintenance are saved in `snapshots/2026-10-25-zz-editorial-review-all-current.json`. [Editorial policy](EDITORIAL_POLICY.md) defines acceptance, mandatory river/location names, source-stated figures and units, all-years priority, and credit-aware operation. The task does not purchase credits or enable paid overages. TinyFish free-tier limits and Firecrawl credit exhaustion are handled independently: an unavailable provider does not stop usable retrieval through the other. The task retains its daily schedule and reports a new actionable blocker if neither can provide sufficient evidence.
-
-## Legacy manual collector
-
-`.github/workflows/collect.yml` retains `workflow_dispatch` for manual diagnostics and its dry-run option. Its daily cron trigger is disabled after the successful scheduled-chat test. `collector/collect.mjs` needs a working supported provider credential, currently `GEMINI_API_KEY`, in repository Actions secrets. [GitHub Models was retired on 30 July 2026](https://docs.github.com/en/github-models); the script's historical fallback is not a working model provider. Without a valid supported provider, the script stops before collecting articles.
-
-The manual script gathers discovery backlog, Bing News RSS, GDELT and OpenAlex candidates; it reads pages directly and can use Firecrawl v2 when `FIRECRAWL_API_KEY` is configured. Its limits remain 20 records, 30 model calls and 60 page reads per run, with at most three retrieval attempts per backlog item. This script is separate from the active scheduled chat.
-
+Records are marked `auto: true` with `collector: "github-actions"`. Each snapshot's `editorialReviews` keeps the source body hash, date evidence, figure quotes and checks for each record, and its run entry records TinyFish, Firecrawl and Claude usage. A green run with zero additions does not establish that nothing new was published.
 
 Public address: https://sadiulchyon.github.io/bangladesh-sand-watch/
 
