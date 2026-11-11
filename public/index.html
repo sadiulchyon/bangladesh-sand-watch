@@ -17,8 +17,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
-  <link rel="stylesheet" href="styles.css?v=20261111">
-  <script type="module" src="app.js?v=titles-20261111"></script>
+  <link rel="stylesheet" href="styles.css?v=stats-20261111">
+  <script type="module" src="app.js?v=stats-20261111"></script>
   <script type="module" src="visuals.js?v=20261111"></script>
 </head>
 <body data-view="archive">
@@ -49,10 +49,10 @@
         <div class="intro-foot"><p class="intro-credit" data-visual-en="Someshwari River · 26 January 2023 · Field drone footage" data-visual-bn="সোমেশ্বরী নদী · ২৬ জানুয়ারি ২০২৩ · মাঠের ড্রোন ভিডিও">Someshwari River · 26 January 2023 · Field drone footage</p><button class="video-toggle" id="video-toggle" type="button" aria-pressed="false" aria-label="Pause background video"><span aria-hidden="true">❚❚</span></button></div>
       </div>
       <div class="stats" aria-label="Collection totals">
-        <button class="stat active" data-category="all"><span class="stat-value" id="stat-all">–</span><span data-i18n="allRecords">All records</span></button>
-        <button class="stat" data-category="news"><span class="stat-value" id="stat-news">–</span><span data-i18n="news">News & context</span></button>
-        <button class="stat" data-category="official"><span class="stat-value" id="stat-official">–</span><span data-i18n="official">Official documents</span></button>
-        <button class="stat" data-category="research"><span class="stat-value" id="stat-research">–</span><span data-i18n="research">Research articles</span></button>
+        <button class="stat active" aria-pressed="true" data-category="all"><span class="stat-value" id="stat-all">–</span><span data-i18n="allRecords">All records</span></button>
+        <button class="stat" aria-pressed="false" data-category="news"><span class="stat-value" id="stat-news">–</span><span data-i18n="news">News & context</span></button>
+        <button class="stat" aria-pressed="false" data-category="official"><span class="stat-value" id="stat-official">–</span><span data-i18n="official">Official documents</span></button>
+        <button class="stat" aria-pressed="false" data-category="research"><span class="stat-value" id="stat-research">–</span><span data-i18n="research">Research articles</span></button>
       </div>
     </section>
     <div id="load-error" class="notice error" hidden></div>

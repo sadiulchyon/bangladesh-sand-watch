@@ -126,7 +126,9 @@ h1,h2,h3{color:var(--ink);font-weight:600}
 .stat+.stat{padding-left:24px;border-left:1px solid rgb(255 255 255 / .16)}
 .stat:hover,.stat.active{color:#fff}
 .stat:before{content:'';position:absolute;left:0;right:0;top:-1px;height:2px;background:#fff;transform:scaleX(0);transform-origin:left;transition:transform .3s}
-.stat.active:before,.stat:hover:before{transform:scaleX(1)}
+.stat.active:before{transform:scaleX(1)}
+.stat:hover{background:rgb(255 255 255 / .04)}
+.stat:focus-visible{outline:2px solid #fff;outline-offset:-5px}
 .stat-value{font-size:clamp(30px,3.8vw,54px);line-height:1.05;font-weight:600;letter-spacing:-.035em;color:#fff;font-variant-numeric:tabular-nums}
 
 /* ---------- Sections ---------- */
@@ -457,7 +459,6 @@ html[data-mode=public] #review-progress{display:none!important}
   .stat+.stat{padding-left:16px}
   .stat:nth-child(3){padding-left:0;border-left:0}
   .stat:nth-child(n+3){border-top:1px solid rgb(255 255 255 / .16)}
-  .stat:before{display:none}
   .stat-value{font-size:30px}
   body:not([data-view=archive]) main>section:not(.intro){padding-top:132px}
   body:not([data-view=archive]) .notice{margin-top:120px}

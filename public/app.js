@@ -46,7 +46,7 @@ function render(){
  $('#results-count').textContent=language==='bn'?`${records.length}টি নথির মধ্যে ${filtered.length}টি দেখানো হচ্ছে`:`Showing ${filtered.length} of ${records.length} records`;
  const reviewed=records.filter(r=>decisionOf(r,reviews)!=='Pending').length;
  $('#review-progress').textContent=language==='bn'?`${records.length}টি নথির মধ্যে ${reviewed}টি পর্যালোচিত`:`${reviewed} of ${records.length} records reviewed`;
- $$('.stat').forEach(el=>el.classList.toggle('active',el.dataset.category===$('#category').value));
+ $$('.stat').forEach(el=>{const selected=el.dataset.category===$('#category').value;el.classList.toggle('active',selected);el.setAttribute('aria-pressed',String(selected));});
  $('#stat-all').textContent=records.length;for(const g of ['news','official','research'])$('#stat-'+g).textContent=records.filter(r=>groupOf(r)===g).length;
 }
 function renderSources(){
@@ -70,14 +70,14 @@ function renderDetail(r){
  $('#review-form').addEventListener('submit',async e=>{e.preventDefault();const value={decision:$('#detail-decision').value,notes:$('#detail-notes').value};if(await persistReviews({[r.id]:value})){reviews[r.id]=value;render();toast(t('saved'));}else toast(t('storageFailed'));});
 }
 function openRecord(id){const r=records.find(r=>r.id===id);if(!r)return;activeId=id;renderDetail(r);if(!$('#record-dialog').open)$('#record-dialog').showModal();$('#record-dialog').scrollTop=0;}
-function reset(){for(const id of fields)$('#'+id).value=(id==='dateFrom'||id==='dateTo')?'':'all';$('#search').value='';$('#sort').value='newest';if(view==='review')$('#decision').value='Pending';render();}
+function reset(){for(const id of fields)$('#'+id).value=(id==='dateFrom'||id==='dateTo')?'':'all';$('#search').value='';if($('#hero-search'))$('#hero-search').value='';$('#sort').value='newest';if(view==='review')$('#decision').value='Pending';render();}
 function download(text,name,mime){const url=URL.createObjectURL(new Blob([text],{type:mime}));const a=document.createElement('a');a.href=url;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);$('.export-menu').open=false;toast(t('exported'));}
 function filename(base,ext){return base+'_'+new Date().toISOString().replace(/[:.]/g,'-')+'.'+ext;}
 function exportCsv(){const cols=['id','type','source','title','titleEn','date','dateKind','district','river','material','topics','language','en','bn','evidence','flag','decision','reviewNotes','documentId','otherDate','url','alternateUrl','notes'];const rows=selectedRecords().map(r=>({...r,titleEn:englishTitle(r),decision:decisionOf(r,reviews),reviewNotes:reviews[r.id]?.notes??r.reviewNotes}));download(csv([cols,...rows.map(r=>cols.map(k=>r[k]))]),filename('Bangladesh_Sand_Watch_records','csv'),'text/csv;charset=utf-8');}
 function exportReview(){download(JSON.stringify({kind:'bangladesh-sand-watch-review',schemaVersion:1,exportedAt:new Date().toISOString(),datasetAsOf:'2026-10-11',reviews},null,2),filename('Bangladesh_Sand_Watch_review','json'),'application/json');}
 async function importReview(file){try{if(!file||file.size>1000000)throw new Error();const validated=validateReviewBackup(JSON.parse(await file.text()),records);if(await persistReviews(validated)){reviews={...reviews,...validated};render();toast(t('imported'));}else toast(t('storageFailed'));}catch{toast(t('importFailed'));}$('#review-file').value='';}
 
-document.addEventListener('click',e=>{const record=e.target.closest('[data-record]');if(record){openRecord(record.dataset.record);return;}const nav=e.target.closest('[data-view]');if(nav){e.preventDefault();setView(nav.dataset.view);return;}const stat=e.target.closest('[data-category]');if(stat){setView('archive');$('#category').value=stat.dataset.category;render();$('#catalogue').scrollIntoView({behavior:'smooth',block:'start'});return;}if(!e.target.closest('.export-menu'))$('.export-menu').open=false;});
+document.addEventListener('click',e=>{const record=e.target.closest('[data-record]');if(record){openRecord(record.dataset.record);return;}const nav=e.target.closest('button[data-view],a[data-view]');if(nav){e.preventDefault();setView(nav.dataset.view);return;}const stat=e.target.closest('[data-category]');if(stat){pickFilter({category:stat.dataset.category});return;}if(!e.target.closest('.export-menu'))$('.export-menu').open=false;});
 $('#lang-en').addEventListener('click',()=>setLanguage('en'));$('#lang-bn').addEventListener('click',()=>setLanguage('bn'));
 fields.forEach(id=>$('#'+id).addEventListener('change',render));$('#sort').addEventListener('change',render);$('#search').addEventListener('input',render);$('#reset').addEventListener('click',reset);$('#more').addEventListener('click',()=>{limit+=40;render();});$('#empty-reset').addEventListener('click',reset);
 $('#close-dialog').addEventListener('click',()=>$('#record-dialog').close());$('#record-dialog').addEventListener('close',()=>activeId='');$('#record-dialog').addEventListener('click',e=>{if(e.target!==$('#record-dialog'))return;const rect=e.target.getBoundingClientRect();if(e.clientX<rect.left||e.clientX>rect.right||e.clientY<rect.top||e.clientY>rect.bottom)e.target.close();});
