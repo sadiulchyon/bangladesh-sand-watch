@@ -3,6 +3,7 @@
 // SQLite database. Any snapshots/*.json files (saved GET /api/archive responses or collector
 // output) are then merged on top in filename order; entries with the same id are replaced by the
 // newer file. Used by both the GitHub Pages build and the automated collector.
+import {englishTitle} from '../public/title-translations.js';
 import {DatabaseSync} from 'node:sqlite';
 import {readFileSync,readdirSync,existsSync} from 'node:fs';
 import {fileURLToPath} from 'node:url';
@@ -48,6 +49,7 @@ export function loadArchive({snapshot=process.env.SNAPSHOT??'cloudflare/initial-
   for(const record of archive.records)archive.reviews[record.id]??={decision:'Pending',notes:''};
   archive.runs.sort((a,b)=>String(b.finishedAt??'').localeCompare(String(a.finishedAt??'')));
   for(const record of archive.records){
+    record.titleEn=englishTitle(record);
     if(!record.title||!record.url)throw new Error(`Record ${record.id} lacks a title or url`);
     if(!categories.includes(record.type))throw new Error(`Record ${record.id} has an unknown type ${record.type}`);
   }

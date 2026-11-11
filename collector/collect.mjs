@@ -231,6 +231,7 @@ const policy = `You catalogue evidence for Bangladesh Sand Watch, a public bilin
 
 Rules (from EDITORIAL_POLICY.md):
 - Use ONLY the supplied article body. Never add facts. Ignore navigation, recommendation cards, advertisements, page clocks and headlines of other stories that may appear in the text.
+- Translate the supplied page title faithfully into English as titleEn, preserving names, quantities, questions and allegation strength. Do not replace it with a summary. English source titles stay in English.
 - Keep claim strength: allegations, estimates and projections stay attributed ("residents alleged", "officials said", "the paper reported"). Accepted records are inclusion and faithful representation, not independent verification.
 - Both summaries must name the river/channel or extraction site and the village/union/upazila/district the source states. For national or unnamed-site material say so (e.g. "the report names no river"). Never invent a place.
 - Keep every substantive source-stated figure in BOTH summaries with its exact magnitude, unit, range, time basis and attribution: fines, lease/revenue/project/loss amounts, sand or stone volume or mass, affected length, area, depth, distance, equipment and people counts, durations. Distinguish cubic feet from cubic metres, seized stock from extraction rates, damaged length from total project length, project cost from mining losses. Keep lakh/crore equivalent between languages. Use more sentences when needed rather than dropping numbers.
@@ -239,12 +240,13 @@ Rules (from EDITORIAL_POLICY.md):
 
 const draftSchema = {
   type: 'object', additionalProperties: false,
-  required: ['relevant', 'reason', 'type', 'source', 'district', 'river', 'material', 'topics', 'en', 'bn', 'evidence', 'flag', 'date', 'dateKind', 'dateQuote', 'figures'],
+  required: ['relevant', 'reason', 'type', 'source', 'titleEn', 'district', 'river', 'material', 'topics', 'en', 'bn', 'evidence', 'flag', 'date', 'dateKind', 'dateQuote', 'figures'],
   properties: {
     relevant: {type: 'boolean'},
     reason: {type: 'string', description: 'One sentence explaining the relevance decision.'},
     type: {type: 'string', enum: categories},
     source: {type: 'string', description: 'Publisher or journal name.'},
+    titleEn: {type: 'string', description: 'Faithful English translation of the supplied page title; preserve names, numbers and claim strength.'},
     district: {type: 'string', description: "Place hierarchy stated by the source, most specific first, e.g. 'Mostapara village, Chitoshi Purba union, Shahrashti, Chandpur'; or 'National'."},
     river: {type: 'string', description: "River/channel/site named, or e.g. 'Agricultural land at Mostapara; no river named'."},
     material: {type: 'string', description: "Sand, Stone, Gravel, Soil, Topsoil, or a '; ' list."},
@@ -263,8 +265,9 @@ const draftSchema = {
 };
 const reviewSchema = {
   type: 'object', additionalProperties: false,
-  required: ['verdict', 'issues', 'duplicateOf', 'en', 'bn'],
+  required: ['verdict', 'issues', 'duplicateOf', 'titleEn', 'en', 'bn'],
   properties: {
+    titleEn: {type: 'string', description: 'Corrected English title when revising, otherwise empty.'},
     verdict: {type: 'string', enum: ['pass', 'revise', 'reject']},
     issues: {type: 'array', items: {type: 'string'}},
     duplicateOf: {type: 'string', description: 'ID of an existing record reporting the same incident/action, or empty.'},
@@ -443,14 +446,16 @@ for (let start = 0; start < candidates.length && records.length < MAX_RECORDS &&
       if (missing.length) { logEntry(c, 'Deferred', `figure quotes not found in the article: ${missing.map(f => f.quote).join(' | ').slice(0, 300)}`); continue; }
       if (!bangla.test(draft.bn) || draft.en.length < 60 || draft.bn.length < 40) { logEntry(c, 'Deferred', 'summary missing or too short'); continue; }
 
+      if (!clean(draft.titleEn) || bangla.test(draft.titleEn)) { logEntry(c, 'Deferred', 'English title translation missing or not English'); continue; }
+
       // Editorial review + incident-level dedup.
       const pool = [...archive.records, ...records];
       const near = nearbyRecords(draft, pool);
-      const reviewPrompt = (en, bn) => `Article body:\n${page.text.slice(0, MAX_TEXT)}\n\nDraft record:\n${JSON.stringify({type: draft.type, date: draft.date, district: draft.district, river: draft.river, material: draft.material, en, bn, evidence: draft.evidence, flag: draft.flag}, null, 1)}\n\nExisting archive records that may report the same incident:\n${near.length ? near.map(r => `- ${r.id} | ${r.date || 'undated'} | ${r.district} | ${r.river} | ${String(r.en).slice(0, 300)}`).join('\n') : '(none)'}\n\nAct as the editor. Check that: the record is relevant; both summaries name the river/site and stated places; every substantive figure in the article is present, correct and identically stated in both languages (units, lakh/crore, ranges, time basis); allegations stay attributed; nothing is added beyond the article; type and date fit. If it is the same incident or action as an existing record (repeat, translated or syndicated coverage) set duplicateOf; a distinct dated follow-up with new evidence is not a duplicate. Verdict: pass if publishable as is; revise if only the summaries need fixing (give corrected en and bn); reject if not publishable.`;
+      const reviewPrompt = (en, bn) => `Article body:\n${page.text.slice(0, MAX_TEXT)}\n\nDraft record:\n${JSON.stringify({sourceTitle: page.title, titleEn: draft.titleEn, type: draft.type, date: draft.date, district: draft.district, river: draft.river, material: draft.material, en, bn, evidence: draft.evidence, flag: draft.flag}, null, 1)}\n\nExisting archive records that may report the same incident:\n${near.length ? near.map(r => `- ${r.id} | ${r.date || 'undated'} | ${r.district} | ${r.river} | ${String(r.en).slice(0, 300)}`).join('\n') : '(none)'}\n\nAct as the editor. Check that: titleEn faithfully translates sourceTitle with the same names, figures and allegation strength; the record is relevant; both summaries name the river/site and stated places; every substantive figure in the article is present, correct and identically stated in both languages (units, lakh/crore, ranges, time basis); allegations stay attributed; nothing is added beyond the article; type and date fit. If it is the same incident or action as an existing record (repeat, translated or syndicated coverage) set duplicateOf; a distinct dated follow-up with new evidence is not a duplicate. Verdict: pass if publishable as is; revise if the title or summaries need fixing (give corrected titleEn, en and bn); reject if not publishable.`;
       let rev = await ask(reviewPrompt(draft.en, draft.bn), reviewSchema, 'high');
       let en = draft.en, bn = draft.bn, revised = false;
       if (rev.verdict === 'revise' && bangla.test(rev.bn) && rev.en.length >= 60) {
-        en = rev.en; bn = rev.bn; revised = true;
+        en = rev.en; bn = rev.bn; if (clean(rev.titleEn)) draft.titleEn = clean(rev.titleEn); revised = true;
         rev = await ask(reviewPrompt(en, bn), reviewSchema, 'high');
       }
       if (rev.duplicateOf && pool.some(r => r.id === rev.duplicateOf)) { logEntry(c, 'Already archived', `same incident as ${rev.duplicateOf}`, rev.duplicateOf); continue; }
@@ -459,14 +464,14 @@ for (let start = 0; start < candidates.length && records.length < MAX_RECORDS &&
       const url = canonicalUrl(page.url.startsWith('http') ? page.url : c.url), id = keyFor(url);
       if (knownIds.has(id) || records.some(r => r.id === id)) { logEntry(c, 'Already archived', 'duplicate canonical URL', id); continue; }
       const record = {
-        source: clean(draft.source) || page.site || hostOf(url), title: clean(page.title) || clean(c.title), date: draft.date, dateKind: draft.dateKind,
+        source: clean(draft.source) || page.site || hostOf(url), title: clean(page.title) || clean(c.title), titleEn: clean(draft.titleEn), date: draft.date, dateKind: draft.dateKind,
         district: clean(draft.district), river: clean(draft.river), material: clean(draft.material), topics: clean(draft.topics),
         language: (page.text.match(/[ঀ-৿]/g)?.length ?? 0) > page.text.length * 0.3 ? 'Bangla' : 'English',
         en: clean(en), bn: clean(bn), evidence: clean(draft.evidence), flag: clean(draft.flag), id, url, type: draft.type,
         documentId: '', otherDate: meta && meta !== draft.date ? `Metadata ${meta}` : '', alternateUrl: '',
         notes: `Collected ${day} by GitHub Actions (${page.via} read, ${page.text.length} characters); summaries by ${MODEL}; editorial review passed${revised ? ' after revision' : ''}.`,
         decision: 'Accept', reviewNotes: '', collectedAt: new Date().toISOString(), auto: true, collector: 'github-actions'};
-      if (!record.title || !categories.includes(record.type)) { logEntry(c, 'Deferred', 'missing title or invalid type'); continue; }
+      if (!record.title || !record.titleEn || bangla.test(record.titleEn) || !categories.includes(record.type)) { logEntry(c, 'Deferred', 'missing title or invalid type'); continue; }
       records.push(record);
       reviews[id] = {decision: 'Accept', notes: '', auto: true, reviewer: `github-actions:${MODEL}`, reviewedAt: record.collectedAt};
       editorialReviews[id] = {decision: 'Accept', reviewer: `github-actions:${MODEL}`, reviewedAt: record.collectedAt,

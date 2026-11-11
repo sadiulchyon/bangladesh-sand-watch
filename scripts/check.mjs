@@ -50,3 +50,22 @@ execFileSync(process.execPath,['--check',path.join(root,'public/visuals.js')]);
 execFileSync(process.execPath,['--check',path.join(root,'public/places.js')]);
 execFileSync(process.execPath,['--check',path.join(root,'public/insights.js')]);
 console.log('Passed: 17 records, provenance and dates, bilingual aliases, combined filters, sorting, review import/export rules, CSV safety, syntax, DOM targets, and static assets.');
+
+// Language switching, source fidelity and complete English title coverage.
+const {englishTitle,titleFor,titleLanguage,titleTranslations}=await import('../public/title-translations.js');
+const {loadArchive}=await import('./archive-data.mjs');
+const archive=loadArchive({log:()=>{}});
+for(const record of archive.records){
+ assert.ok(englishTitle(record));
+ assert.doesNotMatch(englishTitle(record),/[ঀ-৿]/u,record.id+' needs an English title');
+ assert.equal(titleFor(record,'bn'),record.title);
+}
+const translated=archive.records.find(r=>titleTranslations[r.id]);
+assert.notEqual(titleFor(translated,'en'),translated.title);
+assert.equal(titleLanguage(translated,'en'),'en');
+assert.equal(titleLanguage(translated,'bn'),'bn');
+assert.equal(englishTitle({...translated,title:'Changed source headline',titleEn:''}),'Changed source headline');
+assert.equal(englishTitle({title:'English source headline'}),'English source headline');
+assert.equal(englishTitle({title:'বাংলা',titleEn:'New translated headline'}),'New translated headline');
+assert.ok(filterRecords([translated],{search:englishTitle(translated)}).length);
+console.log('Passed: English titles, Bangla source preservation, translated-title search, stale translation fallback and full archive coverage.');

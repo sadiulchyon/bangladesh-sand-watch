@@ -1,3 +1,5 @@
+import {englishTitle} from './title-translations.js';
+export {englishTitle,titleFor,titleLanguage} from './title-translations.js';
 import {canonicalDistrict,detectRivers} from './places.js';
 export const groupOf=r=>['Law','Rules','Lease'].includes(r.type)?'official':r.type==='Research'?'research':r.type==='Project'?'project':'news';
 const aliases=[[/শোমেশ্বরী|সোমেশ্বরী|shomeshwari|someshwari/gu,' someshwari '],[/তিস্তা|teesta/gu,' teesta '],[/ব্রহ্মপুত্র|brahmaputra/gu,' brahmaputra '],[/মেঘনা|meghna/gu,' meghna '],[/ছোট যমুনা|chhoto jamuna/gu,' chhoto jamuna '],[/জিঞ্জিরাম|jinjiram/gu,' jinjiram '],[/সিলেট|sylhet/gu,' sylhet '],[/সুনামগঞ্জ|sunamganj/gu,' sunamganj '],[/নেত্রকোনা|netrakona|netrokona/gu,' netrokona '],[/জামালপুর|jamalpur/gu,' jamalpur '],[/লালমনিরহাট|lalmonirhat/gu,' lalmonirhat '],[/নীলফামারী|nilphamari/gu,' nilphamari '],[/নওগাঁ|naogaon/gu,' naogaon '],[/রংপুর|rangpur/gu,' rangpur '],[/বালুমহাল|balumahal/gu,' balumahal '],[/বাংলাদেশ|bangladesh/gu,' bangladesh '],[/বালু|sand/gu,' sand '],[/পাথর|stone/gu,' stone '],[/নুড়ি|gravel/gu,' gravel ']];
@@ -18,7 +20,7 @@ export const decisionOf=(r,reviews)=>reviews[r.id]?.decision??r.decision??'Pendi
 export function filterRecords(records,f,reviews={}){
  const q=normalize(f.search??'').split(' ').filter(Boolean);
  return records.filter(r=>{
-  const corpus=normalize([r.id,r.title,r.source,r.district,r.river,r.material,r.topics,r.en,r.bn,r.documentId].join(' '));
+  const corpus=normalize([r.id,r.title,englishTitle(r),r.source,r.district,r.river,r.material,r.topics,r.en,r.bn,r.documentId].join(' '));
   return q.every(t=>corpus.includes(t))&&(!f.dateFrom||(r.date&&r.date>=f.dateFrom))&&(!f.dateTo||(r.date&&r.date<=f.dateTo))&&(!f.category||f.category==='all'||groupOf(r)===f.category)&&(!f.district||f.district==='all'||districts(r).includes(f.district))&&(!f.river||f.river==='all'||riverNames(r).includes(f.river))&&(!f.year||f.year==='all'||yearOf(r)===f.year)&&(!f.material||f.material==='all'||(f.material==='gravel'?/stone|gravel/i.test(r.material):r.material.toLowerCase().includes(f.material)))&&(!f.topic||f.topic==='all'||tokens(r.topics).includes(f.topic))&&(!f.sourceLanguage||f.sourceLanguage==='all'||r.language===f.sourceLanguage)&&(!f.decision||f.decision==='all'||decisionOf(r,reviews)===f.decision)&&(!f.source||f.source==='all'||r.source===f.source);
  });
 }
