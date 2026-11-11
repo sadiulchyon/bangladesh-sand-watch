@@ -298,33 +298,6 @@
    "collector": "github-actions"
   },
   {
-   "source": "Jamuna TV (YouTube)",
-   "title": "শরীয়তপুরে রাতের আধারে চলছে অবৈধভাবে বালু উত্তোলনের মহোৎসব | Shariatpur Sand Mining",
-   "date": "2024-12-20",
-   "dateKind": "Published",
-   "district": "Shariatpur",
-   "river": "Padma River (various points)",
-   "material": "Sand",
-   "topics": "Illegal sand extraction; Padma right-bank protective embankment; Enforcement; Local allegations of influential people",
-   "language": "English",
-   "en": "Jamuna TV reported on 20 December 2024 that illegal sand extraction was going on in the dark of night at various points of the Padma River in Shariatpur, describing it as a \"festival\" of illegal extraction. It said unplanned extraction threatens the Padma right-bank protection embankment, built at a cost of about 1,500 crore taka (1.5 thousand crore), along with many other structures. The report said extraction continues despite jail terms and fines. Locals alleged that several organised syndicates extract sand under the protection of influential people. The video description names no specific union or upazila within Shariatpur.",
-   "bn": "যমুনা টিভি ২০২৪ সালের ২০ ডিসেম্বর জানায়, শরীয়তপুরে পদ্মা নদীর বিভিন্ন পয়েন্টে রাতের আঁধারে অবৈধভাবে বালু উত্তোলনের \"মহোৎসব\" চলছে। প্রতিবেদনে বলা হয়, অপরিকল্পিত উত্তোলনের কারণে প্রায় দেড় হাজার কোটি টাকা (প্রায় ১,৫০০ কোটি টাকা) ব্যয়ে নির্মিত পদ্মার ডান তীর রক্ষা বাঁধসহ বহু স্থাপনা হুমকিতে রয়েছে। জেল-জরিমানার পরও উত্তোলন থামানো যাচ্ছে না বলে প্রতিবেদনে বলা হয়। স্থানীয়দের অভিযোগ, প্রভাবশালীদের ছত্রছায়ায় একাধিক সংঘবদ্ধ চক্র বালু তুলছে। ভিডিওর বিবরণে শরীয়তপুরের মধ্যে নির্দিষ্ট কোনো ইউনিয়ন বা উপজেলার নাম নেই।",
-   "evidence": "TV news video description with a 3:06 clip; no officials named; locals' allegations.",
-   "flag": "Allegations by locals; only a short video description is available, with no specific location within Shariatpur and no transcript text",
-   "id": "BSW-e7b1620fb7511710",
-   "url": "https://www.youtube.com/watch?v=ifJOvZkHRUA",
-   "type": "News",
-   "documentId": "",
-   "otherDate": "",
-   "alternateUrl": "",
-   "notes": "Collected 2026-11-11 by GitHub Actions (tinyfish read, 5423 characters); summaries by claude-sonnet-5-5; editorial review passed after revision.",
-   "decision": "Accept",
-   "reviewNotes": "",
-   "collectedAt": "2026-11-11T09:23:04.445Z",
-   "auto": true,
-   "collector": "github-actions"
-  },
-  {
    "source": "Protidiner Sangbad",
    "title": "দৌলতপুরে ড্রেজার দিয়ে অবৈধভাবে বালু উত্তোলন, হুমকিতে কৃৃষিজমি-বাড়ি",
    "date": "2024-03-19",
@@ -457,13 +430,6 @@
    "reviewer": "github-actions:claude-sonnet-5-5",
    "reviewedAt": "2026-11-11T09:21:17.437Z"
   },
-  "BSW-e7b1620fb7511710": {
-   "decision": "Accept",
-   "notes": "",
-   "auto": true,
-   "reviewer": "github-actions:claude-sonnet-5-5",
-   "reviewedAt": "2026-11-11T09:23:04.445Z"
-  },
   "BSW-250b7d52309ecc1e": {
    "decision": "Accept",
    "notes": "",
@@ -490,7 +456,7 @@
    "fallbackProvider": "firecrawl",
    "model": "claude-sonnet-5-5",
    "found": 511,
-   "added": 14,
+   "added": 13,
    "fetches": 40,
    "duplicates": 7,
    "deferred": 5,
@@ -506,7 +472,6 @@
     "BSW-bd273a58112d1a14",
     "BSW-4d45e0e293d64672",
     "BSW-d74f4736b3a92307",
-    "BSW-e7b1620fb7511710",
     "BSW-250b7d52309ecc1e",
     "BSW-bbd94aa4d2cd532f"
    ],
@@ -564,7 +529,8 @@
     "https://www.shomoyeralo.com/news/300090: TinyFish bot_blocked; direct: HTTP 403; Firecrawl fallback unavailable or this run's credit cap reached",
     "https://www.ittefaq.com.bd/679215/%E0%A6%85%E0%A6%AC%E0%A7%88%E0%A6%A7-%E0%A6%AC%E0%A6%BE%E0%A6%B2%E0%A7%81-%E0%A6%89%E0%A6%A4%E0%A7%8D%E0%A6%A4%E0%A7%8B%E0%A6%B2%E0%A6%A8-%E0%A6%A5%E0%A6%BE%E0%A6%AE%E0%A6%9B%E0%A7%87-%E0%A6%A8%E0%A6%BE-%E0%A7%A8-%E0%A6%B2%E0%A6%BE%E0%A6%96-%E0%A7%AC%E0%A7%AB-%E0%A6%B9%E0%A6%BE%E0%A6%9C%E0%A6%BE%E0%A6%B0-%E0%A6%9C%E0%A6%B0%E0%A6%BF%E0%A6%AE%E0%A6%BE%E0%A6%A8%E0%A6%BE: TinyFish bot_blocked; direct: HTTP 403; Firecrawl fallback unavailable or this run's credit cap reached",
     "https://www.eyenews.news/sylhet/moulvibazar/65861: model call budget reached"
-   ]
+   ],
+   "notes": "Owner removed BSW-e7b1620fb7511710 (YouTube video page, not a written article) on 2026-11-11."
   }
  ],
  "searches": [
@@ -1183,9 +1149,8 @@
    "title": "শরীয়তপুরে রাতের আধারে চলছে অবৈধভাবে বালু উত্তোলনের মহোৎসব",
    "query": "অবৈধ বালু উত্তোলন",
    "rank": 3,
-   "status": "Added",
-   "reason": "article body, date and figures checked; editorial review passed",
-   "recordId": "BSW-e7b1620fb7511710",
+   "status": "Excluded",
+   "reason": "video page, not a written article (removed by owner)",
    "autoAttempts": 1,
    "loggedAt": "2026-11-11T09:08:58.031Z",
    "collector": "github-actions",
@@ -2262,40 +2227,6 @@
     "BSW-ff3300bf7206c8f1",
     "BSW-3eb974e27d5d970a",
     "BSW-4242143058c439e4"
-   ],
-   "revised": true,
-   "checksPassed": [
-    "original article body read",
-    "publication date from article text",
-    "every figure quote found in article body",
-    "bilingual places, figures and attribution reviewed",
-    "canonical URL and incident-level deduplication"
-   ]
-  },
-  "BSW-e7b1620fb7511710": {
-   "decision": "Accept",
-   "reviewer": "github-actions:claude-sonnet-5-5",
-   "reviewedAt": "2026-11-11T09:23:04.445Z",
-   "sourceReads": [
-    {
-     "provider": "tinyfish",
-     "sourceUrl": "https://www.youtube.com/watch?v=ifJOvZkHRUA",
-     "sourceBodySha256": "1b1f37310718c244c07ffb57d7a76f8b513982fd0b0185b5f0d1a6d9ce17718d",
-     "sourceCharacters": 5423,
-     "usedAsArticleEvidence": true
-    }
-   ],
-   "dateEvidence": {
-    "source": "article text",
-    "quote": "2024 Dec 20",
-    "metadata": ""
-   },
-   "figureQuotes": [
-    "প্রায় দেড় হাজার কোটি টাকা ব্যয়ে নির্মিত পদ্মার ডান তীড় রক্ষা বাধ"
-   ],
-   "incidentCandidates": [
-    "BSW-c9fcea3949277633",
-    "BSW-e7efd18c8c4d1c2d"
    ],
    "revised": true,
    "checksPassed": [
